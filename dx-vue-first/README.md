@@ -1,4 +1,4 @@
-# dx-vue
+# dx-vue-first
 
 > A Vue.js project
 
