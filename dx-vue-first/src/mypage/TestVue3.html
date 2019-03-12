@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TestVue3</title>
+  <script src="https://cdn.bootcss.com/vue/2.6.8/vue.common.dev.js"></script>
+</head>
+<body>
+
+<div id="main">
+  <img src="../assets/logo.png">
+  <div v-if="num1%3 >1">
+    num1 是大于3 的,他的值是{{num1}}
+  </div>
+  <div v-else>
+    num1 是不不不不不不不不不不不不不不不大于3 的,他的值是{{num1}}
+  </div>
+
+
+  <div :id="div1">
+    <button @click="add()">给num1加一</button>
+  </div>
+
+  <div>
+    <ul>
+      <li v-for="item in lists" v-if="item.age>20"> {{item.name}}</li>
+
+    </ul>
+  </div>
+
+
+</div>
+
+
+<script>
+
+  new Vue({
+
+    el: main,
+    data: {
+      div1: 'div1',
+      num1: 1,
+      lists: [{
+        name: "tom",
+        age: 34
+      }, {
+        name: "jack",
+        age: 33
+      }, {
+        name: "miller",
+        age: 3
+      }]
+
+    },
+    methods: {
+      add: function () {
+        this.num1++
+      }
+    }
+  })
+
+
+</script>
+
+<style>
+  #main {
+    margin-top: 100px;
+    text-align: center;
+    background-color: #deffd5;
+
+  }
+
+
+  #div {
+
+  }
+
+
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TestVue2</title>
+  <script src="https://cdn.bootcss.com/vue/2.6.8/vue.common.dev.js"></script>
+</head>
+<body>
+
+<div id="div1">
+
+  <img src="../assets/logo.png">
+  <div :id="div2">
+    {{msg}}, <br/>{{num1}},<hr/> {{msg2}}
+  </div>
+
+  <div>
+
+    <button @click="add()">点击我加一</button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+  var app = new Vue({
+    el: '#div1',
+    data: {
+      div2: 'div2',
+      msg: 'hello,你好',
+      mydata: '这个是我的值',
+      num1: 3
+
+    },
+    watch: {
+      num1: function (newvar, oldvar) {
+        console.info("new var is :" + newvar)
+        console.info("old var is : " + oldvar)
+      }
+    },
+
+    computed: {
+      msg2: function () {
+        return 'num1 : ' +this.num1 + "      ||||||||||||       data：    " + this.mydata
+      }
+    },
+
+    methods: {
+      add: function () {
+        this.num1++
+      }
+    }
+  })
+
+
+</script>
+
+
+<style>
+  #div1 {
+    margin-top: 100px;
+    text-align: center;
+
+  }
+
+</style>
+
+
+</body>
+</html>

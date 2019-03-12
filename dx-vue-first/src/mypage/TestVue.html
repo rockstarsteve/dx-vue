@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.6.8/vue.common.dev.js"></script>
+</head>
+<body>
+
+
+<div id="div1">
+  hello
+  <img src="../assets/logo.png">
+  <div id="div2">
+    {{mydata}}
+
+    <div>
+
+      {{(num1 +1)*20}}
+
+    </div>
+    {{template}}
+
+    <div v-html="template">
+
+    </div>
+
+    <a v-bind:href="uri">百度</a>
+
+    <div v-bind:id="div5">
+      你好
+    </div>
+    <div :id="div7">
+      你好7
+    </div>
+    {{num1}}
+    <button v-on:click="add()">点击我加1</button>
+    <button @click="sub()">点击我减1</button>
+
+  </div>
+
+</div>
+
+
+<script>
+  new Vue({
+    el: "#div2",
+    data: {
+      div5: 'div6',
+      div7: 'div8',
+      mydata: "hello world",
+      num1: 3,
+      template: '<div>nihao <div>',
+      uri: 'http://www.baidu.com'
+    },
+    methods: {
+
+      add: function () {
+        this.num1++
+      },
+
+      sub: function () {
+        this.num1--
+      }
+
+    }
+
+  })
+</script>
+
+<style>
+
+
+  #div1 {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  #div8 {
+    font-size: xx-large;
+    font-weight: bold;
+
+
+  }
+
+</style>
+
+
+</body>
+</html>

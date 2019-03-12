@@ -294,5 +294,29 @@ import 子组件对象 from './xxx.vue';
 
 #### 获取元素
 
-
 #### vue构建方式
+
+##### 可以啊
+
+* 第一个
+
+  * 第一个
+
+    * 好的
+
+      - 嗯
+
+        ```java
+        import com.dx.util.*
+        public class {
+        	 
+             public static void main(String[] args){
+             	System.out.print("hello world")
+             }
+        	 
+        }
+        ```
+
+  - 第二个
+
+    
