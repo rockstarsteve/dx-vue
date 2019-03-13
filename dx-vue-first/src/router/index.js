@@ -14,7 +14,7 @@ export default new Router({
     },
     {
       path: '/MyApp',
-      name: 'myapp page',
+      name: 'MyApp',
       component: MyApp
     }
   ]

@@ -1,13 +1,23 @@
 <template>
+  <div>
+    this is myapp
     <div>
-      hello my app
+      <p>{{msg}}</p>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "MyApp"
+  import store from '@/store'
+  export default {
+    name: "MyApp",
+    store,
+    data() {
+      return {
+        msg: store.state.count
+      }
     }
+  }
 </script>
 
 <style scoped>
