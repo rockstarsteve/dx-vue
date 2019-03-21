@@ -80,43 +80,24 @@
         </a>
       </li>
     </ul>
-    <router-link to="/MyPageList">MyPageList</router-link>
-    <router-link to="/MyApp">MyApp</router-link>
-    <button type="button" @click="addnum()">让count加1</button>
-    <div>
-
-      {{num1}}
-
-    </div>
-
+    <button @click="goTest()">goTest!!!!!!!</button>
   </div>
 </template>
 
 <script>
-  import store from '@/store'
-
-  export default {
-    name: 'HelloWorld',
-    store,
-    data() {
-      return {
-        num1: store.state.count,
-        msg: 'Welcome to Your Vue.js App'
-      }
-    },
-    watch: {
-      num1: function (newVar, oldVar) {
-        console.log('new var is ' + newVar)
-        console.log('old var is ' + oldVar)
-      }
-    },
-    methods: {
-      addnum() {
-        console.log("hello");
-        store.commit('increase')
-      }
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    goTest () {
+      this.$router.push('test')
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

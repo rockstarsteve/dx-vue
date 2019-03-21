@@ -34,13 +34,14 @@
       num1: 3
 
     },
+    // 侦听器
     watch: {
       num1: function (newvar, oldvar) {
         console.info("new var is :" + newvar)
         console.info("old var is : " + oldvar)
       }
     },
-
+    // 计算属性
     computed: {
       msg2: function () {
         return 'num1 : ' +this.num1 + "      ||||||||||||       data：    " + this.mydata
