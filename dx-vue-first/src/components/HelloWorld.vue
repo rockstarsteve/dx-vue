@@ -80,12 +80,11 @@
         </a>
       </li>
     </ul>
-    <router-link to="/MyApp">MyApp</router-link>
+    <router-link to="/MyApp2">跳转到MyApp2</router-link>
+    <router-link to="/MyApp">跳转到MyApp</router-link>
     <button type="button" @click="addnum()">让count加1</button>
-    <div>
-
+    <div id="numDiv">
       {{num1}}
-
     </div>
 
   </div>
@@ -109,12 +108,17 @@
         console.log('old var is ' + oldVar)
       }
     },
+    mounted() {
+      console.info("初始化完成")
+    },
     methods: {
       addnum() {
-        console.log("hello");
-        store.commit('increase')
+        console.log("将num1进行加1操作");
+        //提交更改到组件中
+        store.commit('increase');
       }
     }
+
   }
 </script>
 
@@ -137,4 +141,10 @@
   a {
     color: #42b983;
   }
+
+  #numDiv {
+    font-size: xx-large;
+    background-color: aqua;
+  }
+
 </style>

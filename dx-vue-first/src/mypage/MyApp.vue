@@ -1,6 +1,6 @@
 <template>
   <div>
-    this is myapp
+    this is myapp  ssssss!!!
     <div>
       <p>{{msg}}</p>
     </div>
