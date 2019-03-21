@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import MyApp from '@/mypage/MyApp'
 import MyPageList from '@/mypage/MyPageList'
+import MyApp2 from '@/mypage/MyApp2'
 
 Vue.use(Router)
 
