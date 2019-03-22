@@ -4,11 +4,11 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  //组件公用的状态
+  // 组件公用的状态
   state: {
     count: 0
   },
-  //定义改变状态方法
+  // 定义改变状态方法
   mutations: {
     increase () {
       this.state.count = this.state.count + 1

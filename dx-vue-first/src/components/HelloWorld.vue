@@ -84,39 +84,51 @@
     <router-link to="/MyApp">MyApp</router-link>
     <router-link to="/MyApp2">跳转到MyApp2</router-link>
     <button type="button" @click="addnum()">让count加1</button>
+    <button type="button" @click="watch1()">watch1</button>
     <div id="numDiv">
       {{num1}}
+      <!--{{num}}-->
     </div>
 
   </div>
 </template>
 
 <script>
-  import store from '@/store'
 
   export default {
     name: 'HelloWorld',
-    store,
     data() {
       return {
-        num1: store.state.count,
+        num: 23,
+        // num1: this.num,
+        num2: 33,
         msg: 'Welcome to Your Vue.js App'
       }
     },
     watch: {
       num1: function (newVar, oldVar) {
+        this.num = newVar
         console.log('new var is ' + newVar)
         console.log('old var is ' + oldVar)
       }
     },
+    computed: {
+      num1() {
+        return this.num;
+      }
+    },
     mounted() {
       console.info("初始化完成")
+      console.log()
     },
     methods: {
       addnum() {
         console.log("将num1进行加1操作");
         //提交更改到组件中
-        store.commit('increase');
+        this.$store.commit('increase');
+      },
+      watch1: function () {
+        this.num1 = this.$store.state.count
       }
     }
 

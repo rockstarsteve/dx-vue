@@ -23,6 +23,11 @@ export default new Router({
       path: '/MyPageList',
       name: 'MyPageList',
       component: MyPageList
+    },
+    {
+      path: '/MyApp2',
+      name: 'MyApp2',
+      component: MyApp2
     }
   ]
 })
