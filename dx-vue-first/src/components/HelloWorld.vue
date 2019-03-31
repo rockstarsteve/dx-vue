@@ -83,6 +83,8 @@
     <router-link to="/MyPageList">MyPageList</router-link>
     <router-link to="/MyApp">MyApp</router-link>
     <router-link to="/MyApp2">跳转到MyApp2</router-link>
+    <router-link to="/MyApp3">跳转到MyApp3</router-link>
+    <router-link to="/TestCon">跳转到TestCon</router-link>
     <button type="button" @click="addnum()">让count加1</button>
     <button type="button" @click="watch1()">watch1</button>
     <div id="numDiv">
