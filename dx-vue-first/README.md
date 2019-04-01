@@ -1,30 +1,23 @@
 # dx-vue-first
 
-> A Vue.js project
+#### 介绍
+  学习学习
 
-## Build Setup
+## 项目
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
+#### dx-vue-first
 
-# build for production and view the bundle analyzer report
-npm run build --report
+ - vue 基本
+    - data：数据定义
+    - computed ：计算属性，对一些值进行监控
+    - methods：方法，
+    - watch：侦听器，对指定值进行值的监控
+ - vuex 
+    - state：基本数据
+    - mutations：提交更改数据的方法，同步
+    - actions：像一个装饰器，包裹mutations，使之可以异步
+    - getters ：从基本数据派生的数据 
+    - modules ：模块化Vuex
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -80,16 +80,24 @@
         </a>
       </li>
     </ul>
-    <router-link to="/MyPageList">MyPageList</router-link>
-    <router-link to="/MyApp">MyApp</router-link>
-    <router-link to="/MyApp2">跳转到MyApp2</router-link>
-    <router-link to="/MyApp3">跳转到MyApp3</router-link>
-    <router-link to="/TestCon">跳转到TestCon</router-link>
+    <p class="p01">路由页面：</p>
+    <hr/><br/><br/><br/><br/><br/>
+
+    <router-link to="/MyApp">MyApp</router-link> |
+    <router-link to="/MyApp2">跳转到MyApp2</router-link> |
+    <router-link to="/MyApp3">跳转到MyApp3</router-link> |
+    <router-link to="/TestCon">跳转到TestCon</router-link> |
+    <router-link to="/CommunicationParent">跳转到CommunicationParent</router-link> |
+    <router-link to="/CommunicationParent2">跳转到CommunicationParent2</router-link> |
+
+    <br/><br/><br/><br/><hr/>
+
+
+
     <button type="button" @click="addnum()">让count加1</button>
     <button type="button" @click="watch1()">watch1</button>
     <div id="numDiv">
       {{num1}}
-      <!--{{num}}-->
     </div>
 
   </div>
@@ -101,8 +109,7 @@
     name: 'HelloWorld',
     data() {
       return {
-        num: 23,
-        // num1: this.num,
+        num: 1,
         num2: 33,
         msg: 'Welcome to Your Vue.js App'
       }
@@ -119,10 +126,6 @@
         return this.num;
       }
     },
-    mounted() {
-      console.info("初始化完成")
-      console.log()
-    },
     methods: {
       addnum() {
         console.log("将num1进行加1操作");
@@ -130,7 +133,7 @@
         this.$store.commit('increase');
       },
       watch1: function () {
-        this.num1 = this.$store.state.count
+        this.num = this.$store.state.count
       }
     }
 
@@ -161,5 +164,12 @@
     font-size: xx-large;
     background-color: aqua;
   }
+
+  .p01 {
+    text-align: left;
+    padding-left: 200px;
+    font-size: 24px;
+  }
+
 
 </style>

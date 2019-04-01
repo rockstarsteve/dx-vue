@@ -10,16 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/invoice-admin': {    //将http://xxx印射
-        target: 'http://XXX',  // 接口域名
-        // secure: false,  // 如果是https接口，需要配置这个参数
-        changeOrigin: true,  //是否跨域
-        pathRewrite: {
-          '^/proxyApi': '/'
-        }
-      }
-    },
+    // proxyTable: {
+    //   '/invoice-admin': {    //将http://xxx印射
+    //     target: 'http://XXX',  // 接口域名
+    //     // secure: false,  // 如果是https接口，需要配置这个参数
+    //     changeOrigin: true,  //是否跨域
+    //     pathRewrite: {
+    //       '^/proxyApi': '/'
+    //     }
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
