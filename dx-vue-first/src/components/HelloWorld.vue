@@ -89,6 +89,7 @@
     <router-link to="/TestCon">跳转到TestCon</router-link> |
     <router-link to="/CommunicationParent">跳转到CommunicationParent</router-link> |
     <router-link to="/CommunicationParent2">跳转到CommunicationParent2</router-link> |
+    <router-link to="/TestEl01">TestEl01</router-link> |
 
     <br/><br/><br/><br/><hr/>
 

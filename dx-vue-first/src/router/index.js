@@ -7,6 +7,7 @@ import MyApp3 from '@/mypage/MyApp3'
 import TestCon from '@/mypage/TestCon'
 import CommunicationParent from '@/mypage/CommunicationParent'
 import CommunicationParent2 from '@/mypage/CommunicationParent2'
+import TestEl01 from '@/element/TestEl01'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/CommunicationParent2',
       name: 'CommunicationParent2',
       component: CommunicationParent2
+    },
+    {
+      path: '/TestEl01',
+      name: 'TestEl01',
+      component: TestEl01
     }
   ]
 })
