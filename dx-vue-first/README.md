@@ -21,3 +21,6 @@
     - getters ：从基本数据派生的数据 
     - modules ：模块化Vuex
 
+### cron模块
+[cron模块项目引入的来源](https://gitee.com/lindeyi/vue-cron.git)
+

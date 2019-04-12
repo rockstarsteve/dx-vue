@@ -81,18 +81,30 @@
       </li>
     </ul>
     <p class="p01">路由页面：</p>
-    <hr/><br/><br/><br/><br/><br/>
+    <hr/>
+    <br/><br/><br/><br/><br/>
 
-    <router-link to="/MyApp">MyApp</router-link> |
-    <router-link to="/MyApp2">跳转到MyApp2</router-link> |
-    <router-link to="/MyApp3">跳转到MyApp3</router-link> |
-    <router-link to="/TestCon">跳转到TestCon</router-link> |
-    <router-link to="/CommunicationParent">跳转到CommunicationParent</router-link> |
-    <router-link to="/CommunicationParent2">跳转到CommunicationParent2</router-link> |
-    <router-link to="/TestEl01">TestEl01</router-link> |
+    <router-link to="/MyApp">MyApp</router-link>
+    |
+    <router-link to="/MyApp2">跳转到MyApp2</router-link>
+    |
+    <router-link to="/MyApp3">跳转到MyApp3</router-link>
+    |
+    <router-link to="/TestCon">跳转到TestCon</router-link>
+    |
+    <router-link to="/CommunicationParent">跳转到CommunicationParent</router-link>
+    |
+    <router-link to="/CommunicationParent2">跳转到CommunicationParent2</router-link>
+    |
+    <router-link to="/TestEl01">TestEl01</router-link>
+    |
+    <router-link to="/CronIndex">CronIndex</router-link>
+    |
+    <router-link to="/DomTest">DomTest</router-link>
+    |
 
-    <br/><br/><br/><br/><hr/>
-
+    <br/><br/><br/><br/>
+    <hr/>
 
 
     <button type="button" @click="addnum()">让count加1</button>
@@ -105,6 +117,7 @@
 </template>
 
 <script>
+
 
   export default {
     name: 'HelloWorld',

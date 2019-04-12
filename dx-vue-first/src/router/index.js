@@ -8,6 +8,8 @@ import TestCon from '@/mypage/TestCon'
 import CommunicationParent from '@/mypage/CommunicationParent'
 import CommunicationParent2 from '@/mypage/CommunicationParent2'
 import TestEl01 from '@/element/TestEl01'
+import CronIndex from '@/mypage/CronIndex'
+import DomTest from '@/mypage/dom/Test'
 
 Vue.use(Router)
 
@@ -52,6 +54,16 @@ export default new Router({
       path: '/TestEl01',
       name: 'TestEl01',
       component: TestEl01
+    },
+    {
+      path: '/CronIndex',
+      name: 'CronIndex',
+      component: CronIndex
+    },
+    {
+      path: '/DomTest',
+      name: 'DomTest',
+      component: DomTest
     }
   ]
 })

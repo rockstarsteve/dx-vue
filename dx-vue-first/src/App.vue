@@ -4,12 +4,23 @@
     <div id="content">
       <router-view/>
     </div>
+    <div>
+      <first-child></first-child>
+      <second-child></second-child>
+    </div>
   </div>
 </template>
 
 <script>
+  import firstChild from '@/components/AChild'
+  import secondChild from '@/components/BChild'
+
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      firstChild,
+      secondChild,
+    }
   }
 </script>
 
