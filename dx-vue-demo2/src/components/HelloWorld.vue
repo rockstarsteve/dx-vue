@@ -90,13 +90,6 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
-  methods: {
-
-    get2 : function(){
-      return "321";
-    }
-
   }
 }
 </script>
