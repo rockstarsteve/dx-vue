@@ -20,22 +20,22 @@ export default new Router({
     {
       name: 'a',
       path: '/a',
-      components: a
+      component: a
     },
     {
       name: 'b',
       path: '/b',
-      components: b
+      component: b
     },
     {
       name: 'c',
       path: '/c',
-      components: c
+      component: c
     },
     {
       name: 'd',
       path: '/d',
-      components: d
+      component: d
     }
   ]
 })
