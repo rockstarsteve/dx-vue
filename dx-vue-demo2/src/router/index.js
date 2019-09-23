@@ -7,6 +7,7 @@ import a from '@/components/a'
 import b from '@/components/b'
 import c from '@/components/c'
 import d from '@/components/d'
+import temp from '@/components/temp'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       name: 'd',
       path: '/d',
       component: d
+    },
+    {
+      name: 'temp',
+      path: '/temp',
+      component: temp
     }
   ]
 })

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="list-group">
-
       <div class="navbottom">
         <router-link to="a">跳转1</router-link>
       </div>
@@ -15,6 +14,9 @@
       </div>
       <div class="navbottom">
         <router-link to="d">跳转4</router-link>
+      </div>
+      <div class="navbottom">
+        <router-link to="temp">跳转temp</router-link>
       </div>
 
     </div>
