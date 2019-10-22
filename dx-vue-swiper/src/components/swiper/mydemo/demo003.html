@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <!--  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">-->
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <!--  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
+  <style>
+    /*.swiper-wrapper{*/
+    /*  !*background-color: greenyellow;*!*/
+    /*  height: 300px;*/
+    /*  width: 1000px;*/
+    /*}*/
+
+    /*.swiper-slide{*/
+    /*  background-color: cyan;*/
+    /*  height: 300px;*/
+    /*  width: 1000px;*/
+    /*}*/
+
+    .containt {
+      height: 300px;
+      width: 800px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="containt">
+  <div class="swiper-container" id="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../../../assets/logo.png" height="200" width="200"/></div>
+      <div class="swiper-slide"><img src="../../../assets/logo.png" height="200" width="200"/></div>
+      <div class="swiper-slide"><img src="../../../assets/logo.png" height="200" width="200"/></div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  var mySwiper = new Swiper('#swiper-container', {
+    // initialSlide: 1,
+    // direction: 'vertical',
+    // grabCursor: true,
+    // parallax: true
+    loop : true,
+    effect: 'coverflow',
+    slidesPerView: 3,
+
+    autoplay: true,
+    autoplay: {
+      disableOnInteraction: false,
+    },
+
+  });
+
+  //鼠标覆盖停止自动切换
+  mySwiper.el.onmouseover = function () {
+    mySwiper.autoplay.stop();
+  }
+
+  //鼠标移开开始自动切换
+  mySwiper.el.onmouseout = function () {
+    mySwiper.autoplay.start();
+  }
+
+</script>
+
+</body>
+</html>
