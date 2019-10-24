@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import {main, right, footer, login, error404, home} from '@/view'
+import {main, login, error404, home} from '@/view'
 
 export default new Router({
   routes: [

@@ -8,7 +8,10 @@
         @close="handleClose"
         background-color="#545c64"
         text-color="#fff"
-        active-text-color="#ffd04b">
+        active-text-color="#ffd04b"
+        :router="true"
+        @select="selectitem"
+      >
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
@@ -57,6 +60,11 @@
     mounted() {
       this.activeIndex = this.$route.meta.index;
     },
+    methods: {
+      selectitem(index) {
+        if (!index.includes('-')) this.openeds = [];
+      }
+    }
   }
 </script>
 
