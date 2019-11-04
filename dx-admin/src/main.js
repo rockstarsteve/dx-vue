@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+// import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import myplug from './utils/my.plug'
@@ -18,7 +18,7 @@ Vue.use(myplug);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  // router,
   components: { App },
   template: '<App/>'
 })

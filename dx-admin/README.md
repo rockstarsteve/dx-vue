@@ -28,3 +28,19 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
+
+
+
+
+
+## 好习惯
+
+- 一个文件夹有一个出口,用index做为中转站来访问文件夹下的内容
+
+- 父子组件传值emit popeti
+
+
