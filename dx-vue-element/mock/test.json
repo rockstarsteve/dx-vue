@@ -1,8 +1,0 @@
-{
-  "first": [
-    {"name":"tom","nick": "001"},
-    {"name":"jack","nick": "002"},
-    {"name":"smith","nick": "003"},
-    {"name":"miller","nick": "004"}
-  ]
-}
