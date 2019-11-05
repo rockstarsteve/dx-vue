@@ -1,7 +1,7 @@
 <template>
   <header
     style="display: flex;background-color: #545c64;align-items: center;justify-content: space-between;padding: 0 20px">
-    <div style="color: white;font-size: 20px">Blued后台</div>
+    <div style="color: white;font-size: 20px">后台管理</div>
     <el-menu
       class="el-menu-demo"
       mode="horizontal"

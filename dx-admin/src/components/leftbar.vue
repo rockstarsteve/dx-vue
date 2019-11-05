@@ -1,24 +1,30 @@
 <template>
-  <nav style="background: #545c64">
+  <nav style="background: #545c64;position: relative">
     <i class="cllapsebtn" :class="isCollapse?'el-icon-d-arrow-right':'el-icon-d-arrow-left'"
        @click="isCollapse=!isCollapse"></i>
     <!--        <h5>自定义颜色</h5>-->
     <el-menu
       :collapse="isCollapse"
-      :default-openeds="['1']"
-      default-active="1-1"
+      :default-openeds="[]"
+      default-active="0"
       :unique-opened="true"
       class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
-      active-text-color="#558ff2">
+      active-text-color="#558ff2"
+      :router="true"
+    >
+      <el-menu-item index="0" route="/">
+        <i class="el-icon-menu"></i>
+        <span slot="title">工作平台</span>
+      </el-menu-item>
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-s-custom"></i>
           <span>用户管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1">用户列表</el-menu-item>
+          <el-menu-item index="1-1" route="/showlist">用户列表</el-menu-item>
           <el-menu-item index="1-2">封号列表</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
@@ -53,5 +59,23 @@
 </script>
 
 <style scoped>
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
+
+  .cllapsebtn {
+    color: #fff;
+    position: absolute;
+    bottom: 100px;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+
+  ;
+  }
 
 </style>

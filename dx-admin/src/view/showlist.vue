@@ -34,7 +34,7 @@
 
 
     <el-dialog title="用户详情" :visible.sync="dialogTableVisible">
-      <el-table :data="gridData">
+      <el-table >
         <el-table-column property="name" label="姓名" width="200"></el-table-column>
         <el-table-column property="address" label="地址"></el-table-column>
         <el-table-column property="date" label="日期" width="150"></el-table-column>
@@ -87,8 +87,6 @@
         this.$get("/vue/getData", {params: {}}).then(res => {
           this.tableData = res.data;
           console.info(res.data)
-        }).then(res =>{
-          console.info("res..." + res.data)
         });
       }
     },
