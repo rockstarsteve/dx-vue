@@ -166,15 +166,22 @@
       handleLogin() {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
+            // this.loading = true
+            // this.$store.dispatch('user/login', this.loginForm)
+            //   .then(() => {
+            //     this.$router.push({path: this.redirect || '/', query: this.otherQuery})
+            //     this.loading = false
+            //   })
+            //   .catch(() => {
+            //     this.loading = false
+            //   })
             this.loading = true
-            this.$store.dispatch('user/login', this.loginForm)
-              .then(() => {
-                this.$router.push({path: this.redirect || '/', query: this.otherQuery})
-                this.loading = false
-              })
-              .catch(() => {
-                this.loading = false
-              })
+            this.loading = false
+
+            this.$router.push("/")
+
+
+
           } else {
             console.log('error submit!!')
             return false
@@ -264,7 +271,8 @@
   $light_gray: #eee;
 
   .login-container {
-    min-height: 100%;
+    /*min-height: 100%;*/
+    min-height: 100vh;
     width: 100%;
     background-color: $bg;
     overflow: hidden;
@@ -333,3 +341,7 @@
     }
   }
 </style>
+
+
+
+
