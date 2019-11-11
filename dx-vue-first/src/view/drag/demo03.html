@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">-->
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<div class="handle" style="width: 300px;height: 300px;background-color: lightsalmon;">
+  <div class="selector1" style="width:100px;height: 100px;background-color: lightseagreen;"></div>
+  <div id="test1" style="width: 100px;height: 100px;background-color: lightgreen;"></div>
+</div>
+
+<div class="cancel" style="width: 300px;height: 300px;background-color: lightcyan;">
+  <div class="selector2" style="width:100px;height: 100px;background-color: lightgrey;"></div>
+  <div id="test2" style="width: 100px;height: 100px;background-color: lightpink;"></div>
+</div>
+</body>
+<script type="text/javascript">
+
+  // $(function () {
+    //可以同时指定多个，使用逗号隔开
+    $(".handle").draggable({handle: ".selector1,#test1"});
+    $(".cancel").draggable({cancel: ".selector2,#test2"});
+  // })
+</script>
+</html>

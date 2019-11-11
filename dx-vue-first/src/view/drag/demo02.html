@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<div class="preview-toolbar">
+  <div class="bar">
+    <div class="sort-handle">toolbar</div>
+    <ul>
+      <li>样式</li>
+      <li>组件</li>
+    </ul>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var toolBar = $(".preview-toolbar");
+  // $(".sort-handle", toolBar).DragElement(toolBar);
+
+
+  $(".preview-toolbar").draggable({handle: ".bar"});
+
+</script>
+
+
+</body>
+</html>
