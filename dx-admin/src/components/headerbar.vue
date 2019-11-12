@@ -27,7 +27,9 @@
           confirmButtonText: "确定",
           cancelButtonClass: "取消",
           type: "warning"
-        }).then(()=>{
+        }).then(() => {
+          //退出
+          sessionStorage.removeItem("loginUser");
           this.$router.push("/login")
         })
       }
