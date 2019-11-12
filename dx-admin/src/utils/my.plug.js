@@ -4,6 +4,15 @@ import dateutil from '@/utils/my.date'
 export default {
   install(Vue, options) {
 
+    Vue.prototype.$success = function (message = "成功",onClose) {
+      this.$message({
+        type:"success",
+        duration: 1500,
+        message,
+        onClose
+      })
+    }
+
     Vue.prototype.$get = function (url, data) {
       return axios.get(url, data);
     }

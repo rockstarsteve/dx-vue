@@ -4,7 +4,7 @@ import Router from 'vue-router';
 
 // 按需加载
 
-import {home, showlist, erro404, main,login} from '@/view'
+import {home, showlist, erro404, main, login} from '@/view'
 
 
 Vue.use(Router);
@@ -38,6 +38,20 @@ const router = new Router({
 
 
 export default router;
+
+router.beforeEach((to, from, next) => {
+  // ...
+
+  console.log(to.fullPath !== '/login')
+  if (to.fullPath !== '/login') {
+    if (!sessionStorage.getItem("loginUser")) {
+      return next("/login");
+    }
+  }
+
+  next();
+
+})
 
 
 

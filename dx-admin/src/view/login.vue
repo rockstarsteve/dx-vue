@@ -14,7 +14,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="Username"
+          placeholder="用户名"
           name="username"
           type="text"
           tabindex="1"
@@ -32,7 +32,7 @@
             ref="password"
             v-model="loginForm.password"
             :type="passwordType"
-            placeholder="Password"
+            placeholder="密码"
             name="password"
             tabindex="2"
             autocomplete="on"
@@ -101,7 +101,7 @@
       return {
         loginForm: {
           username: 'admin',
-          password: '111111'
+          password: '123456'
         },
         loginRules: {
           username: [{required: true, trigger: 'blur', validator: validateUsername}],
@@ -175,13 +175,31 @@
             //   .catch(() => {
             //     this.loading = false
             //   })
-            this.loading = true
-            this.loading = false
-
-            this.$router.push("/")
 
 
+            if (this.loginForm.username === "admin" && this.loginForm.password === "123456") {
+              this.$success("登录成功", () => {
+                  sessionStorage.setItem("loginUser", this.loginForm.username)
+                  this.$router.push("/")
+                }
+              )
+            } else {
+              this.$message({
+                type: "error",
+                message: "登录失败",
+                onClose: () => {
+                  this.loginForm = this.username = '';
+                }
+              })
 
+            }
+
+
+            // sessionStorage.setItem("loginUser",this.loginForm.username)
+            // this.$router.push({
+            //   path: this.redirect || "/",
+            //   query: this.otherQuery
+            // })
           } else {
             console.log('error submit!!')
             return false

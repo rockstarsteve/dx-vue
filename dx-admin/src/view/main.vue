@@ -18,7 +18,7 @@
   import {headerbar, leftbar} from '@/components'
 
   export default {
-    name: "main",
+    name: "mains",
     components: {
       headerbar: headerbar,
       leftbar,
