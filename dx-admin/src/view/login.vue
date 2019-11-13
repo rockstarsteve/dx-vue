@@ -4,7 +4,7 @@
              label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">后台支撑系统</h3>
       </div>
 
       <el-form-item prop="username">
@@ -152,15 +152,8 @@
       handleLogin() {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-            // this.loading = true
-            // this.$store.dispatch('user/login', this.loginForm)
-            //   .then(() => {
-            //     this.$router.push({path: this.redirect || '/', query: this.otherQuery})
-            //     this.loading = false
-            //   })
-            //   .catch(() => {
-            //     this.loading = false
-            //   })
+
+            // this.$get("/sys/login",{params: {loginForm}}).then();
 
 
             if (this.loginForm.username === "admin" && this.loginForm.password === "123456") {
@@ -177,10 +170,7 @@
                   // this.loginForm = this.username = '';
                 }
               })
-
             }
-
-
             // sessionStorage.setItem("loginUser",this.loginForm.username)
             // this.$router.push({
             //   path: this.redirect || "/",
@@ -314,6 +304,7 @@
       position: relative;
 
       .title {
+        user-select: none;
         font-size: 26px;
         color: $light_gray;
         margin: 0px auto 40px auto;
