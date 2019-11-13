@@ -152,30 +152,18 @@
       handleLogin() {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-
-            // this.$get("/sys/login",{params: {loginForm}}).then();
-
-
-            if (this.loginForm.username === "admin" && this.loginForm.password === "123456") {
-              this.$success("登录成功", () => {
-                  sessionStorage.setItem("loginUser", this.loginForm.username)
-                  this.$router.push("/")
-                }
-              )
-            } else {
-              this.$message({
-                type: "error",
-                message: "登录失败",
-                onClose: () => {
-                  // this.loginForm = this.username = '';
-                }
-              })
-            }
-            // sessionStorage.setItem("loginUser",this.loginForm.username)
-            // this.$router.push({
-            //   path: this.redirect || "/",
-            //   query: this.otherQuery
-            // })
+            this.$post("/sys/login").then(res => {
+              if (res.data.data === "success") {
+                this.$success("登录成功!", () => {
+                  sessionStorage.setItem("loginUser", this.username);
+                  this.$router.push("/");
+                });
+              } else {
+                this.$failed("用户名或密码错误!", () => {
+                  this.password = this.username = "";
+                });
+              }
+            });
           } else {
             console.log('error submit!!')
             return false

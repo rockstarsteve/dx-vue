@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">-->
+  <!--  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+  <!--  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+
+  <script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.js"></script>
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
+
+
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      font-family: courier new, courier;
+      font-size: 12px;
+    }
+
+    .draggable {
+      border: 1px solid #ccc;
+      display: inline-block;
+      cursor: move;
+      position: absolute;
+    }
+
+    .guide {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    #guide-h {
+      border-top: 1px dashed #55f;
+      width: 100%;
+    }
+
+    #guide-v {
+      border-left: 1px dashed #55f;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div style="width: 1300px;height: 900px;border: 1px solid red;" id="contain">
+  <!--需要拖动的div-->
+  <div class="draggable" style="width: 200px;height: 200px;">第一个11111111111111div</div>
+  <div class="draggable" style="width: 150px;height: 150px;left: 500px;top: 220px;">第二个22div</div>
+  <div class="draggable" style="width: 220px;height: 220px;left: 40px;top: 400px;">第三个333333div</div>
+  <div class="draggable" style="width: 140px;height: 270px;left: 990px;top: 470px;">第四个ggdgdgdiv</div>
+  <div class="draggable" style="width: 230px;height: 90px;left: 190px;top: 250px;">第五个div</div>
+  <div class="draggable" style="width: 290px;height: 40px;left: 400px;top: 300px;">第六个div</div>
+  <!--拖动辅助线-->
+  <div id="guide-h" class="guide"></div>
+  <div id="guide-v" class="guide"></div>
+</div>
+
+<script>
+  /**
+   * 指标拖动辅助标线
+   * @author sdj
+   */
+  var MIN_DISTANCE = 8; //捕获的最小距离
+  var guides = []; // 没有可用的引导
+  var innerOffsetX, innerOffsetY;
+  $(".draggable").draggable({
+    containment: "#contain",
+
+  });
+
+</script>
+</body>
+</html>

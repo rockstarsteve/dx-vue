@@ -1,17 +1,16 @@
-
-
-
 import Mock from 'mockjs'
 
 Mock.setup({
-  timeout:'200-500'
+  timeout: '200-500'
 })
 
-import system from './system'
+import sys from './sys'
+import showList from './showList'
 
 export default {
 
-  system
+  sys,
+  showList
 
 
 }

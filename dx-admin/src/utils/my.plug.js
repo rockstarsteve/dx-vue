@@ -17,6 +17,10 @@ export default {
       return axios.get(url, data);
     }
 
+    Vue.prototype.$post = function (url, data) {
+      return axios.post(url, data);
+    }
+
     Vue.prototype.$formatTime = function (number,fomatdate) {
       return dateutil.formatTime(number,fomatdate);
     }
