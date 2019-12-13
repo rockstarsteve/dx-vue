@@ -33,14 +33,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 
-
-
-
-
 ## 好习惯
 
 - 一个文件夹有一个出口,用index做为中转站来访问文件夹下的内容
 
 - 父子组件传值emit popeti
+
+
+## 下一个任务
+使用vuex保存获取用户名称
+
 
 
