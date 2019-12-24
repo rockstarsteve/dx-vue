@@ -29,11 +29,11 @@ module.exports = {
             })
 
         // 修改images loader 添加svg处理
-        const imagesRule = config.module.rule('images')
-        imagesRule.exclude.add(resolve('src/components/svg/components/icons'))
-        config.module
-            .rule('images')
-            .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
+        // const imagesRule = config.module.rule('images')
+        // imagesRule.exclude.add(resolve('src/components/svg/components/icons'))
+        // config.module
+        //     .rule('images')
+        //     .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
     },
 
 }

@@ -13,7 +13,7 @@
     import Header from './component/header/index'
 
     export default {
-        name: "Demo1",
+        name: "Demo2",
         components:{
             Header
 

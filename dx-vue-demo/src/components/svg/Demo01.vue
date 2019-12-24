@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div class="content">
         hello world
         <svg-icon icon-class="s"/>
+
+        <svg-icon icon-class="filter" />
     </div>
 </template>
 
@@ -12,5 +14,11 @@
 </script>
 
 <style scoped>
+
+    /* svg 支持按字体的方式去动态调整图标大小，颜色等等*/
+    .content{
+        font-weight: bold;
+        font-size: xx-large;
+    }
 
 </style>
