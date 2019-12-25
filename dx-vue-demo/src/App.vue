@@ -12,7 +12,7 @@
     // import demo from './components/vue/HelloYuFa.vue'
 
      /*********************elementui测试******************/
-    import Demo from './components/element/Demo02'
+    import Demo from './components/element/Demo12'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Demo02'

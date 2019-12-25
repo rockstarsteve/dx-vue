@@ -10,11 +10,20 @@
             <el-input v-model.number="ruleForm.age"></el-input>
         </el-form-item>
         <el-form-item label="满意度" prop="value">
-            <div class="block">
+<!--            <div class="block">-->
                 <el-slider
                         v-model="ruleForm.value"
                         show-input>
                 </el-slider>
+<!--            </div>-->
+        </el-form-item>
+        <el-form-item label="评分" prop="rates">
+            <div class="block">
+                <span class="demonstration">区分颜色</span>
+                <el-rate
+                        v-model="ruleForm.rates"
+                        :colors="colors">
+                </el-rate>
             </div>
         </el-form-item>
         <el-form-item>
@@ -76,13 +85,24 @@
                     callback();
                 }
             };
+            var checkRates = (rule, value, callback) => {
+                if (!Number.isInteger(value)) {
+                    callback(new Error('请输入数字值'));
+                }else if(value<2){
+                    callback(new Error('不能小于2星'));
+                }else {
+                    callback();
+                }
+            };
             return {
                 ruleForm: {
                     pass: '',
                     checkPass: '',
                     age: '',
-                    value: 20
+                    value: 20,
+                    rates: null,
                 },
+                colors: ['#99A9BF', '#F7BA2A', '#FF9900'],  // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
                 rules: {
                     pass: [
                         {validator: validatePass, trigger: 'blur'}
@@ -95,6 +115,9 @@
                     ],
                     value: [
                         {validator: checkValue, trigger: 'blur'}
+                    ],
+                    rates: [
+                        {validator: checkRates, trigger: 'blur'}
                     ]
                 }
             };
