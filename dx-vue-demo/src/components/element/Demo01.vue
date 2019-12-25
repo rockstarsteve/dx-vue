@@ -1,7 +1,7 @@
 <template>
     <div class="content">
-        <el-form ref="form" :model="form" label-width="80px">
-            <el-form-item label="活动名称">
+        <el-form ref="form" :model="form" :rules="rules" label-width="80px">
+            <el-form-item label="活动名称" prop="name">
                 <el-input v-model="form.name"></el-input>
             </el-form-item>
             <el-form-item label="活动区域">
@@ -50,6 +50,7 @@
 
 <script>
     // element基本语法测试
+    // 表单提交时间的校验
 
     import tool from './tool'
 
@@ -66,9 +67,16 @@
                     type: [],
                     resource: '',
                     desc: ''
-                }
+                },
+                rules: {
+                    name: [
+                        { required: true, message: '请输入活动名称', trigger: 'blur' },
+                        { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+                    ],
+                },
             }
         },
+
         methods: {
             onSubmit() {
 
@@ -76,6 +84,8 @@
                     if (valid) {
                         tool.writeObj(this.form)
                         console.log('submit data: ' + this.form);
+                    }else {
+                        console.log("校验还没有通过！")
                     }
                 })
             },
