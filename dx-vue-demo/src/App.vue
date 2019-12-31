@@ -9,10 +9,10 @@
 
 <script>
     /***********************vue语法测试********************/
-    // import demo from './components/vue/HelloYuFa.vue'
+    import Demo from './components/vue/HelloYuFa6.vue'
 
      /*********************elementui测试******************/
-    import Demo from './components/element/Demo12'
+    // import Demo from './components/element/Temp'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Demo02'

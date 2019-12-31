@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .content {
+            /*background-color: pink;*/
+            width: 70%;
+            height: 500px;
+            margin: 50px;
+        }
+        .parent {
+            background-color: cyan;
+            margin: 20px;
+        }
+        .left{
+            background-color: fuchsia;
+            width: 800px;
+            height: 450px;
+            display: flex;
+        }
+        .child1 {
+            margin-top: -20px;
+            margin-left: 20px;
+            /*left: 20px;*/
+            background-color: #409EFF;
+            width: 200px;
+            height: 80px;
+            /*padding-right: 20px;*/
+            /*padding-left: 20px;*/
+        }
+        .child2 {
+            /*margin-left: 26%;*/
+            background-color: #42b983;
+            width: 300px;
+            height: 200px;
+        }
+        .right{
+            display: flex;
+            flex-direction:row-reverse
+        }
+        .child3{
+            width: 100px;
+            height: 100px;
+            background-color: moccasin;
+        }
+        .child4{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+<div class="content">
+
+    <div class="parent">
+
+        <div class="left">
+
+            <div class="child1">
+                子内容1
+            </div>
+
+
+            <div class="child2">
+                子内容2
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="child3">
+                子内容3
+            </div>
+            <div class="child4">
+                子内容4
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
