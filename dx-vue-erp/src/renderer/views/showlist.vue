@@ -46,50 +46,45 @@
 
 <script>
   export default {
-    name: "showlist",
-    data() {
+    name: 'showlist',
+    data () {
       return {
         dialogTableVisible: false,
         tableData: []
       }
     },
-    created() {
+    created () {
       this.getShowList()
     },
     methods: {
-      collapseChange(val) {
+      collapseChange (val) {
         if (val) {
           this.leftWith = 65
         } else {
           this.leftWith = 201
         }
       },
-      handleEdit(i, j) {
-
-        this.dialogTableVisible=true;
-
-
+      handleEdit (i, j) {
+        this.dialogTableVisible = true
       },
-      handleDelete(i, j) {
+      handleDelete (i, j) {
         console.info(i, j)
 
         this.$message({
-          type:'success',
-          message: "删除成功"
+          type: 'success',
+          message: '删除成功'
         })
-
       },
-      fomatDate(format) {
+      fomatDate (format) {
         format = format + ''
-        return this.$formatTime(format.substring(0, format.length - 3), 'Y/M/D h:m:s');
+        return this.$formatTime(format.substring(0, format.length - 3), 'Y/M/D h:m:s')
       },
-      getShowList() {
-        this.$get("/vue/getData", {params: {}}).then(res => {
-          this.tableData = res.data.data;
-          console.info("shuju shi :" + res.data)
-        });
+      getShowList () {
+        this.$get('/vue/getData', {params: {}}).then(res => {
+          this.tableData = res.data.data
+        })
       }
-    },
+    }
   }
 </script>
 

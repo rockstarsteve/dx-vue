@@ -7,10 +7,10 @@
 
 <script>
   export default {
-    name: "404",
+    name: '404',
     methods: {
-      goBackWorkSapce() {
-        this.$router.push("/")
+      goBackWorkSapce () {
+        this.$router.push('/')
       }
     }
   }
