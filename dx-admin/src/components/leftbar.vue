@@ -31,11 +31,11 @@
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>内容管理</span>
+          <span>进销存管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1">用户列表</el-menu-item>
-          <el-menu-item index="2-2">封号列表</el-menu-item>
+          <el-menu-item index="2-1">产品入库管理</el-menu-item>
+          <el-menu-item index="2-2">订单管理</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

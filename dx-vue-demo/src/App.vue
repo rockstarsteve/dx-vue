@@ -9,7 +9,7 @@
 
 <script>
     /***********************vue语法测试********************/
-    import Demo from './components/vue/HelloYuFa6.vue'
+    // import Demo from './components/vue/HelloYuFa5.vue'
 
      /*********************elementui测试******************/
     // import Demo from './components/element/Temp'
@@ -19,6 +19,14 @@
 
     /***********************svg测试********************/
     // import Demo from './components/svg/Demo01'
+
+    /***********************vueqr测试********************/
+    // import Demo from './components/vueqr/Demo01'
+
+    /***********************echarts测试********************/
+    import Demo from './components/echarts/Demo03'
+
+
 
     export default {
         name: 'app',

@@ -12,6 +12,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
+//echarts
+// import echarts from 'echarts'
+// Vue.prototype.echarts = echarts;
+
 
 // swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'

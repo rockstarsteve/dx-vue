@@ -153,7 +153,7 @@
       handleLogin () {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-            this.$post('/sys/login').then(res => {
+            this.$post('/erp/goods/sys/login').then(res => {
               if (res.data.data === 'success') {
                 this.$success('登录成功!', () => {
                   sessionStorage.setItem('loginUser', this.username)

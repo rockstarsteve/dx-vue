@@ -1,6 +1,6 @@
 export default {
   CONSTANT: {
-    // BASEURL: 'http://localhost:8085'
-    BASEURL: '/'
+    BASEURL: 'http://122.51.181.164:8080'
+    // BASEURL: '/'
   }
 }

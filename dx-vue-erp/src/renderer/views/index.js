@@ -8,3 +8,7 @@ export const erro404 = () => import('./404.vue')
 export const main = () => import('./main.vue')
 
 export const login = () => import('./login.vue')
+
+export const showGoods = () => import('./showGoods.vue')
+
+export const showOrder = () => import('./showOrder.vue')

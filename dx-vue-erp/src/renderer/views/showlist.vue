@@ -80,7 +80,7 @@
         return this.$formatTime(format.substring(0, format.length - 3), 'Y/M/D h:m:s')
       },
       getShowList () {
-        this.$get('/vue/getData', {params: {}}).then(res => {
+        this.$post('/erp/goods/vue/getData', {params: {}}).then(res => {
           this.tableData = res.data.data
         })
       }

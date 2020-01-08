@@ -25,10 +25,10 @@
     /**
      * 使用插槽
      */
-    import alertBox from './component/alertBox'
-    import tabHome from './component/tabHome'
-    import tabPosts from './component/tabPosts'
-    import tabArchive from './component/tabArchive'
+    import alertBox from '../component/alertBox'
+    import tabHome from '../component/tabHome'
+    import tabPosts from '../component/tabPosts'
+    import tabArchive from '../component/tabArchive'
 
     export default {
         name: 'HelloYuFa5',
@@ -70,7 +70,7 @@
         border-top-right-radius: 3px;
         border: 1px solid #ccc;
         cursor: pointer;
-        background: #f0f0f0;
+        background-color: #409EFF;
         margin-bottom: -1px;
         margin-right: -1px;
     }
