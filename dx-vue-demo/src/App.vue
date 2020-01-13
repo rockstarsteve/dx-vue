@@ -9,7 +9,7 @@
 
 <script>
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/HelloYuFa5.vue'
+    import Demo from './components/vue/Demo07.vue'
 
      /*********************elementui测试******************/
     // import Demo from './components/element/Temp'
@@ -24,7 +24,13 @@
     // import Demo from './components/vueqr/Demo01'
 
     /***********************echarts测试********************/
-    import Demo from './components/echarts/Demo03'
+    // import Demo from './components/echarts/Demo01'
+
+    /***********************事件监听测试********************/
+    // /import Demo from './components/monitor/Demo02'
+
+    /***********************base64js测试********************/
+    // import Demo from './components/base64/Demo03'
 
 
 

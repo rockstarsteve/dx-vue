@@ -27,9 +27,22 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 import '@/components/svg/components/icons'
 
 
+// vue-router
+// import router from '@/router/index'
+
+//vue 项目在路由切换的时候调用
+// router.beforeEach(function (to,from,next){
+//   //console.log('url1:', document.URL);
+//   setTimeout(function (){
+//     //console.log('url2:', document.URL);
+//
+//     next();
+//     //console.log('to:', to, 'from:', from, 'URL:', document.URL);
+//     sensors.quick("autoTrackSinglePage"); // after the next(); statement
+//   },0);
+// });
 
 new Vue({
   render: h => h(App),
+  // router
 }).$mount('#app')
-
-

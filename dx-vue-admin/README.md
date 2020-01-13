@@ -1,4 +1,4 @@
-# dx-vue-demo
+# dx-vue-admin
 
 ## Project setup
 ```
@@ -22,14 +22,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-
-
-子组件向父组件传递方法时候：
-    使用v-on或@的事件绑定才能让父组件接受到子组件的方法,使用方法传递参数
-
-
-
-外部js：
-    - 神策埋点的js
