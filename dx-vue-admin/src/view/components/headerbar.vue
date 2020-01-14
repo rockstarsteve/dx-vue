@@ -10,17 +10,15 @@
                 background-color="#545c64"
                 text-color="#fff"
                 active-text-color="#ffd04b">
-            <el-menu-item index="0" route="/">
+            <el-menu-item index="0" @click="goToRule('')" route="/">
                 <i class="el-icon-menu"></i>
-                <span slot="title" @click="goToRule('')">工作平台</span>
+                <span slot="title">工作平台</span>
             </el-menu-item>
-<!--            <router-link :to="/showlist">-->
-                <el-menu-item index="1" @click="goToRule('showlist')">列表展示</el-menu-item>
-<!--            </router-link>-->
+            <el-menu-item index="1" @click="goToRule('showlist')">列表展示</el-menu-item>
             <el-submenu index="2">
                 <template slot="title">进进仓管理</template>
-                <el-menu-item index="2-1" @click="goToRule('showGoods')">库存货物</el-menu-item>
-                <el-menu-item index="2-2" @click="goToRule('showOrder')">订单</el-menu-item>
+                <el-menu-item index="2-1" @click="goToRule('showGoods')">库存货物(未做完)</el-menu-item>
+                <el-menu-item index="2-2" @click="goToRule('showOrder')">订单(未做完)</el-menu-item>
             </el-submenu>
         </el-menu>
 
@@ -55,7 +53,7 @@
                 })
             },
             goToRule(url) {
-                this.$router.push({path:'/'+url})
+                this.$router.push({path: '/' + url})
             }
         }
     }

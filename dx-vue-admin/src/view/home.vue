@@ -5,7 +5,7 @@
                 <el-card class="box-card">
                     <div slot="header" class="clearfix">
                         <span>{{item.title}}</span>
-                        <el-button style="float: right; padding: 3px 0" type="text">无效的操作按钮</el-button>
+                        <el-button style="float: right; padding: 3px 0" @click="goToDetail()" type="text">查看列表</el-button>
                     </div>
                     {{item.count}}
                 </el-card>
@@ -21,22 +21,23 @@
             return {
                 listData: [
                     {
-                        title: "昨日增加人数",
-                        count: "44"
+                        title: "昨日进库数",
+                        count: "44",
+                        name: ""
                     },
                     {
-                        title: "阅读数",
-                        count: "23,444"
+                        title: "总数量",
+                        count: "23,444",
+                        name: ""
                     }
                 ]
             }
         },
-        // created() {
-        //     this.$post("/showList/getCont").then(res => {
-        //         this.listData = res.data.data
-        //     })
-        //
-        // }
+        methods: {
+            goToDetail(){
+                this.$router.push("/showList")
+            }
+        }
     }
 </script>
 
