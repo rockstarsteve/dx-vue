@@ -1,15 +1,99 @@
 <template>
-    <div>
+    <div class="main">
         <el-breadcrumb separator-class="el-icon-arrow-right" style="margin: 10px 0px">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item>列表展示</el-breadcrumb-item>
         </el-breadcrumb>
-        <el-table :data="tableData" ref="myTable"
+        <el-row :gutter="10" class="mb8">
+            <el-col :span="1.5">
+                <el-button
+                        type="primary"
+                        icon="el-icon-plus"
+                        size="mini"
+                        @click="handleAdd"
+                >新增
+                </el-button>
+            </el-col>
+            <el-col :span="1.5">
+                <el-button
+                        type="danger"
+                        icon="el-icon-delete"
+                        size="mini"
+                        @click="handleDelete2()"
+                >删除
+                </el-button>
+            </el-col>
+            <el-col :span="1.5">
+                <el-form  ref="queryForm" :inline="true" label-width="68px">
+                    <el-form-item label="名称" prop="code">
+                        <el-input
+                                placeholder="请输入名称"
+                                clearable
+                                size="small"
+                        />
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" icon="el-icon-search" size="mini">搜索</el-button>
+                        <el-button icon="el-icon-refresh" size="mini" >重置</el-button>
+                    </el-form-item>
+                </el-form>
+            </el-col>
+        </el-row>
+
+        <el-table :data="tableData" ref="myTable" class="main-table"
+                  border
+                  row-style="height:0"
+                  cell-style="padding:0"
                   highlight-current-row
-                  border style="width: 100%;margin: 20px 0px"
                   @row-click="clickTableRow"
                   @row-contextmenu="rightClick"
         >
+            <el-table-column
+                    type="selection"
+                    width="55">
+            </el-table-column>
+            <el-table-column prop="name" label="姓名" width="180"></el-table-column>
+            <el-table-column prop="address" label="地址"></el-table-column>
+            <el-table-column label="日期">
+                <template slot-scope="scope">
+                    <i class="el-icon-time"></i>
+                    <span style="margin-left: 10px">
+                        {{ fomatDate(scope.row.birthDay) }}
+                      </span>
+                </template>
+            </el-table-column>
+            <el-table-column label="操作" width="180">
+                <template slot-scope="scope">
+                    <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index, scope.row)">详情
+                    </el-button>
+                    <el-button
+                            size="mini"
+                            type="danger"
+                            @click="handleDelete(scope.$index, scope.row)">删除
+                    </el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+        <el-pagination
+                background
+                layout="prev, pager, next"
+                :total="1000">
+        </el-pagination>
+
+        <div class="centerDiv"></div>
+
+        <el-table :data="tableData2" ref="myTable2" class="main-table"
+                  border
+                  row-style="height:0"
+                  cell-style="padding:0"
+                  highlight-current-row
+        >
+            <el-table-column
+                    type="selection"
+                    width="55">
+            </el-table-column>
             <el-table-column prop="name" label="姓名" width="180"></el-table-column>
             <el-table-column prop="address" label="地址"></el-table-column>
             <el-table-column label="日期">
@@ -67,20 +151,170 @@
                 gridData: [],
                 radio: null,
                 dialogTableVisible: false,
-                tableData: [],
+                tableData: [
+                    {
+                        "id": "03",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "04",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "04",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360719
+                    },
+                    {
+                        "id": "05",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "06",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "07",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "08",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360719
+                    },
+                    {
+                        "id": "08",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "09",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "10",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    }
+                ],
+                tableData2: [
+                    {
+                        "id": "03",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "04",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "04",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360719
+                    },
+                    {
+                        "id": "05",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "06",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "07",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "08",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360719
+                    },
+                    {
+                        "id": "08",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "09",
+                        "name": "tom",
+                        "nick": "tom001",
+                        "address": "湖南",
+                        "birthDay": 1577983360720
+                    },
+                    {
+                        "id": "10",
+                        "name": "tom2",
+                        "nick": "tom002",
+                        "address": "湖北",
+                        "birthDay": 1577983360720
+                    }
+                ],
+                current: 1,
                 cuurrentFlag: 0,
+                cuurrentFlag2: 0,
                 menus: ['详细信息', '方案分析', '方案存库', '清除方案'],
                 currentRowIndex: 0, // 获取当前右键点击的table行下标
             }
         },
         created() {
-            this.getShowList()
             document.addEventListener('keydown', this.listenKey);
         },
         beforeDestroy() {
             document.removeEventListener('keydown', this.listenKey);
         },
         methods: {
+            handleDelete2(){
+                alert("删除")
+            },
+            handleAdd(){
+              alert("新增")
+            },
             listenKey(evt) {
                 let _this = this;
                 evt = (evt) ? evt : ((window.event) ? window.event : "");//兼容IE和Firefox获得keyBoardEvent对象
@@ -90,41 +324,88 @@
 
                 // 上键处理
                 if (_key === 38) {
-                    //up
-                    this.cuurrentFlag = this.cuurrentFlag - 1
-                    if (this.cuurrentFlag < 0) {
-                        this.cuurrentFlag = this.tableData.length - 1
+
+                    if (this.current == 1) {
+                        //up
+                        this.cuurrentFlag = this.cuurrentFlag - 1
+                        if (this.cuurrentFlag < 0) {
+                            this.cuurrentFlag = this.tableData.length - 1
+                        }
+                        this.$refs.myTable.setCurrentRow(this.tableData[this.cuurrentFlag]);
+                    }else {
+                        //up
+                        this.cuurrentFlag2 = this.cuurrentFlag2 - 1
+                        if (this.cuurrentFlag2 < 0) {
+                            this.cuurrentFlag2 = this.tableData.length - 1
+                        }
+                        this.$refs.myTable2.setCurrentRow(this.tableData2[this.cuurrentFlag2]);
                     }
-                    this.$refs.myTable.setCurrentRow(this.tableData[this.cuurrentFlag]);
+
+
                 }
                 // 下键处理
                 if (_key === 40) {
                     //down
-                    this.cuurrentFlag = this.cuurrentFlag + 1
-                    if (this.cuurrentFlag >= (this.tableData.length)) {
-                        this.cuurrentFlag = 0
+                    if (this.current == 1) {
+                        this.cuurrentFlag = this.cuurrentFlag + 1
+                        if (this.cuurrentFlag >= (this.tableData.length)) {
+                            this.cuurrentFlag = 0
+                        }
+                        this.$refs.myTable.setCurrentRow(this.tableData[this.cuurrentFlag]);
+                    }else {
+                        this.cuurrentFlag2 = this.cuurrentFlag2 + 1
+                        if (this.cuurrentFlag2 >= (this.tableData2.length)) {
+                            this.cuurrentFlag2 = 0
+                        }
+                        this.$refs.myTable2.setCurrentRow(this.tableData2[this.cuurrentFlag2]);
                     }
-                    this.$refs.myTable.setCurrentRow(this.tableData[this.cuurrentFlag]);
                 }
 
                 // 回车键处理
                 if (_key === 13) {
                     //down
-                    if (this.dialogTableVisible){
-                        this.dialogTableVisible = false
-                    } else {
-                        this.handleEdit(this.cuurrentFlag,this.tableData[this.cuurrentFlag])
+                    if (this.current == 1) {
+                        if (this.dialogTableVisible) {
+                            this.dialogTableVisible = false
+                        } else {
+                            this.handleEdit(this.cuurrentFlag, this.tableData[this.cuurrentFlag])
+                        }
+                    }else {
+                        if (this.dialogTableVisible2) {
+                            this.dialogTableVisible2 = false
+                        } else {
+                            this.handleEdit(this.cuurrentFlag2, this.tableData2[this.cuurrentFlag2])
+                        }
                     }
 
                 }
 
+                // 回车键处理
+                if (_key === 9) {
+                    console.log("tab")
+                    if (this.current == 1){
+                        this.current = 2
+                        // document.getElementById('myTable2').focus()
+                        // this.$refs.myTable2.focus()
+                        document.getElementsByTagName("input").blur();
+                        // $("input").blur();
+                    } else {
+                        this.current = 1
+                        // document.getElementById('myTable').focus()
+                        // this.$refs.myTable.focus()
+                        document.getElementsByTagName("input").blur();
+                    }
+                }
 
             },
+            /**
+             *
+             * @param i
+             * @param j
+             */
             handleEdit(i, j) {
-
                 this.gridData = []
                 let temp = new Object()
-                // temp.name =
                 this.gridData.push(j)
 
                 this.dialogTableVisible = true;
@@ -139,12 +420,6 @@
             fomatDate(format) {
                 format = format + ''
                 return this.$formatTime(format.substring(0, format.length - 3), 'Y/M/D h:m:s');
-            },
-            getShowList() {
-                this.$get("/vue/getData", {params: {}}).then(res => {
-                    this.tableData = res.data.data;
-                    this.$refs.myTable.setCurrentRow(this.tableData[this.cuurrentFlag]);
-                });
             },
 
             // 自定义菜单的点击事件
@@ -162,7 +437,7 @@
             clickTableRow(row, column, event) {
                 var menu = document.querySelector("#menu");
                 menu.style.display = 'none';
-                console.log(row,column,event)
+                console.log(row, column, event)
                 this.tableData.forEach((item, index) => {
                     if (row.id === item.id) {
                         this.radio = index;
@@ -171,7 +446,6 @@
                         this.$refs.myTable.setCurrentRow(this.tableData[index]);
                     }
                 })
-
 
 
             },
@@ -201,7 +475,19 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+    .main{
+        .el-form-item{
+            margin-bottom: 0px !important;
+        }
+        .centerDiv{
+            height: 100px;
+            width: 100%;
+            border: 2px solid blue;
+        }
+    }
+
     #menu {
         width: 120px;
         height: 100px;
