@@ -34,7 +34,7 @@
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" icon="el-icon-search" size="mini">搜索</el-button>
-                        <el-button icon="el-icon-refresh" size="mini" >重置</el-button>
+                        <el-button id="resetbtn" icon="el-icon-refresh" size="mini" >重置</el-button>
                     </el-form-item>
                 </el-form>
             </el-col>
@@ -42,6 +42,7 @@
 
         <el-table :data="tableData" ref="myTable" class="main-table"
                   border
+                  height="200"
                   row-style="height:0"
                   cell-style="padding:0"
                   highlight-current-row
@@ -82,9 +83,10 @@
                 :total="1000">
         </el-pagination>
 
-        <div class="centerDiv"></div>
+        <div class="centerDiv">这里可以添加一些信息进来</div>
 
         <el-table :data="tableData2" ref="myTable2" class="main-table"
+                  height="200"
                   border
                   row-style="height:0"
                   cell-style="padding:0"
@@ -154,7 +156,7 @@
                 tableData: [
                     {
                         "id": "03",
-                        "name": "tom",
+                        "name": "tom1",
                         "nick": "tom001",
                         "address": "湖南",
                         "birthDay": 1577983360720
@@ -168,57 +170,57 @@
                     },
                     {
                         "id": "04",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom3",
+                        "nick": "tom003",
                         "address": "湖南",
                         "birthDay": 1577983360719
                     },
                     {
                         "id": "05",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom4",
+                        "nick": "tom004",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "06",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom5",
+                        "nick": "tom005",
                         "address": "湖南",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "07",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom6",
+                        "nick": "tom006",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "08",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom7",
+                        "nick": "tom007",
                         "address": "湖南",
                         "birthDay": 1577983360719
                     },
                     {
                         "id": "08",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom8",
+                        "nick": "tom008",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "09",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom9",
+                        "nick": "tom009",
                         "address": "湖南",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "10",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "to102",
+                        "nick": "tom0010",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     }
@@ -226,7 +228,7 @@
                 tableData2: [
                     {
                         "id": "03",
-                        "name": "tom",
+                        "name": "tom1",
                         "nick": "tom001",
                         "address": "湖南",
                         "birthDay": 1577983360720
@@ -240,57 +242,57 @@
                     },
                     {
                         "id": "04",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom3",
+                        "nick": "tom003",
                         "address": "湖南",
                         "birthDay": 1577983360719
                     },
                     {
                         "id": "05",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom4",
+                        "nick": "tom004",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "06",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom5",
+                        "nick": "tom005",
                         "address": "湖南",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "07",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom6",
+                        "nick": "tom006",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "08",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom7",
+                        "nick": "tom007",
                         "address": "湖南",
                         "birthDay": 1577983360719
                     },
                     {
                         "id": "08",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "tom8",
+                        "nick": "tom008",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "09",
-                        "name": "tom",
-                        "nick": "tom001",
+                        "name": "tom9",
+                        "nick": "tom009",
                         "address": "湖南",
                         "birthDay": 1577983360720
                     },
                     {
                         "id": "10",
-                        "name": "tom2",
-                        "nick": "tom002",
+                        "name": "to102",
+                        "nick": "tom0010",
                         "address": "湖北",
                         "birthDay": 1577983360720
                     }
@@ -364,6 +366,7 @@
                 // 回车键处理
                 if (_key === 13) {
                     //down
+                    console.log("切换！")
                     if (this.current == 1) {
                         if (this.dialogTableVisible) {
                             this.dialogTableVisible = false
@@ -371,8 +374,8 @@
                             this.handleEdit(this.cuurrentFlag, this.tableData[this.cuurrentFlag])
                         }
                     }else {
-                        if (this.dialogTableVisible2) {
-                            this.dialogTableVisible2 = false
+                        if (this.dialogTableVisible) {
+                            this.dialogTableVisible = false
                         } else {
                             this.handleEdit(this.cuurrentFlag2, this.tableData2[this.cuurrentFlag2])
                         }
@@ -380,8 +383,9 @@
 
                 }
 
-                // 回车键处理
+                // tab键处理
                 if (_key === 9) {
+                    document.getElementById("resetbtn").focus()
                     console.log("tab")
                     if (this.current == 1){
                         this.current = 2
