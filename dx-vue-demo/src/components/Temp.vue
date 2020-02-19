@@ -9,6 +9,8 @@
 
         <div v-bind:style="styleObject">123</div>
 
+        <button v-on:click="greet">Greet</button>
+
     </div>
 </template>
 
@@ -17,6 +19,7 @@
         name: "Temp",
         data() {
             return {
+                name: 'tom',
                 message: 'hello,world',
                 num: 0,
                 styleObject: {
@@ -25,7 +28,16 @@
                 }
             }
         },
-        methods: {},
+        methods: {
+            greet: function (event) {
+                // `this` 在方法里指向当前 Vue 实例
+                alert('Hello ' + this.name + '!')
+                // `event` 是原生 DOM 事件
+                if (event) {
+                    alert(event.target.tagName)
+                }
+            }
+        },
         computed: {
             // 计算属性的 getter
             reversedMessage: function () {
@@ -39,8 +51,11 @@
 
         beforeCreate() {
 
-            let a = new Object('asdf','yyyy')
-            console.log("a:" + a)
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            var arr2 = arr.filter(function (x) {
+                return x >= 8;
+            });
+            console.log(arr2);//[1, 4, 7, 8, 9, 10]
 
             console.log("beforeCreate.....")
         },

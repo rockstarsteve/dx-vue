@@ -80,6 +80,9 @@
     .tab-button.active {
         background: #e0e0e0;
     }
+    .tab-button:focus{
+        outline: none;
+    }
     .tab {
         border: 1px solid #ccc;
         padding: 10px;

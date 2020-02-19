@@ -9,13 +9,13 @@
 
 <script>
 
-    import Demo from './components/Temp'
+    // import Demo from './components/Temp'
 
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/Demo07.vue'
+    // import Demo from './components/vue/Demo05.vue'
 
      /*********************elementui测试******************/
-    // import Demo from './components/element/Demo13'
+    // import Demo from './components/element/Demo31'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Demo02'
@@ -34,6 +34,15 @@
 
     /***********************base64js测试********************/
     // import Demo from './components/base64/Demo03'
+
+    /***********************Slider 滑块测试********************/
+    import Demo from './components/slider/Demo22'
+    // import Demo from './components/slider/components/vue-slider2-two'
+
+    /***********************软键盘测试********************/
+    // import Demo from './components/keybord/Demo01'
+
+
 
 
 
