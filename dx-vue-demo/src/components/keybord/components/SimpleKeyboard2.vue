@@ -1,5 +1,5 @@
 <template>
-    <div :class="keyboardClass"></div>
+    <div :class="keyboardClass" ></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@
     import "simple-keyboard/build/css/index.css";
 
     export default {
-        name: "SimpleKeyboard",
+        name: "SimpleKeyboard2",
         props: {
             keyboardClass: {
                 default: "simple-keyboard",
@@ -25,7 +25,8 @@
                 onChange: this.onChange,
                 onKeyPress: this.onKeyPress,
                 layout: {
-                    default: ["1 2 3", "4 5 6", "7 8 9", "- 0 删除", "关闭"],
+                    default: ["1 2 3", "4 5 6", "7 8 9", "{shift} 0 _", "{bksp}"],
+                    shift: ["! / #", "$ % ^", "& * (", "{shift} ) +", "{bksp}"]
                 },
                 theme: "hg-theme-default hg-layout-numeric numeric-theme"
             });
@@ -40,16 +41,15 @@
                 /**
                  * If you want to handle the shift and caps lock buttons
                  */
-                if (button === "删除") {
-                    this.handleShift();
-                }
-                if (button === "关闭") {
-                    this.$emit("closeBox",false)
-                    console.log("ok");
-                }
+                if (button === "{shift}" || button === "{lock}") this.handleShift();
             },
             handleShift() {
+                let currentLayout = this.keyboard.options.layoutName;
+                let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
+                this.keyboard.setOptions({
+                    layoutName: shiftToggle
+                });
             }
         },
         watch: {

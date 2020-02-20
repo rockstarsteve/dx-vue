@@ -36,11 +36,10 @@
     // import Demo from './components/base64/Demo03'
 
     /***********************Slider 滑块测试********************/
-    import Demo from './components/slider/Demo22'
-    // import Demo from './components/slider/components/vue-slider2-two'
+    // import Demo from './components/slider/Demo23'
 
     /***********************软键盘测试********************/
-    // import Demo from './components/keybord/Demo01'
+    import Demo from './components/keybord/Demo03'
 
 
 

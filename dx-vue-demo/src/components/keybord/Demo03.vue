@@ -2,24 +2,21 @@
     <div id="content">
         键盘demo：
         <input
-                ref="keybordInput"
                 :value="input"
                 class="input"
                 @input="onInputChange"
                 placeholder="请输入电话号码"
                 @focus="inputFocus()"
         >
-        <button @click="setFoucus">设置上焦点</button>
-        <SimpleKeyboard ref="keybord" @closeBox="closeBox" v-if="showFlag" @onChange="onChange" @onKeyPress="onKeyPress" :input="input"/>
+        <SimpleKeyboard v-show="showFlag" @closeBox="closeBox" @onChange="onChange" @onKeyPress="onKeyPress" :input="input"/>
     </div>
 </template>
 
 <script>
-    // import SimpleKeyboard from "./components/SimpleKeyboard";
-    import SimpleKeyboard from "./components/SimpleKeyboard";
+    import SimpleKeyboard from "./components/SimpleKeyboard3";
 
     export default {
-        name: "Demo01",
+        name: "Demo03",
         components: {
             SimpleKeyboard
         },
@@ -28,22 +25,20 @@
             showFlag: false
         }),
         methods: {
-            setFoucus() {
-                this.$refs.keybordInput.focus()
-            },
             onChange(input) {
                 this.input = input;
             },
             onKeyPress(button) {
+                console.log("button", button);
             },
             onInputChange(input) {
                 this.input = input.target.value;
             },
-            closeBox(){
-                this.showFlag = false
-            },
             inputFocus() {
                 this.showFlag = true
+            },
+            closeBox(){
+                this.showFlag = false
             },
         }
     }
