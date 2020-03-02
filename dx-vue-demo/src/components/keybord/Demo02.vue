@@ -1,54 +1,42 @@
+/**
+自定义数字键盘的
+*/
 <template>
-    <div id="content">
-        键盘demo：
-        <input
-                :value="input"
-                class="input"
-                @input="onInputChange"
-                placeholder="请输入电话号码"
-                @focus="inputFocus()"
-        >
-        <SimpleKeyboard v-if="showFlag" @onChange="onChange" @onKeyPress="onKeyPress" :input="input"/>
+    <div>
+        <input type="text" v-model="text1"/>
+        <br/>
+        <input type="text" v-model="text2" id="mykeyboard" class="keyboard" ref="mykey"/>
+
+        <input type="file"/>
+        <numberKeyBoard @remove="remove" @setVar="setVar" :classkey="'keyboard'"></numberKeyBoard>
     </div>
 </template>
-
 <script>
-    import SimpleKeyboard from "./components/SimpleKeyboard2";
+    import numberKeyBoard from "./components/keyboard002";
 
     export default {
-        name: "Demo01",
         components: {
-            SimpleKeyboard
+            numberKeyBoard
         },
-        data: () => ({
-            input: "",
-            showFlag: false
-        }),
+        data() {
+            return {
+                classkey: 'keyboard',
+                text1: '',
+                text2: ''
+            };
+        },
         methods: {
-            onChange(input) {
-                this.input = input;
+            remove() {
+                if (this.text2.length > 0) {
+                    this.text2 = this.text2.substring(0, this.text2.length - 1)
+                }
             },
-            onKeyPress(button) {
-                console.log("button", button);
-            },
-            onInputChange(input) {
-                this.input = input.target.value;
-            },
-            inputFocus() {
-                this.showFlag = true
-            },
-        }
-    }
+            setVar(innerText) {
+                this.text2 = innerText
+            }
+        },
+
+    };
 </script>
-
 <style scoped>
-    #content {
-        font-family: "Avenir", Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .simple-keyboard {
-        max-width: 850px;
-    }
 </style>

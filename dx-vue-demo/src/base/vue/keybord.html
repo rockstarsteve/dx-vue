@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pinPade</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .pinPage {
+            background: url('timg.jpeg') no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+            width: 400px;
+            height: 200px
+        }
+
+        input {
+            margin-top: 50px;
+            width: 100px;
+            height: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .inputBtnList {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 32px;
+            height: 20px;
+            /*background-color: transparent*/
+        }
+
+        input {
+            /*background-color: transparent;*/
+        }
+
+    </style>
+</head>
+<body>
+<div id="root">
+    <div class="pinPage">
+        <input type="text" v-model="currentNumber">
+        <div class="inputBtnList">
+            <button @click="traceNumber" v-for="(item, key) in buttons" :key="key">{{item}}</button>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+            el: '#root',
+            data() {
+                return {
+                    currentNumber: '',
+                    buttons: [1, 2, 3, 4, 5, 6, 7, 8, 9, 'Clear', 0, 'Undo']
+                }
+            },
+            methods: {
+                traceNumber: function (event) {
+                    const btnText = event.target.textContent
+                    if (btnText === 'Clear') {
+                        this.currentNumber = ''
+                    } else if (btnText === 'Undo') {
+                        this.currentNumber = this.currentNumber.substring(0, this.currentNumber.length - 1)
+                    } else {
+                        this.currentNumber += btnText
+                    }
+                }
+            }
+        }
+    )
+</script>
+</body>
+</html>

@@ -1,17 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>pinPade</title>
+    <title>Title</title>
 </head>
 <body>
-<div id="root">
-    <div class="pinPage">
-        <input type="text" v-model="currentNumber">
-        <div class="inputBtnList">
-            <button @click="traceNumber" v-for="(item, key) in buttons" :key="key">{{item}}</button>
-        </div>
-    </div>
-</div>
+es6中set对象
+
 <script>
     // ## 初始化
     // 例一 可以接受一个数组作为参数
@@ -22,7 +17,7 @@
 
     console.log("要打印的set日志是：" + set)
 
-    // ...将一个数组转为用逗号分隔的参数序列
+    // ...将一个数组转为用逗号分隔的参数序列(其实就是把set转换为数组)
     console.log([...set]);
 
     let temp = [...set]
@@ -30,5 +25,6 @@
     console.log("要打印的temp日志是：" + temp)
 
 </script>
+
 </body>
 </html>

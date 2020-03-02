@@ -1,3 +1,7 @@
+/**
+第三方组件
+数字键盘
+*/
 <template>
     <div id="content">
         键盘demo：

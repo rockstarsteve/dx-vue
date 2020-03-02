@@ -1,5 +1,9 @@
+/**
+第三方组件
+默认的数字键盘
+*/
 <template>
-    <div :class="keyboardClass" ></div>
+    <div :class="keyboardClass"></div>
 </template>
 
 <script>

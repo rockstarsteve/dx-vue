@@ -1,3 +1,7 @@
+/**
+第三方组件
+数字键盘,修改了配置，见2标准的
+*/
 <template>
     <div :class="keyboardClass"></div>
 </template>

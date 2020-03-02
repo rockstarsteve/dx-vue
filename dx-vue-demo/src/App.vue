@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-<!--        <img alt="Vue logo" src="./assets/logo.png">-->
-<!--        <hr/>-->
-<!--        <hello-yu-fa msg="Welcome to Your Vue.js App"/>-->
+        <!--        <img alt="Vue logo" src="./assets/logo.png">-->
+        <!--        <hr/>-->
+        <!--        <hello-yu-fa msg="Welcome to Your Vue.js App"/>-->
         <demo/>
     </div>
 </template>
@@ -11,11 +11,14 @@
 
     // import Demo from './components/Temp'
 
+    /**********************错误复现********************/
+    // import Demo from './components/erro/Demo01'
+
     /***********************vue语法测试********************/
     // import Demo from './components/vue/Demo05.vue'
 
-     /*********************elementui测试******************/
-    // import Demo from './components/element/Demo31'
+    /*********************elementui测试******************/
+    // import Demo from './components/element/Demo41'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Demo02'
@@ -39,10 +42,14 @@
     // import Demo from './components/slider/Demo23'
 
     /***********************软键盘测试********************/
-    import Demo from './components/keybord/Demo03'
+    // import Demo from './components/keybord/Demo05'
 
 
+    /**********************弹框********************/
+    // import Demo from './components/dialog/Demo01'
 
+    /**********************axios********************/
+    import Demo from './components/axios/Demo01'
 
 
     export default {
@@ -54,10 +61,11 @@
 </script>
 
 <style>
-    body{
+    body {
         margin: 0px;
         padding: 0px;
     }
+
     #app {
         width: 100%;
         height: 100%;
