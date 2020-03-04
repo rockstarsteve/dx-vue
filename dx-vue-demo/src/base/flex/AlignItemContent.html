@@ -21,6 +21,14 @@
 </div>
 
 
+主轴是y的flex
+<div id="main3">
+    <div class="div31" style="background-color:coral;"></div>
+    <div class="div32" style="background-color:lightblue;"></div>
+    <div class="div33" style="background-color:pink;"></div>
+</div>
+
+
 <style>
     #main {
         width: 140px;
@@ -28,7 +36,7 @@
         border: 1px solid #c3c3c3;
         display: flex;
         flex-wrap: wrap;
-        align-content: center;/*控制垂直的排列方式  ，，，这个只有当元素为列排列的时候才生效*/
+        align-content: center; /*控制垂直的排列方式  ，，，这个只有当元素为列排列的时候才生效*/
     }
 
     #main div {
@@ -41,7 +49,7 @@
         height: 600px;
         border: 1px solid #c3c3c3;
         display: flex;
-        align-items: center;/*控制垂直的排列方式 ，，，这个只有当元素为行排列的时候才生效*/
+        align-items: center; /*控制垂直的排列方式 ，，，这个只有当元素为行排列的时候才生效*/
     }
 
     #main2 .div1 {
@@ -55,6 +63,31 @@
     }
 
     #main2 .div3 {
+        width: 300px;
+        height: 30px;
+    }
+
+
+    #main3 {
+        width: 1000px;
+        height: 600px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;   /*根据主轴来控制的*/
+    }
+
+    #main3 .div31 {
+        width: 190px;
+        height: 100px;
+    }
+
+    #main3 .div32 {
+        width: 150px;
+        height: 150px;
+    }
+
+    #main3 .div33 {
         width: 300px;
         height: 30px;
     }
