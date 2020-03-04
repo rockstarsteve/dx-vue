@@ -11,6 +11,9 @@
      */
     export default {
         name: "alertBox",
+        created() {
+            console.log("alertBox初始化请求后台")
+        }
 
     }
 </script>

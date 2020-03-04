@@ -4,7 +4,10 @@
 
 <script>
     export default {
-        name: "tabHome"
+        name: "tabHome",
+        created() {
+            console.log("tabHome初始化请求后台")
+        }
     }
 </script>
 

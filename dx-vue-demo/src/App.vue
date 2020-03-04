@@ -15,10 +15,10 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/Demo05.vue'
+    // import Demo from './components/vue/Sync'
 
     /*********************elementui测试******************/
-    // import Demo from './components/element/Demo41'
+    // import Demo from './components/element/Temp'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Demo02'
@@ -27,7 +27,7 @@
     // import Demo from './components/svg/Demo01'
 
     /***********************vueqr测试********************/
-    // import Demo from './components/vueqr/Demo01'
+    // import Demo from './components/vueqr/Simple'
 
     /***********************echarts测试********************/
     // import Demo from './components/echarts/Demo01'
@@ -44,12 +44,17 @@
     /***********************软键盘测试********************/
     // import Demo from './components/keybord/Demo05'
 
-
     /**********************弹框********************/
     // import Demo from './components/dialog/Demo01'
 
     /**********************axios********************/
-    import Demo from './components/axios/Demo01'
+    // import Demo from './components/axios/Demo01'
+
+    /***********************ajv语法测试********************/
+    // import Demo from './components/ajv/Simple'
+
+    /***********************animate语法测试********************/
+    import Demo from './components/animate/Simple'
 
 
     export default {

@@ -1,6 +1,5 @@
 <template>
     <div class="hello">
-
         <div>
             <alert-box>
                 Something bad happened.
@@ -14,24 +13,23 @@
                         v-on:click="currentTab = tab.path">
                     {{ tab.name }}
                 </button>
-
-                <component :is="currentTabComponent" class="tab"></component>
+                <keep-alive>
+                    <component :is="currentTabComponent" class="tab"></component>
+                </keep-alive>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    /**
-     * 使用插槽
-     */
+    // componet
     import alertBox from '../component/alertBox'
     import tabHome from '../component/tabHome'
     import tabPosts from '../component/tabPosts'
     import tabArchive from '../component/tabArchive'
 
     export default {
-        name: 'HelloYuFa5',
+        name: 'Tabs',
         components: {
             alertBox,
             home: tabHome,
@@ -54,7 +52,7 @@
                 }]
             }
         },
-        computed:{
+        computed: {
             currentTabComponent: function () {
                 return this.currentTab
             }
@@ -74,15 +72,19 @@
         margin-bottom: -1px;
         margin-right: -1px;
     }
+
     .tab-button:hover {
         background: #e0e0e0;
     }
+
     .tab-button.active {
         background: #e0e0e0;
     }
-    .tab-button:focus{
+
+    .tab-button:focus {
         outline: none;
     }
+
     .tab {
         border: 1px solid #ccc;
         padding: 10px;

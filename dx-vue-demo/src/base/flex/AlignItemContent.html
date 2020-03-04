@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+换行的flex
+<div id="main">
+    <div style="background-color:coral;"></div>
+    <div style="background-color:lightblue;"></div>
+    <div style="background-color:pink;"></div>
+</div>
+
+<br/>
+不换行的flex
+<div id="main2">
+    <div class="div1" style="background-color:coral;"></div>
+    <div class="div2" style="background-color:lightblue;"></div>
+    <div class="div3" style="background-color:pink;"></div>
+</div>
+
+
+<style>
+    #main {
+        width: 140px;
+        height: 300px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;/*控制垂直的排列方式  ，，，这个只有当元素为列排列的时候才生效*/
+    }
+
+    #main div {
+        width: 70px;
+        height: 70px;
+    }
+
+    #main2 {
+        width: 1000px;
+        height: 600px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: center;/*控制垂直的排列方式 ，，，这个只有当元素为行排列的时候才生效*/
+    }
+
+    #main2 .div1 {
+        width: 190px;
+        height: 150px;
+    }
+
+    #main2 .div2 {
+        width: 150px;
+        height: 450px;
+    }
+
+    #main2 .div3 {
+        width: 300px;
+        height: 30px;
+    }
+</style>
+</body>
+</html>
