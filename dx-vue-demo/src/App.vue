@@ -18,10 +18,10 @@
     // import Demo from './components/vue/Sync'
 
     /*********************elementui测试******************/
-    // import Demo from './components/element/Temp'
+    // import Demo from './components/element/Dialog'
 
     /***********************swiper测试********************/
-    // import Demo from './components/swiper/Demo02'
+    import Demo from './components/swiper/Pagination'
 
     /***********************svg测试********************/
     // import Demo from './components/svg/Demo01'
@@ -54,7 +54,7 @@
     // import Demo from './components/ajv/Simple'
 
     /***********************animate语法测试********************/
-    import Demo from './components/animate/Simple'
+    // import Demo from './components/animate/Simple'
 
 
     export default {

@@ -2,15 +2,15 @@
     <div class="content">
         <swiper :options="swiperOption" ref="mySwiper" >
             <!-- slides -->
-            <swiper-slide>I'm Slide 1</swiper-slide>
-            <swiper-slide>I'm Slide 2</swiper-slide>
-            <swiper-slide>I'm Slide 3</swiper-slide>
-            <swiper-slide>I'm Slide 4</swiper-slide>
-            <swiper-slide>I'm Slide 5</swiper-slide>
-            <swiper-slide>I'm Slide 6</swiper-slide>
-            <swiper-slide>I'm Slide 7</swiper-slide>
+            <swiper-slide style="background-color: red">I'm Slide 1</swiper-slide>
+            <swiper-slide style="background-color: royalblue">I'm Slide 2</swiper-slide>
+            <swiper-slide style="background-color: salmon">I'm Slide 3</swiper-slide>
+            <swiper-slide style="background-color: #F6F8FB">I'm Slide 4</swiper-slide>
+            <swiper-slide style="background-color: -webkit-focus-ring-color">I'm Slide 5</swiper-slide>
+            <swiper-slide style="background-color: hotpink">I'm Slide 6</swiper-slide>
+            <swiper-slide style="background-color: navajowhite">I'm Slide 7</swiper-slide>
             <!-- Optional controls -->
-<!--            <div class="swiper-pagination" slot="pagination"></div>-->
+            <div class="swiper-pagination" slot="pagination"></div>
 <!--            <div class="swiper-button-prev" slot="button-prev"></div>-->
 <!--            <div class="swiper-button-next" slot="button-next"></div>-->
 <!--            <div class="swiper-scrollbar" slot="scrollbar"></div>-->
