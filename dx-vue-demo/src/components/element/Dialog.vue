@@ -29,12 +29,9 @@
                 background-color: transparent;
                 box-shadow: 0 0;
                 position: relative;
-
                 .el-dialog__header {
                     display: none;
                 }
-
-
                 .el-dialog__body {
                     display: flex;
 

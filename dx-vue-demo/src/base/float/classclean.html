@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .box1 {
+        border: 3px solid yellowgreen;
+    }
+    .sun1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        float: left;
+    }
+    .sun2 {
+
+        width: 200px;
+        height: 200px;
+        background-color: rebeccapurple;
+        float: left;
+
+    }
+    .box2 {
+        width: 300px;
+        height: 200px;
+        background-color: red;
+    }
+    .clearfix:after {
+        /* 添加一个内容空白的 */
+        content: "";
+        /* 转化为块级元素 */
+        display: block;
+        /* 设置元素是否显示 */
+        visibility: hidden;
+        /* 高度为0 */
+        height: 0;
+        /* 行高为0 */
+        line-height: 0;
+        /* 清楚 */
+        clear: both;
+    }
+</style>
+
+<div class="box1 clearfix">
+    123
+    <div class="sun1"></div>
+    <div class="sun2"></div>
+</div>
+<div class="box2"></div>
+
+</body>
+</html>

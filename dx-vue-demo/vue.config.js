@@ -1,10 +1,14 @@
 'use strict'
 
-
+// TODO svg里面的
 const path = require('path')
-function resolve (dir) {
+function resolve(dir) {
     return path.join(__dirname, './', dir)
 }
+
+
+
+const webpack = require("webpack");
 
 module.exports = {
 
@@ -25,7 +29,7 @@ module.exports = {
     },
 
 
-
+    // TODO svg没有搞清楚，从新学习
     chainWebpack: config => {
         // svg loader
         const svgRule = config.module.rule('svg') // 找到svg-loader
@@ -38,13 +42,18 @@ module.exports = {
             .options({
                 symbolId: 'icon-[name]'
             })
-
-        // 修改images loader 添加svg处理
-        // const imagesRule = config.module.rule('images')
-        // imagesRule.exclude.add(resolve('src/components/svg/components/icons'))
-        // config.module
-        //     .rule('images')
-        //     .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
     },
+
+
+    configureWebpack: {
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+            })
+        ]
+    }
+
 
 }

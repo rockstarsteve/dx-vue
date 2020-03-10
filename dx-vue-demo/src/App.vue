@@ -15,13 +15,13 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/Sync'
+    import Demo from './components/vue/nextTick'
 
     /*********************elementui测试******************/
     // import Demo from './components/element/Dialog'
 
     /***********************swiper测试********************/
-    import Demo from './components/swiper/Pagination'
+    // import Demo from './components/swiper/Pagination'
 
     /***********************svg测试********************/
     // import Demo from './components/svg/Demo01'
@@ -55,6 +55,12 @@
 
     /***********************animate语法测试********************/
     // import Demo from './components/animate/Simple'
+
+    /***********************vue-video-player测试********************/
+    // import Demo from './components/vuevideoplayer/Simple'
+
+    /***********************trun测试********************/
+    // import Demo from './components/turn/Simple'
 
 
     export default {
