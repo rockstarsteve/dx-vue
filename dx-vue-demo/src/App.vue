@@ -15,7 +15,7 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    import Demo from './components/vue/nextTick'
+    // import Demo from './components/vue/nextTick'
 
     /*********************elementui测试******************/
     // import Demo from './components/element/Dialog'
@@ -60,7 +60,7 @@
     // import Demo from './components/vuevideoplayer/Simple'
 
     /***********************trun测试********************/
-    // import Demo from './components/turn/Simple'
+    import Demo from './components/turn/SimpleSinglePage'
 
 
     export default {
