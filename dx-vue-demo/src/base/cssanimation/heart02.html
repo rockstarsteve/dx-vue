@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="background-color: pink" id="shake" height="80"></div>
+
+
+    你好啊
+<style>
+
+
+
+    #shake {
+        width: 200px;
+        height: 200px;
+        animation: skake 2s ease-in 0s infinite;
+        -webkit-animation: shake 4s ease-in 0s infinite;
+    }
+
+    @keyframes shake {
+        0%, 75% {
+            -webkit-transform: none;
+            transform: none
+        }
+        75%, 78% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        81%, 84% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        84%, 91% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        91%, 90% {
+            -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+        }
+        90%, 100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+</style>
+</body>
+</html>

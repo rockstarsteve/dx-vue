@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<body>
+<video autoplay loop poster="polina.jpg" class="bgvid" id="bgvid">
+    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+</video>
+
+</body>
+
+<style>
+    body {
+        background-color: gray;
+        background: url("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4") no-repeat center 0px;
+    }
+
+    video#bgvid {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+    }
+</style>
+
+
+</body>
+</html>

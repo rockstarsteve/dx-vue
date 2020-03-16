@@ -26,13 +26,12 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 // icon的使用
 import '@/components/svg/components/icons'
 
-// TODO
 // VideoPlayer的使用
+import 'video.js/dist/video-js.css'
+import 'vue-video-player/src/custom-theme.css'
+import 'videojs-contrib-hls'
 import VideoPlayer from 'vue-video-player'
-require('video.js/dist/video-js.css')
-require('vue-video-player/src/custom-theme.css')
-
-Vue.use(VideoPlayer)
+Vue.use(VideoPlayer);
 
 
 

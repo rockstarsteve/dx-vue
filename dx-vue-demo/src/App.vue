@@ -57,10 +57,10 @@
     // import Demo from './components/animate/Simple'
 
     /***********************vue-video-player测试********************/
-    // import Demo from './components/vuevideoplayer/Simple'
+    import Demo from './components/vuevideoplayer/Simple'
 
     /***********************trun测试********************/
-    import Demo from './components/turn/SimpleSinglePage'
+    // import Demo from './components/turn/Simple'
 
 
     export default {

@@ -25,8 +25,10 @@
             $("#flipbook").turn({
                 width: 400,
                 height: 300,
-                autoCenter: true
+                autoCenter: true,
+                elevation: 50,
             });
+            $("#flipbook").turn("peel", "br");
         }
     }
 </script>
@@ -37,6 +39,7 @@
         margin-left: 200px;
         background-color: pink;
         width: 500px;
+        background-color: #409EFF;
         height: 500px;
         div:nth-child(1){
             margin-left: 0 !important;
