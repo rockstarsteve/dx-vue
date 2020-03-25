@@ -2,7 +2,6 @@
     <div id="app">
         <!--        <img alt="Vue logo" src="./assets/logo.png">-->
         <!--        <hr/>-->
-        <!--        <hello-yu-fa msg="Welcome to Your Vue.js App"/>-->
         <demo/>
     </div>
 </template>
@@ -15,10 +14,10 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/nextTick'
+    // import Demo from './components/vue/Drag'
 
     /*********************elementui测试******************/
-    // import Demo from './components/element/Dialog'
+    // import Demo from './components/element/SimpleTabs'
 
     /***********************swiper测试********************/
     // import Demo from './components/swiper/Pagination'
@@ -57,10 +56,13 @@
     // import Demo from './components/animate/Simple'
 
     /***********************vue-video-player测试********************/
-    import Demo from './components/vuevideoplayer/Simple'
+    // import Demo from './components/vuevideoplayer/Simple'
 
     /***********************trun测试********************/
     // import Demo from './components/turn/Simple'
+
+    /***********************tabs测试********************/
+    import Demo from './components/tabs/SimpleTabs'
 
 
     export default {
