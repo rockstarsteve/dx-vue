@@ -14,13 +14,13 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    // import Demo from './components/vue/Drag'
+    import Demo from './components/vue/Pagination'
 
     /*********************elementui测试******************/
     // import Demo from './components/element/SimpleTabs'
 
     /***********************swiper测试********************/
-    // import Demo from './components/swiper/Pagination'
+    // import Demo from './components/swiper/OnesideSlide'
 
     /***********************svg测试********************/
     // import Demo from './components/svg/Demo01'
@@ -62,7 +62,7 @@
     // import Demo from './components/turn/Simple'
 
     /***********************tabs测试********************/
-    import Demo from './components/tabs/SimpleTabs'
+    // import Demo from './components/tabs/SimpleTabs'
 
 
     export default {
