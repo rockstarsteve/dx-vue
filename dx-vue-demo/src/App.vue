@@ -14,7 +14,7 @@
     // import Demo from './components/erro/Demo01'
 
     /***********************vue语法测试********************/
-    import Demo from './components/vue/Pagination'
+    // import Demo from './components/vue/Pagination'
 
     /*********************elementui测试******************/
     // import Demo from './components/element/SimpleTabs'
@@ -47,7 +47,7 @@
     // import Demo from './components/dialog/Demo01'
 
     /**********************axios********************/
-    // import Demo from './components/axios/Demo01'
+    import Demo from './components/axios/Demo02'
 
     /***********************ajv语法测试********************/
     // import Demo from './components/ajv/Simple'

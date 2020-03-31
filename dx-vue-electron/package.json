@@ -1,0 +1,14 @@
+{
+  "name": "dx-vue-electron",
+  "version": "1.0.0",
+  "description": "electron测试应用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "rockstarsteve",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.0"
+  }
+}
