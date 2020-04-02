@@ -47,7 +47,7 @@
     // import Demo from './components/dialog/Demo01'
 
     /**********************axios********************/
-    import Demo from './components/axios/Demo02'
+    // import Demo from './components/axios/Demo02'
 
     /***********************ajv语法测试********************/
     // import Demo from './components/ajv/Simple'
@@ -63,6 +63,10 @@
 
     /***********************tabs测试********************/
     // import Demo from './components/tabs/SimpleTabs'
+
+    /***********************lottie测试********************/
+    import Demo from './components/lottie/Simple'
+
 
 
     export default {
