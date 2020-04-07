@@ -8,7 +8,7 @@
 
 <script>
 
-    // import Demo from './components/Temp'
+    import Demo from './components/Temp.vue'
 
     /**********************错误复现********************/
     // import Demo from './components/erro/Demo01'
@@ -65,7 +65,10 @@
     // import Demo from './components/tabs/SimpleTabs'
 
     /***********************lottie测试********************/
-    import Demo from './components/lottie/Simple'
+    // import Demo from './components/lottie/Simple'
+
+    /***********************es6测试********************/
+    // import Demo from './components/es6/Number'
 
 
 

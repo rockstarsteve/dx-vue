@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import Temp from './Temp'
+    let temp = new Temp()
     export default {
         name: "Temp",
         data() {
@@ -66,6 +68,7 @@
             console.log("beforeMount.....")
         },
         mounted() {
+            temp.test(12)
             console.log("mounted.....")
         },
         beforeUpdate() {
