@@ -8,7 +8,7 @@
 
 <script>
 
-    import Demo from './components/Temp.vue'
+    // import Demo from './components/Temp.vue'
 
     /**********************错误复现********************/
     // import Demo from './components/erro/Demo01'
@@ -59,7 +59,7 @@
     // import Demo from './components/vuevideoplayer/Simple'
 
     /***********************trun测试********************/
-    // import Demo from './components/turn/Simple'
+    import Demo from './components/turn/Simple'
 
     /***********************tabs测试********************/
     // import Demo from './components/tabs/SimpleTabs'
