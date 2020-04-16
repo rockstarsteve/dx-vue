@@ -33,9 +33,6 @@
             });
       }
     },
-    // created() {
-    //   this.getUser();
-    // }
   }
 </script>
 

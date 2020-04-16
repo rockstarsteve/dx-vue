@@ -3,12 +3,14 @@ import App from './App.vue'
 
 // 自定义全局组件挂载
 import GlobalMessageTemplate from '@/components/vue/GlobalMessageTemplate.vue'
+
 Vue.component('global-message-template', GlobalMessageTemplate)
 
 
 // element ui使用
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
@@ -20,6 +22,7 @@ Vue.use(ElementUI);
 // swiper使用
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 
@@ -31,15 +34,19 @@ import 'video.js/dist/video-js.css'
 import 'vue-video-player/src/custom-theme.css'
 import 'videojs-contrib-hls'
 import VideoPlayer from 'vue-video-player'
+
 Vue.use(VideoPlayer);
 
 
+// 手势控制插件
+// import VueTouch from 'vue-touch'
+//
+// Vue.use(VueTouch, {name: 'v-touch'})
 
 // 引入jQuery
 // import $ from 'jquery'
 
 // Vue.prototype.$ = $;
-
 
 
 // vue-router

@@ -1,102 +1,36 @@
 <template>
-    <div class="container">
+  <div class="container">
+    数据是：{{datas}}
 
-        <p>Original message: "{{ message }}"</p>
-        <p>Computed reversed message: "{{ reversedMessage }}"</p>
-
-        now : {{now}}
-
-
-        <div v-bind:style="styleObject">123</div>
-
-        <button v-on:click="greet">Greet</button>
-
-    </div>
+  </div>
 </template>
 
 <script>
-    import Temp from './Temp'
-    let temp = new Temp()
-    export default {
-        name: "Temp",
-        data() {
-            return {
-                name: 'tom',
-                message: 'hello,world',
-                num: 0,
-                styleObject: {
-                    color: 'red',
-                    fontSize: '13px'
-                }
-            }
-        },
-        methods: {
-            greet: function (event) {
-                // `this` 在方法里指向当前 Vue 实例
-                alert('Hello ' + this.name + '!')
-                // `event` 是原生 DOM 事件
-                if (event) {
-                    alert(event.target.tagName)
-                }
-            }
-        },
-        computed: {
-            // 计算属性的 getter
-            reversedMessage: function () {
-                // `this` 指向 vm 实例
-                return this.message.split('').reverse().join('')
-            },
-            now: function () {
-                return Date.now()
-            }
-        },
+  import Temp from './Temp'
 
-        beforeCreate() {
+  let temp = new Temp()
 
-            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            var arr2 = arr.filter(function (x) {
-                return x >= 8;
-            });
-            console.log(arr2);//[1, 4, 7, 8, 9, 10]
+  import {DateUtil} from '@/util/StringUtil.js'
 
-            console.log("beforeCreate.....")
-        },
-        created() {
-            console.log("created.....")
-        },
-        beforeMount() {
-            console.log("beforeMount.....")
-        },
-        mounted() {
-            temp.test(12)
-            console.log("mounted.....")
-        },
-        beforeUpdate() {
-            console.log("beforeUpdate.....")
-        },
-        updated() {
-            console.log("updated.....")
-        },
-        beforeDestroy() {
-            console.log("beforeDestroy.....")
-        },
-        destroyed() {
-            console.log("destroyed.....")
-        }
+  export default {
+    name: "Temp",
+    data() {
+      return {
+        datas: null
+      }
+    },
+    methods: {
+      greet: function (event) {
+      }
+    },
+    created() {
+      // let mydate = new Date("2018-2-3 1:1:1")
+      let mydate = new Date(222222222233)
+      this.datas = DateUtil.getFormatText(mydate)
     }
+  }
 </script>
 
 <style scoped>
-    .bind-test {
-        width: 100px;
-        height: 100px;
-        background-color: yellow;
-    }
-
-    .bind-test:active {
-        width: 100px;
-        height: 100px;
-        background-color: pink;
-    }
 
 </style>

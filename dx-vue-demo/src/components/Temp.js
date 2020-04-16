@@ -1,5 +1,11 @@
 export default class Temp {
   test(temp) {
-    console.log("要打印的temp日志   " + 1)
+    console.log(`输出${temp}`)
+  }
+  observer(newVal, oldVal, changedPath) {
+    new Object({
+      name: 1,
+      sdf: 2
+    })
   }
 }
