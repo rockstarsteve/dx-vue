@@ -42,7 +42,7 @@ https://segmentfault.com/a/1190000019433559
 
 
 ### 工具类
-    - lodash https://www.npmjs.com/package/lodash
+    - lodash https://lodash.com/，https://www.npmjs.com/package/lodash
     - is-type-of https://www.npmjs.com/package/is-type-of
     - numeraljs: http://numeraljs.com/
 
