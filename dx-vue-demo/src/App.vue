@@ -8,7 +8,7 @@
 
 <script>
   // 临时测试文件
-  import Demo from './components/Temp.vue'
+  // import Demo from './components/Temp.vue'
 
   /**********************错误复现********************/
   // import Demo from './components/erro/Demo01'
@@ -47,7 +47,7 @@
   // import Demo from './components/dialog/Demo01'
 
   /**********************axios********************/
-  // import Demo from './components/axios/Demo2Request'
+  import Demo from './components/axios/Demo02'
 
   /***********************ajv语法测试********************/
   // import Demo from './components/ajv/Simple'
