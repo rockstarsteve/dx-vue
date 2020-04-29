@@ -35,7 +35,7 @@
     .line {
       background-color: palegoldenrod;
       width: 100px;
-      .lineMore(4);
+        .lineMore(4);
     }
   }
 

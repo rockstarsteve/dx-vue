@@ -49,8 +49,21 @@ Vue.use(VideoPlayer);
 // Vue.prototype.$ = $;
 
 
-// vue-router
-// import router from '@/router/index'
+// 注册一个全局自定义指令 `v-focus`
+Vue.directive('add', {
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted: function (el, binding, vnode) {
+    // 聚焦元素
+    // el.focus()
+    console.log(`binding:${binding}`)
+    console.log(`vnode:${vnode}`)
+
+  }
+})
+
+
+// vue-router组件
+import router from '@/router/index.js'
 
 // //vue 项目在路由切换的时候调用
 // router.beforeEach(function (to,from,next){
@@ -66,5 +79,5 @@ Vue.use(VideoPlayer);
 
 new Vue({
   render: h => h(App),
-  // router
+  router
 }).$mount('#app')

@@ -11,7 +11,11 @@ let list = [
       {
         id: '3',
         flag: false,
-        childs: []
+        childs: [{
+          id: '20',
+          flag: true,
+          childs: []
+        },]
       }
     ]
   },

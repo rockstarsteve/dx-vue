@@ -2,17 +2,22 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 
-
-import Demo03 from '@/components/monitor/Demo03'
+import Simple from '@/components/router/Simple'
 
 export default new Router({
-    routes: [{
-        path: '/test',
-        name: 'demo03',
-        component: Demo03,
+  routes: [
+    {
+      path: '/',
+      name: 'simple',
+      component: Simple,
+      alias: '/asdfasfsaf'
+    },
+    {
+      path: '/test',
+      name: 'simple',
+      component: Simple,
     }]
 })
-
 
 
 Vue.use(Router)
