@@ -8,7 +8,7 @@
 
 <script>
   // 临时测试文件
-  import Demo from './components/Temp.vue'
+  // import Demo from './components/Temp.vue'
 
   /**********************错误复现********************/
   // import Demo from './components/erro/Demo01'
@@ -77,7 +77,7 @@
   // import Demo from './components/css/Simple'
 
   /***********************百度map测试********************/
-  // import Demo from './components/map/Simple'
+  import Demo from './components/map/syncMap2'
 
 
   export default {

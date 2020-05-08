@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src='js/hammer.js'></script>
+  <script src='js/slider.js'></script>
+
+</head>
+<body>
+<div class='o-sliderContainer' id="pbSliderWrap0" style="margin:0;">
+  <div class='o-slider' id='pbSlider0'>
+    <div class="o-slider--item">
+      <video class='video' autoplay muted loop>
+        <source src="./video/summer20190515.mp4" type="video/mp4">
+      </video>
+      <!--      <div class="o-slider-textWrap">-->
+      <!--        <h1 class="o-slider-title">这是一个视频</h1>-->
+      <!--        <span class="a-divider"></span>-->
+      <!--        <h2 class="o-slider-subTitle">自动播放</h2>-->
+      <!--        <span class="a-divider"></span>-->
+      <!--        <p class="o-slider-paragraph">存在进度条 </p>-->
+      <!--      </div>-->
+    </div>
+    <div class="o-slider--item" data-image="images/1.png">
+      <div class="o-slider-textWrap">
+        <h1 class="o-slider-title">这是图片</h1>
+        <span class="a-divider"></span>
+        <h2 class="o-slider-subTitle">图片放data-image</h2>
+        <span class="a-divider"></span>
+        <p class="o-slider-paragraph">6秒滑动</p>
+      </div>
+    </div>
+    <div class="o-slider--item">
+      <video class='video' autoplay muted loop>
+        <source src="./video/summer20190515.mp4" type="video/mp4">
+      </video>
+      <!--      <div class="o-slider-textWrap">-->
+      <!--        <h1 class="o-slider-title">这是一个视频</h1>-->
+      <!--        <span class="a-divider"></span>-->
+      <!--        <h2 class="o-slider-subTitle">自动播放</h2>-->
+      <!--        <span class="a-divider"></span>-->
+      <!--        <p class="o-slider-paragraph">存在进度条 </p>-->
+      <!--      </div>-->
+    </div>
+    <div class="o-slider--item" data-image="images/2.png">
+      <div class="o-slider-textWrap">
+        <h1 class="o-slider-title">这是图片</h1>
+        <span class="a-divider"></span>
+        <h2 class="o-slider-subTitle">图片放data-image</h2>
+        <span class="a-divider"></span>
+        <p class="o-slider-paragraph">6自动秒滑动</p>
+      </div>
+    </div>
+    <div class="o-slider--item" data-image="images/3.png">
+      <div class="o-slider-textWrap">
+        <h1 class="o-slider-title">这是图片</h1>
+        <span class="a-divider"></span>
+        <h2 class="o-slider-subTitle">图片放data-image</h2>
+        <span class="a-divider"></span>
+        <p class="o-slider-paragraph">6自动秒滑动</p>
+      </div>
+    </div>
+    <div class="o-slider--item" data-image="images/4.png">
+      <div class="o-slider-textWrap">
+
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+
+<script>
+  $('#pbSlider0').pbTouchSlider({
+    slider_Wrap: '#pbSliderWrap0',
+    slider_Threshold: 10,
+    slider_Speed: 600,
+    slider_Ease: 'ease-out',
+    slider_Drag: false,//拖动
+    auto: true,//是否自动滚动
+    autoTime: 6000,//设置图片自动时间
+    slider_Arrows: {
+      enabled: false//箭头
+    },
+    slider_Dots: {//显示点不
+      class: '.o-slider-pagination',
+      enabled: true,
+      preview: false
+    },
+    slider_Breakpoints: {
+      default: {
+        height: 700//高度
+      },
+      tablet: {
+        height: 500,
+        media: 1024
+      },
+      smartphone: {//智能手机高度
+        height: 400,
+        media: 768
+      }
+    }
+  });
+</script>
+</body>
+</html>
