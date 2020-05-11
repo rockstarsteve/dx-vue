@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquerysession.js"></script>
+
+  <style>
+    #swiper-container0 {
+      width: 500px;
+      height: 500px;
+    }
+
+    #swiper-container1 {
+      width: 500px;
+      height: 500px;
+    }
+
+    #swiper-container2 {
+      width: 500px;
+      height: 500px;
+    }
+
+    #swiper-container3 {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+
+
+</head>
+<body>
+<button id="stopButtom0">停止最大的</button>
+<button id="startButtom0">开始最大的</button>
+<button id="stopButtom1">停止1</button>
+<button id="startButtom1">开始1</button>
+<button id="stopButtom2">停止2</button>
+<button id="startButtom2">开始2</button>
+<button id="toButtom">去22</button>
+<button id="cleanButtom">去除去22session</button>
+<div class="swiper-container" id="swiper-container0">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" data-hash="slide01">
+      <div class="swiper-container" id="swiper-container1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-hash="slide11" style="background:#F6F8FB;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider1.1</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide12" style="background:#00a1d6;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider1.2</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide13" style="background:#ccc;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider1.3</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide14" style="background:#ff0000;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider1.4</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide15" style="background:#17694f;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider1.5</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide blue-slide" data-hash="slide02" style="background-color: #4ac4ac">
+      <div class="swiper-container" id="swiper-container2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-hash="slide21" style="background:#FF8C30;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider2.1</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide22" style="background:#2770FF;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider2.2</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide23" style="background:#ccc;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider2.3</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide24" style="background:#8adced;">
+            <div id="myclick" style="width: 100%;height: 100%;">
+              <div style="width: 100%;height: 100%;" class="test">slider 2.4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide blue-slide" data-hash="slide03" style="background-color: #4ac4ac">
+      <div class="swiper-container" id="swiper-container3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-hash="slide31" style="background:#FF8C30;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider3.1</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide32" style="background:#2770FF;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider3.2</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide33" style="background:#ccc;">
+            <a href="http://www.baidu.com">
+              <div style="width: 100%;height: 100%;" class="test">slider3.3</div>
+            </a>
+          </div>
+          <div class="swiper-slide" data-hash="slide34" style="background:#8adced;">
+            <div style="width: 100%;height: 100%;">
+              <div style="width: 100%;height: 100%;" class="test">slider 3.4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.onload = function () {
+    //初始化
+    var mySwiper0 = new Swiper('#swiper-container0', {
+      // hashNavigation: {
+      //   watchState: true,
+      // },
+      direction: 'vertical',
+      // autoplay: {
+      //   disableOnInteraction: false, //手动滑动之后不打断播放
+      //   delay: 1000
+      // },
+      on: {}
+    })
+    var mySwiper1 = new Swiper('#swiper-container1', {
+      // hashNavigation: true,
+      // resistanceRatio: 0,
+      // autoplay: {
+      //   disableOnInteraction: false, //手动滑动之后不打断播放
+      //   delay: 1000
+      // },
+      on: {
+        reachEnd: function () {
+          console.log('mySwiper2到了最后一个slide')
+        },
+      }
+    })
+    var mySwiper2 = new Swiper('#swiper-container2', {
+      // hashNavigation: {
+      //   replaceState: true,
+      // },
+      // resistanceRatio: 0,
+      // autoplay: {
+      //   disableOnInteraction: false, //手动滑动之后不打断播放
+      //   delay: 1000
+      // },
+      on: {
+        // reachEnd: function () {
+        //   console.log('mySwiper3到了最后一个slide')
+        //   mySwiper3.autoplay.stop()
+        //
+        //   mySwiper1.autoplay.start()
+        // },
+      }
+    })
+    var mySwiper3 = new Swiper('#swiper-container3', {
+      // hashNavigation: {
+      //   replaceState: true,
+      // },
+      // resistanceRatio: 0,
+      // autoplay: {
+      //   disableOnInteraction: false, //手动滑动之后不打断播放
+      //   delay: 1000
+      // },
+      on: {
+        // reachEnd: function () {
+        //   console.log('mySwiper3到了最后一个slide')
+        //   mySwiper3.autoplay.stop()
+        //
+        //   mySwiper1.autoplay.start()
+        // },
+      }
+    })
+
+    //操作
+    $(document).ready(function () {
+      $("#myclick").click(function () {
+        console.log("ok")
+        $.session.set('session_swiper0', 1)
+        $.session.set('session_swiper2', 2)
+        window.location.href='http://www.baidu.com';
+      })
+      $("#stopButtom0").click(function () {
+        mySwiper0.autoplay.stop()
+      });
+      $("#startButtom0").click(function () {
+        mySwiper0.autoplay.start()
+      });
+      $("#stopButtom1").click(function () {
+        mySwiper1.autoplay.stop()
+      });
+      $("#startButtom1").click(function () {
+        mySwiper1.autoplay.start()
+      });
+      $("#stopButtom2").click(function () {
+        mySwiper2.autoplay.stop()
+      });
+      $("#startButtom2").click(function () {
+        mySwiper2.init()
+        mySwiper2.autoplay.start()
+      });
+      $("#cleanButtom").click(function () {
+        $.session.remove("session_swiper0")
+        $.session.remove("session_swiper2")
+      });
+      $("#toButtom").click(function () {
+        console.log("ok")
+        var session_swiper0 = $.session.get('session_swiper0')
+        var session_swiper2 = $.session.get('session_swiper2')
+        mySwiper0.slideTo(session_swiper0, 1, false);//切换到第一个slide，速度为1秒
+        mySwiper2.slideTo(session_swiper2, 1, false);//切换到第一个slide，速度为1秒
+      });
+
+
+
+    })
+  };
+
+  // $(document).ready(function(){
+  //   console.log("ok")
+  //   var session_swiper0 = $.session.get('session_swiper0')
+  //   var session_swiper2 = $.session.get('session_swiper2')
+  //   mySwiper0.slideTo(session_swiper0, 1, false);//切换到第一个slide，速度为1秒
+  //   mySwiper2.slideTo(session_swiper2, 1, false);//切换到第一个slide，速度为1秒
+  // });
+
+</script>
+
+
+</body>
+</html>
