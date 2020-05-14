@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+</head>
+<body>
+<button onclick="change()">修改速度</button>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">slider1</div>
+    <div class="swiper-slide">slider2</div>
+    <div class="swiper-slide">slider3</div>
+  </div>
+</div>
+<script>
+
+
+  var mySwiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 1000,
+      stopOnLastSlide: false,
+      disableOnInteraction: true,
+    },
+  })
+
+  function change() {
+    console.log('修改')
+    mySwiper.autoplay.delay = 10
+
+  }
+
+
+</script>
+</body>
+</html>

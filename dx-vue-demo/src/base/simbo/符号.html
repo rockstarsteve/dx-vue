@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>css3画 叉 号</title>
+  <style>
+    b {
+      display: inline-block;
+      width: 12px;
+      height: 2px;
+      background: #f00;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      -webkit-transform: rotate(45deg);
+    }
+
+    b:after {
+      content: '.';
+      display: block;
+      width: 12px;
+      height: 2px;
+      background: #f00;
+      -webkit-transform: rotate(-90deg);
+    }
+    .div1{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+<div class="div1">
+  <b></b>
+</div>
+
+
+</body>
+</html>

@@ -40,7 +40,8 @@
 <button id="stopButtom2">停止2</button>
 <button id="startButtom2">开始2</button>
 <button id="toButtom">去22</button>
-<button id="cleanButtom">去除去22session</button>
+<button id="setButtom">设置22</button>
+<button id="cleanButtom">去除22session</button>
 <div class="swiper-container" id="swiper-container0">
   <div class="swiper-wrapper">
     <div class="swiper-slide" data-hash="slide01">
@@ -104,19 +105,13 @@
       <div class="swiper-container" id="swiper-container3">
         <div class="swiper-wrapper">
           <div class="swiper-slide" data-hash="slide31" style="background:#FF8C30;">
-            <a href="http://www.baidu.com">
-              <div style="width: 100%;height: 100%;" class="test">slider3.1</div>
-            </a>
+            <div style="width: 100%;height: 100%;" class="test">slider3.1</div>
           </div>
           <div class="swiper-slide" data-hash="slide32" style="background:#2770FF;">
-            <a href="http://www.baidu.com">
-              <div style="width: 100%;height: 100%;" class="test">slider3.2</div>
-            </a>
+            <div style="width: 100%;height: 100%;" class="test">slider3.2</div>
           </div>
           <div class="swiper-slide" data-hash="slide33" style="background:#ccc;">
-            <a href="http://www.baidu.com">
-              <div style="width: 100%;height: 100%;" class="test">slider3.3</div>
-            </a>
+            <div style="width: 100%;height: 100%;" class="test">slider3.3</div>
           </div>
           <div class="swiper-slide" data-hash="slide34" style="background:#8adced;">
             <div style="width: 100%;height: 100%;">
@@ -143,12 +138,6 @@
       on: {}
     })
     var mySwiper1 = new Swiper('#swiper-container1', {
-      // hashNavigation: true,
-      // resistanceRatio: 0,
-      // autoplay: {
-      //   disableOnInteraction: false, //手动滑动之后不打断播放
-      //   delay: 1000
-      // },
       on: {
         reachEnd: function () {
           console.log('mySwiper2到了最后一个slide')
@@ -183,6 +172,18 @@
       //   delay: 1000
       // },
       on: {
+        click: function (e) {
+          console.log('你点了Swiper')
+        },
+        reachEnd: function(){
+          console.log('到了最后一张了。。。')
+          // var nextIndex = Number(cIndex)+Number(1);
+          // if(cIndex == Number(size)-1){
+          //   nextIndex = 0;
+          // }
+          // // console.log('最后一张了'+nextIndex)
+          // $("#c_"+nextIndex).click();
+        },
         // reachEnd: function () {
         //   console.log('mySwiper3到了最后一个slide')
         //   mySwiper3.autoplay.stop()
@@ -198,7 +199,7 @@
         console.log("ok")
         $.session.set('session_swiper0', 1)
         $.session.set('session_swiper2', 2)
-        window.location.href='http://www.baidu.com';
+        window.location.href = 'http://www.baidu.com';
       })
       $("#stopButtom0").click(function () {
         mySwiper0.autoplay.stop()
@@ -230,20 +231,12 @@
         mySwiper0.slideTo(session_swiper0, 1, false);//切换到第一个slide，速度为1秒
         mySwiper2.slideTo(session_swiper2, 1, false);//切换到第一个slide，速度为1秒
       });
-
-
-
+      $("#setButtom").click(function () {
+        $.session.set("session_swiper0", 1)
+        $.session.set("session_swiper2", 2)
+      });
     })
   };
-
-  // $(document).ready(function(){
-  //   console.log("ok")
-  //   var session_swiper0 = $.session.get('session_swiper0')
-  //   var session_swiper2 = $.session.get('session_swiper2')
-  //   mySwiper0.slideTo(session_swiper0, 1, false);//切换到第一个slide，速度为1秒
-  //   mySwiper2.slideTo(session_swiper2, 1, false);//切换到第一个slide，速度为1秒
-  // });
-
 </script>
 
 
