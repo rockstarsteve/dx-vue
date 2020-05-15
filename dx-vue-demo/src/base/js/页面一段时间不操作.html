@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../plug/jquery-1.11.2.min.js"></script>
+  <link rel="stylesheet" href="../swiper/css/swiper.min.css">
+  <script src="../swiper/js/swiper.min.js"></script>
+  <style>
+    .swiper-container {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">slider1</div>
+    <div class="swiper-slide">slider2</div>
+    <div class="swiper-slide">slider3</div>
+  </div>
+</div>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    autoplay: true,//可选选项，自动滑动
+  })
+
+</script>
+
+<button>点击好玩的</button>
+<script>
+  timefly = 6000; //超时时间
+  activeDt = new Date();//得到当前时间放入变量作为初始时间
+  gotourl = "http://www.baidu.com"//需要跳转的地址
+  setInterval("checkTime()", 1000);//每间隔1000毫秒执行checkTime函数检查是否超时
+  document.onmousemove = retime;//当鼠标移动
+  document.onkeypress = retime;//当鼠标点击重新获取当前时间放入变量作为初始时间
+  function retime() {
+    activeDt = new Date();
+  }
+
+  function checkTime() {
+    //得到当前时间放入变量
+    dt = new Date();
+    //如果当前时间减去初始时间大于超时时间，就执行自动跳转
+    if ((dt - activeDt) > timefly) {
+      // location.href = gotourl;
+      window.location.href = gotourl;
+    }
+  }
+</script>
+</body>
+</html>
