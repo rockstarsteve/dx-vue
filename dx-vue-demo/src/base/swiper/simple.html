@@ -8,8 +8,6 @@
   <script src="js/swiper.min.js"></script>
 </head>
 <body>
-<button onclick="change()">修改速度</button>
-
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">slider1</div>
@@ -18,23 +16,18 @@
   </div>
 </div>
 <script>
-
-
   var mySwiper = new Swiper('.swiper-container', {
     autoplay: {
       delay: 1000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
     },
+    on: {
+      click: function () {
+        console.log('你点了Swiper');
+      },
+    },
   })
-
-  function change() {
-    console.log('修改')
-    mySwiper.autoplay.delay = 10
-
-  }
-
-
 </script>
 </body>
 </html>

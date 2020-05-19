@@ -64,6 +64,11 @@
       disableOnInteraction: false, //手动滑动之后不打断播放
       delay: 2000
     },
+    on: {
+      click: function (event) {
+        console.log("ok:" + event)
+      },
+    }
   })
   var mySwiper2 = new Swiper('#swiper-container2', {
     // nested: true,
