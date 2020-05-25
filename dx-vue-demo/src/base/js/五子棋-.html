@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>五子棋</title>
+  <style type="text/css">
+    canvas {
+      display: block;
+      margin: 50px auto;
+      box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;
+      cursor: pointer;
+    }
+
+    .btn-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .btn-wrap div {
+      margin: 0 10px;
+    }
+
+    div > span {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #FFFFFF;
+      background-color: #EE82EE;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    div.unable span {
+      background: #D6D6D4;
+      color: #ADACAA;
+    }
+
+    #result-wrap {
+      text-align: center;
+    }
+  </style>
+
+
+</head>
+<body>
+<h3 id="result-wrap">--益智五子棋--</h3>
+<canvas id="chess" width="450px" height="450px"></canvas>
+<script type="text/javascript">
+  var over = false;
+  var me = true;	//我
+  var _nowi = 0, _nowj = 0; //记录自己下棋的坐标
+  var _compi = 0, _compj = 0; //记录计算机当前下棋的坐标
+  var _myWin = [], _compWin = []; //记录我，计算机赢的情况
+  var backAble = false, returnAble = false;
+  var resultTxt = document.getElementById("result-wrap");
+  var chressBord = []; //棋盘
+  for (var i = 0; i < 15; i++) {
+    chressBord[i] = [];
+    for (var j = 0; j < 15; j++) {
+      chressBord[i][j] = 0;
+    }
+  }
+  //赢法的统计数组
+  var myWin = [];
+  var computerWin = [];
+  //赢法数组
+  var wins = [];
+  for (var i = 0; i < 15; i++) {
+    wins[i] = [];
+    for (var j = 0; j < 15; j++) {
+      wins[i][j] = [];
+    }
+  }
+  var count = 0; //赢法总数
+  //横线赢法
+  for (var i = 0; i < 15; i++) {
+    for (var j = 0; j < 11; j++) {
+      for (var k = 0; k < 5; k++) {
+        wins[i][j + k][count] = true;
+      }
+      count++;
+    }
+  }
+  //竖线赢法
+  for (var i = 0; i < 15; i++) {
+    for (var j = 0; j < 11; j++) {
+      for (var k = 0; k < 5; k++) {
+        wins[j + k][i][count] = true;
+      }
+      count++;
+    }
+  }
+  //正斜线赢法
+  for (var i = 0; i < 11; i++) {
+    for (var j = 0; j < 11; j++) {
+      for (var k = 0; k < 5; k++) {
+        wins[i + k][j + k][count] = true;
+      }
+      count++;
+    }
+  }
+  //反斜线赢法
+  for (var i = 0; i < 11; i++) {
+    for (var j = 14; j > 3; j--) {
+      for (var k = 0; k < 5; k++) {
+        wins[i + k][j - k][count] = true;
+      }
+      count++;
+    }
+  }
+  // debugger;
+  for (var i = 0; i < count; i++) {
+    myWin[i] = 0;
+    _myWin[i] = 0;
+    computerWin[i] = 0;
+    _compWin[i] = 0;
+  }
+  var chess = document.getElementById("chess");
+  var context = chess.getContext('2d');
+  window.onload = function () {
+    drawChessBoard(); // 画棋盘
+  }
+
+  var drawChessBoard = function () {
+    for (var i = 0; i < 15; i++) {
+      context.moveTo(15 + i * 30, 15);
+      context.lineTo(15 + i * 30, 435);
+      context.stroke();
+      context.moveTo(15, 15 + i * 30);
+      context.lineTo(435, 15 + i * 30);
+      context.stroke();
+    }
+  }
+</script>
+</body>
+</html>

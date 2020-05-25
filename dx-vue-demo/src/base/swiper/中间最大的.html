@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="../plug/jsize-horizontal-3840.js"></script>
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+
+  <style>
+    .swiper-container {
+      width: 7rem;
+      height: 2rem;
+      border: 1px solid springgreen;
+    }
+
+    .swiper-slide {
+    }
+
+    .swiper-slide-active, .swiper-slide-duplicate-active {
+      transform: scale(1);
+    }
+  </style>
+
+
+</head>
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-color: palegoldenrod">slider1</div>
+    <div class="swiper-slide" style="background-color: lavender">slider2</div>
+    <div class="swiper-slide" style="background-color: deeppink">slider3</div>
+    <div class="swiper-slide" style="background-color: khaki">slider4</div>
+    <div class="swiper-slide" style="background-color: slateblue">slider5</div>
+  </div>
+</div>
+<script>
+  // var mySwiper = new Swiper('.swiper-container', {
+  //   loop: true,
+  //   centeredSlides: true,
+  //   slidesPerView: 3,
+  //   spaceBetween: 30,
+  //   autoplay: {
+  //     delay: 5000,
+  //     stopOnLastSlide: false,
+  //     disableOnInteraction: true,
+  //   },
+  //   on: {
+  //     click: function () {
+  //       console.log('你点了Swiper');
+  //     },
+  //   },
+  // })
+
+
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    effect: 'coverflow',
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: '18%',
+    // slidesPerView: 'auto',
+    loop: true,
+    autoplay: {
+      disableOnInteraction: false,
+    },
+    //   loopedSlides: 2,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: false,
+    }
+  });
+
+
+</script>
+</body>
+</html>
