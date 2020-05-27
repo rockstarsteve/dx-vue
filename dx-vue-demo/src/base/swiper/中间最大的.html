@@ -4,78 +4,66 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="css/swiper.min.css">
-  <script src="../plug/jsize-horizontal-3840.js"></script>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/swiper.min.js"></script>
-
   <style>
+    .content {
+      width: 1000px;
+      height: 800px;
+      background-color: pink;
+    }
+
     .swiper-container {
-      width: 7rem;
-      height: 2rem;
-      border: 1px solid springgreen;
+      width: 600px;
+      height: 400px;
+      background-color: #ffffff;
     }
 
     .swiper-slide {
+      /*width: 70px !important;*/
+      /*width: 15% !important;*/
+      width: 100px !important;
+      height: 80px;
     }
 
-    .swiper-slide-active, .swiper-slide-duplicate-active {
-      transform: scale(1);
+    .swiper-slide-active{
+      background-color: yellow !important;
+      width: 200px !important;
+      /*width: 20% !important;*/
+      height: 300px !important;
     }
   </style>
-
-
 </head>
 <body>
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-color: palegoldenrod">slider1</div>
-    <div class="swiper-slide" style="background-color: lavender">slider2</div>
-    <div class="swiper-slide" style="background-color: deeppink">slider3</div>
-    <div class="swiper-slide" style="background-color: khaki">slider4</div>
-    <div class="swiper-slide" style="background-color: slateblue">slider5</div>
+<div class="content">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-color: palegoldenrod">slider1</div>
+      <div class="swiper-slide" style="background-color: slateblue">slider2</div>
+      <div class="swiper-slide" style="background-color: lavenderblush">slider3</div>
+      <div class="swiper-slide" style="background-color: palegoldenrod">slider4</div>
+      <div class="swiper-slide" style="background-color: slateblue">slider5</div>
+      <div class="swiper-slide" style="background-color: lavenderblush">slider6</div>
+      <div class="swiper-slide" style="background-color: palegoldenrod">slider7</div>
+      <div class="swiper-slide" style="background-color: slateblue">slider8</div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 </div>
 <script>
-  // var mySwiper = new Swiper('.swiper-container', {
-  //   loop: true,
-  //   centeredSlides: true,
-  //   slidesPerView: 3,
-  //   spaceBetween: 30,
-  //   autoplay: {
-  //     delay: 5000,
-  //     stopOnLastSlide: false,
-  //     disableOnInteraction: true,
-  //   },
-  //   on: {
-  //     click: function () {
-  //       console.log('你点了Swiper');
-  //     },
-  //   },
-  // })
-
-
-  var swiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.swiper-container', {
     loop: true,
-    effect: 'coverflow',
+    slidesPerView: 5,
+    // spaceBetween : 20,
     centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: '18%',
-    // slidesPerView: 'auto',
-    loop: true,
-    autoplay: {
-      disableOnInteraction: false,
+    centeredSlidesBounds: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    //   loopedSlides: 2,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 300,
-      modifier: 1,
-      slideShadows: false,
-    }
-  });
-
-
+  })
 </script>
 </body>
 </html>

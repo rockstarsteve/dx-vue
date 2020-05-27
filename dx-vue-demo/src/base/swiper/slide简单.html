@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="../plug/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <style>
+
+    .bx-wrapper {
+      width: 800px !important;
+      background-color: yellow;
+    }
+
+    .bxslider {
+      width: 800px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    .bxslider img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="bxslider">
+  <div><img src="./images/certify01.png"></div>
+  <div><img src="./images/certify02.png"></div>
+  <div><img src="./images/certify03.png"></div>
+</div>
+
+
+<script>
+  $(function () {
+    $('.bxslider').bxSlider({
+      slideWidth: 200,
+      minSlides: 5,
+      maxSlides: 5,
+      moveSlides: 1,
+      slideMargin: 10,
+    });
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>原生JS层叠图片轮播展示代码 - 站长素材</title>
+  <script type="text/javascript" src="js/tools.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    .sw_wrap {
+      position: relative;
+      width: 9.40rem;
+      height: 3.60rem;
+      margin: 1rem auto;
+    }
+
+    .sw_content {
+      position: absolute;
+      width: 9.40rem;
+      height: 3.60rem;
+    }
+
+    .sw_content li {
+      position: absolute;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+
+    .sw_wrap a {
+      position: absolute;
+      /*display: none;*/
+      z-index: 2;
+      top: 50%;
+      width: 0.60rem;
+      height: 0.60rem;
+      margin-top: -0.30rem;
+      font: 0.36rem/0.60rem "宋体";
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background: rgb(255, 100, 0);
+      background: rgba(255, 100, 0, .6);
+      transition: background 1s ease;
+    }
+
+    .sw_wrap a:hover {
+      background: rgb(255, 100, 0);
+    }
+
+    .sw_prev {
+      left: 0.30rem;
+    }
+
+    .sw_next {
+      right: 0.30rem;
+    }
+
+    .mydiv{
+      width: 2rem;
+      height: 2rem;
+      background-color: pink;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="mydiv">
+
+</div>
+
+
+<div class="mian_swiper">
+  <div class="sw_wrap" id="wrap">
+    <ul class="sw_content"></ul>
+    <a href="javascript:;" class="sw_prev">&#60;</a>
+    <a href="javascript:;" class="sw_next">&#62;</a>
+  </div>
+</div>
+
+</body>
+</html>
