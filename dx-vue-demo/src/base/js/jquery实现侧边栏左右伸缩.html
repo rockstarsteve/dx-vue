@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <script src="../plug/jquery-1.11.2.min.js"></script>
+  <style>
+
+    #menu_box {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      background-color: pink;
+    }
+
+    #menu_right {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      bottom: 100px;
+      right: 0px;
+      background-color: royalblue;
+    }
+
+    #menu_btn {
+      width: 100px;
+      height: 50px;
+      background-color: darkgoldenrod;
+      line-height: 50px;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+
+    #menu_btnb {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      cursor: pointer;
+      right: -50px;
+      line-height: 50px;
+      text-align: center;
+      bottom: 250px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+<div id="menu_box">
+  <div id="menu_right">
+    <div id="menu_btn"></div>
+  </div>
+  <div id="menu_btnb">
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(function () {
+    $("#menu_btn").click(function () {
+      $("#menu_right").animate({right: '-200px'});
+      $("#menu_btnb").delay(500).animate({right: '0'});
+    });
+    $("#menu_btnb").click(function () {
+      $("#menu_btnb").animate({right: '-50px'});
+      $("#menu_right").delay(500).animate({right: '0'});
+    });
+  });
+</script>
+</body>
+</html>

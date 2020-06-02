@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../plug/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<h1>设置tabindex属性可触发焦点事件</h1>
+<div style="float:left;">
+
+  <div id="dropdown" class="dropdown" tabindex="0">
+    <li>测试一下</li>
+    <li>测试一下</li>
+    <li>测试一下</li>
+  </div>
+
+  asdfasf
+
+
+  <iframe height="100" src="https://www.baidu.com">
+  </iframe>
+
+
+  as
+  <script type="text/javascript">
+
+    window.onload = function () {
+      $('#dropdown').click(function () {
+        $('#dropdown').focus();
+        console.log('打开了')
+      })
+
+      $('#dropdown').blur(function () {
+        alert("关闭");
+        console.log('关闭了')
+      })
+
+    }
+
+  </script>
+</body>
+</html>
