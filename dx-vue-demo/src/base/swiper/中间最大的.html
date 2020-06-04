@@ -10,7 +10,7 @@
     .content {
       width: 1000px;
       height: 800px;
-      background-color: pink;
+      /*background-color: pink;*/
     }
 
     .swiper-container {
@@ -32,11 +32,30 @@
       /*width: 20% !important;*/
       height: 300px !important;
     }
+
+    .swiper-container:before {
+      content: "";
+      /*background-color: red;*/
+      background: -moz-linear-gradient(top, white, white 30%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.7)) 0px 0px, -moz-element(#imgbox) 0px 0px no-repeat;
+      /*百分比为调倒影的透明度*/
+      -moz-transform: scaleY(-1);
+      padding: 1px 0px;
+      background-origin: padding-box, content-box;
+      background-clip: padding-box, content-box;
+      position: absolute;
+      height: 340px;
+      width: 340px;
+      top: 340px;
+      left: 0px;
+      /*background-color: red;*/
+    }
   </style>
 </head>
 <body>
 <div class="content">
+  123213
   <div class="swiper-container">
+    23424
     <div class="swiper-wrapper">
       <div class="swiper-slide" style="background-color: palegoldenrod">slider1</div>
       <div class="swiper-slide" style="background-color: slateblue">slider2</div>
@@ -51,6 +70,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
+  123213
 </div>
 <script>
   var mySwiper = new Swiper('.swiper-container', {

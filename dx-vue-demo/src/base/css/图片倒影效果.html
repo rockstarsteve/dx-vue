@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<style>
+
+  .main {
+    height: 1500px;
+  }
+
+  .imgbox {
+    -webkit-box-reflect: below 0px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0%, transparent 15%, transparent 100%);
+    padding: 0px 10px;
+    position: relative;
+  }
+
+  .imgbox img {
+    z-index: -1;
+    height: 340px;
+    width: 340px;
+  }
+
+  .contetnt:before {
+    content: "";
+    /*background-color: red;*/
+    background: -moz-linear-gradient(top, white, white 30%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.7)) 0px 0px, -moz-element(#imgbox) 0px 0px no-repeat;
+    /*百分比为调倒影的透明度*/
+    -moz-transform: scaleY(-1);
+    padding: 1px 0px;
+    background-origin: padding-box, content-box;
+    background-clip: padding-box, content-box;
+    position: absolute;
+    height: 340px;
+    width: 340px;
+    top: 340px;
+    left: 0px;
+    /*background-color: red;*/
+  }
+
+
+  /*和上面的隔开*/
+
+  .box {
+    font-size: 72px;
+    -webkit-box-reflect: below -8px -webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(255, 255, 255, 0.5)));
+  }
+</style>
+
+<div class="main">
+
+  <div class="contetnt">
+    adsfasf
+    <div class="imgbox">
+      12321313
+      <img src="../../assets/good.jpg" height="690" width="772"/>
+    </div>
+  </div>
+
+
+  <div class="contetnt" id="1">
+    adsfasf
+    <div class="imgbox">
+      12321313
+      <img src="../../assets/good.jpg" height="690" width="772"/>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>
