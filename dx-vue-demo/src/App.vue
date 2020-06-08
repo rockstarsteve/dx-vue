@@ -77,7 +77,10 @@
   // import Demo from './components/css/Simple'
 
   /***********************百度map测试********************/
-  import Demo from './components/map/syncMap2'
+  // import Demo from './components/map/syncMap2'
+
+  /***********************pdf预览测试********************/
+  import Demo from './components/pdf/showPdf'
 
 
   export default {
