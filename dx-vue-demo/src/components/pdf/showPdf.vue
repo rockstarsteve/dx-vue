@@ -1,7 +1,7 @@
 <template>
-
-  <pdf :src="pdfUlr"></pdf>
-
+  <div class="content">
+    <pdf :src="pdfUlr" class="pdf"></pdf>
+  </div>
 </template>
 
 <script>
@@ -12,8 +12,8 @@
     components: {
       pdf
     },
-    data(){
-      return{
+    data() {
+      return {
         pdfUlr: './static/pdf/道德经.pdf'
       }
     }
@@ -21,5 +21,18 @@
 </script>
 
 <style scoped>
+  .content {
+    width: 900px;
+    height: 900px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pdf {
+    width: 600px;
+    height: 600px;
+    overflow-y: scroll;
+  }
 
 </style>
