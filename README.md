@@ -1,8 +1,26 @@
 # dx-vue学习项目
 
-	- dx-vue-demo是学习各种插件和练习的的demo
-	- dx-vue-admin是自己简单搭建的后台管理系统
-	- dx-vue-electic
+## 前端使用频率不是特别高的组件
+
+### path
+
+简化项目中路径的使用
+
+### normalize.css
+
+全局样式的重置，清除
+
+### moment
+
+时间工具类
+
+
+
+
+
+
+
+
 
 
 
