@@ -1,0 +1,17 @@
+<div class="cotnetne">
+    测试
+    <form id="myform" name="myform">
+        <input type="text" name="username" value=""/>
+        <button onclick="test()">提交</button>
+    </form>
+</div>
+
+<script>
+  function test() {
+
+    // let a = new FormData(event.target)
+    let a = new FormData(document.getElementById("myform"))
+    console.log("----a" ,a.get('username'))
+
+  }
+</script>
