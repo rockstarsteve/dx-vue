@@ -17,7 +17,9 @@
     },
     mounted() {
       setInterval(() => {
-        this.progressnum = this.progressnum + 0.5
+        if (this.progressnum < 0.8) {
+          this.progressnum = this.progressnum + 0.1
+        }
       }, 1000)
     }
   }
