@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!--        <img alt="Vue logo" src="./assets/logo.png">-->
-    <!--        <hr/>-->
     <demo/>
   </div>
 </template>
@@ -80,8 +78,10 @@
   // import Demo from './components/map/syncMap2'
 
   /***********************pdf预览测试********************/
-  import Demo from './components/pdf/showPdf'
+  // import Demo from './components/pdf/showPdf'
 
+  /***********************progress进度条测试********************/
+  import Demo from './components/progress/CpProgressTest'
 
   export default {
     name: 'app',

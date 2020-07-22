@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+Vue.config.productionTip = false
+
 // 自定义全局组件挂载
 import GlobalMessageTemplate from '@/components/vue/GlobalMessageTemplate.vue'
-
 Vue.component('global-message-template', GlobalMessageTemplate)
 
 
@@ -11,7 +12,7 @@ Vue.component('global-message-template', GlobalMessageTemplate)
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.config.productionTip = false
+
 Vue.use(ElementUI);
 
 //  // echarts使用

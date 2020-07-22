@@ -16,6 +16,11 @@
 
 
 
+### 升级组件
+
+npm install -g npm-check //全局安装
+npm-check -u // 检查更新
+
 
 
 

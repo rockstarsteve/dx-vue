@@ -29,7 +29,7 @@ module.exports = {
   },
 
 
-  // TODO svg没有搞清楚，从新学习
+  // svg
   chainWebpack: config => {
     // svg loader
     const svgRule = config.module.rule('svg') // 找到svg-loader
