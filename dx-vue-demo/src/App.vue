@@ -39,7 +39,7 @@
   // import Demo from './components/slider/Demo23'
 
   /***********************软键盘测试********************/
-  // import Demo from './components/keybord/Demo05'
+  import Demo from './components/keybord/Demo01'
 
   /**********************弹框********************/
   // import Demo from './components/dialog/Demo01'
@@ -81,7 +81,7 @@
   // import Demo from './components/pdf/showPdf'
 
   /***********************progress进度条测试********************/
-  import Demo from './components/progress/CpProgressTest'
+  // import Demo from './components/progress/CpProgressTest'
 
   export default {
     name: 'app',
