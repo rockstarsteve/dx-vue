@@ -39,10 +39,10 @@
   // import Demo from './components/slider/Demo23'
 
   /***********************软键盘测试********************/
-  import Demo from './components/keybord/Demo01'
+  // import Demo from './components/keybord/Demo02'
 
   /**********************弹框********************/
-  // import Demo from './components/dialog/Demo01'
+  import Demo from './components/dialog/Demo02'
 
   /**********************axios********************/
   // import Demo from './components/axios/Demo02'
