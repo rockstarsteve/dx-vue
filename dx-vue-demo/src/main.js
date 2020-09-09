@@ -11,8 +11,6 @@ Vue.component('global-message-template', GlobalMessageTemplate)
 // element ui使用
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
-
 Vue.use(ElementUI);
 
 //  // echarts使用
@@ -59,6 +57,11 @@ Vue.directive('add', {
 
   }
 })
+
+
+// js测试
+import '@/components/js/test.js'
+
 
 
 // vue-router组件

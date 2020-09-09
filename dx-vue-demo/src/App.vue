@@ -21,7 +21,7 @@
   // import Demo from './components/swiper/OnesideSlide'
 
   /***********************svg测试********************/
-  import Demo from './components/svg/Demo01'
+  // import Demo from './components/svg/Demo01'
 
   /***********************vueqr测试********************/
   // import Demo from './components/vueqr/Simple'
@@ -82,6 +82,9 @@
 
   /***********************progress进度条测试********************/
   // import Demo from './components/progress/CpProgressTest'
+
+  /***********************cli环境测试********************/
+  import Demo from './components/evn/evnTest'
 
   export default {
     name: 'app',
