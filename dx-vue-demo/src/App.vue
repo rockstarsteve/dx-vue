@@ -84,7 +84,10 @@
   // import Demo from './components/progress/CpProgressTest'
 
   /***********************cli环境测试********************/
-  import Demo from './components/evn/evnTest'
+  // import Demo from './components/evn/evnTest'
+
+  /***********************vuex测试********************/
+  import Demo from './components/store/Demo01'
 
   export default {
     name: 'app',

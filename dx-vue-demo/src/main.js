@@ -7,6 +7,8 @@ Vue.config.productionTip = false
 import GlobalMessageTemplate from '@/components/vue/GlobalMessageTemplate.vue'
 Vue.component('global-message-template', GlobalMessageTemplate)
 
+// vuex使用
+import store from '@/store'
 
 // element ui使用
 import ElementUI from 'element-ui';
@@ -81,5 +83,6 @@ import router from '@/router/index.js'
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
