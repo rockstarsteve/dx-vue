@@ -23,7 +23,6 @@ Vue.use(ElementUI);
 // swiper使用
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 
@@ -41,12 +40,11 @@ Vue.use(VideoPlayer);
 
 // 手势控制插件
 // import VueTouch from 'vue-touch'
-//
 // Vue.use(VueTouch, {name: 'v-touch'})
+
 
 // 引入jQuery
 // import $ from 'jquery'
-
 // Vue.prototype.$ = $;
 
 

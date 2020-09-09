@@ -21,7 +21,7 @@
   // import Demo from './components/swiper/OnesideSlide'
 
   /***********************svg测试********************/
-  // import Demo from './components/svg/Demo01'
+  import Demo from './components/svg/Demo01'
 
   /***********************vueqr测试********************/
   // import Demo from './components/vueqr/Simple'
@@ -42,7 +42,7 @@
   // import Demo from './components/keybord/Demo02'
 
   /**********************弹框********************/
-  import Demo from './components/dialog/Demo02'
+  // import Demo from './components/dialog/Demo02'
 
   /**********************axios********************/
   // import Demo from './components/axios/Demo02'

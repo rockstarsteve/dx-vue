@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         hello world
-        <svg-icon icon-class="s"/>
+        <svg-icon icon-class="el-table"/>
 
         <svg-icon icon-class="filter" />
     </div>

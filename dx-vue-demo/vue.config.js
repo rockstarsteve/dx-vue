@@ -25,7 +25,6 @@ module.exports = {
         }
       }
     }
-
   },
 
 
@@ -45,6 +44,7 @@ module.exports = {
   },
 
 
+  // jquery
   configureWebpack: {
     // externals: {
     //   'BMap': 'BMap',
@@ -57,6 +57,5 @@ module.exports = {
       })
     ]
   }
-
 
 }
