@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <demo/>
-  </div>
+    <div id="app">
+        <demo/>
+    </div>
 </template>
 
 <script>
@@ -87,7 +87,10 @@
   // import Demo from './components/evn/evnTest'
 
   /***********************vuex测试********************/
-  import Demo from './components/store/Demo01'
+  // import Demo from './components/store/Demo01'
+
+  /***********************mock测试********************/
+  import Demo from './components/mock/Demo01'
 
   export default {
     name: 'app',
@@ -98,14 +101,14 @@
 </script>
 
 <style>
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
 
-  #app {
-    width: 100%;
-    height: 100%;
-  }
+    #app {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 

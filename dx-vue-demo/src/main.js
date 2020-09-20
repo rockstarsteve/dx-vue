@@ -5,6 +5,7 @@ Vue.config.productionTip = false
 
 // 自定义全局组件挂载
 import GlobalMessageTemplate from '@/components/vue/GlobalMessageTemplate.vue'
+
 Vue.component('global-message-template', GlobalMessageTemplate)
 
 // vuex使用
@@ -13,6 +14,7 @@ import store from '@/store'
 // element ui使用
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
 Vue.use(ElementUI);
 
 //  // echarts使用
@@ -23,6 +25,7 @@ Vue.use(ElementUI);
 // swiper使用
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 
@@ -65,7 +68,6 @@ Vue.directive('add', {
 import '@/components/js/test.js'
 
 
-
 // vue-router组件
 import router from '@/router/index.js'
 
@@ -80,6 +82,14 @@ import router from '@/router/index.js'
 //     sensors.quick("autoTrackSinglePage"); // after the next(); statement
 //   },0);
 // });
+
+
+//mock测试对象
+console.log("环境：", process.env.NODE_ENV)
+if (process.env.NODE_ENV == 'dev') {
+  const {mockXHR} = require('./mock/index')
+  mockXHR()
+}
 
 new Vue({
   render: h => h(App),
