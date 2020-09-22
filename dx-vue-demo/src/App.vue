@@ -6,7 +6,7 @@
 
 <script>
   // 临时测试文件
-  // import Demo from './components/Temp.vue'
+  import Demo from './components/Temp.vue'
 
   /**********************错误复现********************/
   // import Demo from './components/erro/Demo01'
@@ -90,7 +90,7 @@
   // import Demo from './components/store/Demo01'
 
   /***********************mock测试********************/
-  import Demo from './components/mock/Demo01'
+  // import Demo from './components/mock/Demo01'
 
   export default {
     name: 'app',
