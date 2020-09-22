@@ -20,7 +20,7 @@
     <tr>
         <td style="width:250px;">
             <ul>
-                <!--***********************下面是页面中左侧的超链接，中间是跳转到的经纬度***********************-->
+                <!-- ************* //TODO 下面是页面中左侧的超链接，中间是跳转到的经纬度*********************** -->
 
                 <li><a href="javascript:void(0)" onclick="to(117.223355,39.117717)">津味张记包子铺(浦口道店)</a></li>
                 <li><a href="javascript:void(0)" onclick="to(117.23572,39.111719)">解放南路329号</a></li>
@@ -41,7 +41,7 @@
   map.centerAndZoom(point, 5);
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
-  /************************这里是显示到地图上面的点，前面的是点击后的标题，后面的是点击后的内容********************************/
+  //TODO 这里是显示到地图上面的点，前面的是点击后的标题，后面的是点击后的内容
   var json_data = [
     [117.223355,39.117717, '津味张记包子铺(浦口道店)<br />地址：津味张记包子铺(浦口道店)'],
     [117.23572,39.111719, '解放南路329号<br />地址：解放南路329号'],
@@ -58,9 +58,12 @@
   };
 
   for (var i = 0; i < json_data.length; i++) {
-    // 修改点的图片
-    var myIcon = new BMap.Icon("https://raw.githubusercontent.com/rockstarsteve/dx-vue/master/dx-vue-demo/public/images/big-bg.png", new BMap.Size(25,35));
-    var marker = new BMap.Marker(new BMap.Point(json_data[i][0], json_data[i][1]),{icon:myIcon}); // 创建点
+    // TODO 修改点的图片
+    // var myIcon = new BMap.Icon("https://raw.githubusercontent.com/rockstarsteve/dx-vue/master/dx-vue-demo/public/images/baidu_point.png", new BMap.Size(25,35));
+    // var myIcon = new BMap.Icon(new BMap.Size(25,35));
+    // var marker = new BMap.Marker(new BMap.Point(json_data[i][0], json_data[i][1]),{icon:myIcon}); // 创建点
+    // TODO 使用默认的图片
+    var marker = new BMap.Marker(new BMap.Point(json_data[i][0], json_data[i][1])); // 创建点
     map.addOverlay(marker);    //增加点
     pointArray[i] = new BMap.Point(json_data[i][0], json_data[i][1]);
     var content = json_data[i][2];
