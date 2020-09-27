@@ -12,7 +12,13 @@
         padding: 0
       }
 
+      body {
+        padding-top: 200px;
+      }
+
       #box {
+
+        box-sizing: border-box;
         height: 140px;
         width: 400px;
         border: 1px solid #cccccc;
@@ -21,26 +27,61 @@
         margin: 50px auto;
         text-align: center;
       }
+
+      .div1 {
+        display: inline-block;
+      }
     </style>
 </head>
 
 <body>
 <div id="box">
     <ul id="ul1">
-        <li>1111111111111111111111</li>
-        <li>2222222222222222222222</li>
-        <li>3333333333333333333333</li>
-        <li>4444444444444444444444</li>
-        <li>5555555555555555555555</li>
-        <li>6666666666666666666666</li>
-        <li>7777777777777777777777</li>
-        <li>8888888888888888888888</li>
-        <li>9999999999999999999999</li>
+        <li>
+            <div class="div1">1111111</div>
+            <div class="div1">22222222</div>
+        </li>
+        <li>
+            <div class="div1">333333333</div>
+            <div class="div1">4444444</div>
+        </li>
+        <li>
+            <div class="div1">55555555</div>
+            <div class="div1">666666666</div>
+        </li>
+        <li>
+            <div class="div1">77777777</div>
+            <div class="div1">8888888</div>
+        </li>
+        <li>
+            <div class="div1">99999999</div>
+            <div class="div1">000000000</div>
+        </li>
+        <li>
+            <div class="div1">xxxxxxxx</div>
+            <div class="div1">ssssss</div>
+        </li>
+        <li>
+            <div class="div1">kkkkkkkkk</div>
+            <div class="div1">ddddddd</div>
+        </li>
+        <li>
+            <div class="div1">ppppppppp</div>
+            <div class="div1">aaaaaaaaaa</div>
+        </li>
+        <li>
+            <div class="div1">999tttttt</div>
+            <div class="div1">ooooooaaa</div>
+        </li>
+
     </ul>
     <ul id="ul2"></ul>
 </div>
 <script>
-  window.onload = roll(50);
+
+  // 126px
+
+  window.onload = roll(400);
 
   // 传入的 t 为滚动快慢的时间
   function roll(t) {
@@ -52,29 +93,35 @@
     // 初始化滚动高度
     box.scrollTop = 0;
     let timer = setInterval(rollStart, t);
-    box.onmouseover = function () {
-      clearInterval(timer)
-    }
-    box.onmouseout = function () {
-      timer = setInterval(rollStart, t);
-    }
+    // box.onmouseover = function () {
+    //   clearInterval(timer)
+    // }
+    // box.onmouseout = function () {
+    //   timer = setInterval(rollStart, t);
+    // }
   }
 
   function rollStart() {
+
+    console.log("box.scrollTop:", box.scrollTop, "      ul1.scrollHeight:", ul1.scrollHeight)
+
     if (box.scrollTop >= ul1.scrollHeight) {
       box.scrollTop = 0;
+      console.log('box.scrollTop >= ul1.scrollHeight', box.scrollTop >= ul1.scrollHeight)
     } else {
-      box.scrollTop++;
+      var temp = box.scrollTop++;
+
+      // if (temp > 110) {
+      //   box.scrollTop = 0
+      // }
+
+
+      console.log('temp:', temp)
     }
   }
+</script>
 
-  var newdiv=document.createElement("div");
-  newdiv.id="child_div";
-
-  var mydiv1 = '<div class="BMap_Marker BMap_noprint" unselectable="on" ""="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 21px; height: 33px; left: 1023px; top: 379px; z-index: -122676100; transform-origin: 10px 33px; user-select: none;" title="津味张记包子铺(浦口道店)"></div>'
-
-  document.getElementById("app").append(mydiv1);
-
+<script>
 
 </script>
 </body>

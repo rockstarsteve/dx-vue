@@ -6,7 +6,7 @@
 
 <script>
   // 临时测试文件
-  import Demo from './components/Temp.vue'
+  // import Demo from './components/Temp.vue'
 
   /**********************错误复现********************/
   // import Demo from './components/erro/Demo01'
@@ -54,7 +54,7 @@
   // import Demo from './components/animate/Simple'
 
   /***********************vue-video-player测试********************/
-  // import Demo from './components/vuevideoplayer/Simple'
+  import Demo from './components/vuevideoplayer/phone/PhoneVide'
 
   /***********************trun测试********************/
   // import Demo from './components/turn/Simple'
