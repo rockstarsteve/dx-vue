@@ -54,7 +54,7 @@
   // import Demo from './components/animate/Simple'
 
   /***********************vue-video-player测试********************/
-  import Demo from './components/vuevideoplayer/phone/PhoneVide'
+  // import Demo from './components/vuevideoplayer/phone/PhoneVide'
 
   /***********************trun测试********************/
   // import Demo from './components/turn/Simple'
@@ -91,6 +91,9 @@
 
   /***********************mock测试********************/
   // import Demo from './components/mock/Demo01'
+
+  /***********************wordcloud测试********************/
+  import Demo from './components/wordcloud/Demo'
 
   export default {
     name: 'app',
