@@ -93,7 +93,10 @@
   // import Demo from './components/mock/Demo01'
 
   /***********************wordcloud测试********************/
-  import Demo from './components/wordcloud/Demo'
+  // import Demo from './components/wordcloud/Demo'
+
+  /***********************fouces测试********************/
+  import Demo from './components/event/fockinput'
 
   export default {
     name: 'app',
