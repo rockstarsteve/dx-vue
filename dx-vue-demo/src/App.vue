@@ -96,7 +96,11 @@
   // import Demo from './components/wordcloud/Demo'
 
   /***********************fouces测试********************/
-  import Demo from './components/event/fockinput'
+  // import Demo from './components/event/fockinput'
+
+  /***********************print测试********************/
+  import Demo from './components/print/Demo'
+
 
   export default {
     name: 'app',

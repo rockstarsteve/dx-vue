@@ -84,6 +84,15 @@ import router from '@/router/index.js'
 // });
 
 
+import Print from '@/util/print'
+Vue.use(Print) // 注册
+
+
+
+import nprint from 'vue-print-nb'
+Vue.use(nprint)
+
+
 //mock测试对象
 console.log("环境：", process.env.NODE_ENV)
 if (process.env.NODE_ENV == 'dev') {
