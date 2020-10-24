@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清新农商银行</title>
+    <link rel="stylesheet" href="../plugs/common.css">
+    <script src="../plugs/jquery-1.11.2.min.js"></script>
+    <script src="../plugs/jsize-horizontal-1920.js"></script>
+    <script src="../plugs/videojs/video.min.js"></script>
+    <link rel="stylesheet" href="../plugs/videojs/video-js.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="hover-div"></div>
+    <video class="video-js" autoplay muted id="e_video">
+        <source id="source" type="video/mp4">
+    </video>
+</div>
+
+<script>
+    var myVid;
+    var vList = ["../../assets/video/demo01.mp4", "../../assets/video/demo02.mp4"]; //视频集
+    var curr = 0;
+    var options = {};
+    //静态用于演示
+    $(function() {
+        $("#source").attr("src", vList[0]);
+        myVid = videojs('e_video', options, function onPlayerReady() {
+            this.play();
+            this.on('ended', function() {
+
+                videojs.log('Awww...over so soon?!');
+                if (curr >= vList.length) {
+                    curr = 0; //重新循环播放
+                }
+
+                myVid.src(vList[curr]);
+                myVid.load();
+
+                console.log("curr1: " + curr);
+                curr++;
+                console.log("curr2: " + curr);
+            });
+        })
+        curr++;
+        console.log("curr: " + curr)
+    })
+
+
+
+    //动态
+    //$(function(){
+    //$.ajax({
+    // type:"post",
+    //url:"",  //获取视频url
+    //dataType : "json",
+    //success : function (data){
+    //    vList = data.list; //视频集
+    //    curr = data.subscript; //视频下标    如果不需要播放指定视频可以忽略  curr 赋值为0即可
+    //   var videoUrls = vList[curr]; //从视频集中获取播放指定视频url
+
+    //  $("#source").attr("src", videoUrls);  // 赋值给video标签
+
+
+    // myVid = videojs('e_video', options, function onPlayerReady() {
+    //    this.play();
+    //   this.on('ended', function () {
+
+    //     videojs.log('Awww...over so soon?!');
+    //待所有视频播放完成后  如果不需要重第一个视频播放则注释即可
+    //    if(curr >= vList.length){
+    //        curr = 0; //重新循环播放
+    //   }
+    //   myVid.src(vList[curr]);
+    //   myVid.load();
+    //    curr ++; //视频下标加1
+    //});
+    //})
+
+    // curr ++;
+    // }
+    // })
+    //})
+
+</script>
+
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .video-js {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+</style>
+</body>
+</html>
