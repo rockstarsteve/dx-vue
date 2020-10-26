@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清新农商银行</title>
+    <link rel="stylesheet" href="../plugs/common.css">
+    <script src="../plugs/jquery-1.11.2.min.js"></script>
+    <script src="../plugs/jsize-horizontal-1920.js"></script>
+    <script src="../plugs/videojs/video.min.js"></script>
+    <link rel="stylesheet" href="../plugs/videojs/video-js.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="hover-div"></div>
+    <video class="video-js" id="video" src="../../assets/video/demo01.mp4" autoplay muted object-fit="fill" id="e_video">
+    </video>
+</div>
+
+<script>
+    $(window).load(function () {
+        var vList = ["../../assets/video/demo02.mp4","../../assets/video/demo01.mp4"]
+        var vLen = vList.length;
+        var curr = 0;
+        var myvideo = document.getElementById("video");
+        myvideo.onended = function () {
+            myvideo.src = vList[curr];
+            var $text = vList[curr];
+            myvideo.load();
+            myvideo.play();
+            curr++;
+            console.log(curr)
+            if (curr >= vLen) {
+                curr = 0; //重新循环播放
+            }
+        };
+    })
+
+</script>
+
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .video-js {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+</style>
+</body>
+</html>
