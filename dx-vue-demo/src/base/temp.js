@@ -12,3 +12,9 @@ let myArry = [1,23,4,5,6]
 myArry.push(334444444)
 
 console.log(myArry)
+
+
+
+
+
+

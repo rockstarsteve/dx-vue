@@ -8,61 +8,50 @@
 <style type="text/css" rel="stylesheet">
     .table {
         display: table;
-        /*border: 1px solid #cccccc;*/
         margin: 5px;
-        /*display: table时padding会失效*/
     }
 
     .row {
         display: table-row;
-        border: 1px solid #cccccc;
-        /*display: table-row时margin、padding同时失效*/
+        border: 1px solid seagreen;
     }
 
     .cell {
         display: table-cell;
-        border: 1px solid #cccccc;
+        border: 1px solid royalblue;
         padding: 5px;
-        /*display: table-cell时margin会失效*/
+        /*width: 200px;*/
     }
-
-
-    .table2 {
-        display: table;
-        margin: 5px;
-        width: 1000px;
-    }
-
-    .row2 {
-        display: table-row;
-
-    }
-
-    .cell2 {
-        display: table-cell;
-        padding: 10px;
-        background-color: red;
+    .col-cell {
+        /*display: flex;*/
+        border: 1px solid royalblue;
+        padding: 5px;
+        border-collapse: collapse;
     }
 </style>
 <div class="table">
     <div class="row">
         <div class="cell">张三</div>
-        <div class="cell">李四</div>
-        <div class="cell">王五</div>
+        <!--<div class="cell">李四</div>-->
+        <div class="col-cell">
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+            王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五王五
+        </div>
     </div>
     <div class="row">
         <div class="cell">张三</div>
         <div class="cell">李四</div>
         <div class="cell">王五</div>
     </div>
-    <hr/>
-    <div class="table2">
-        <div class="row2">
-            <div class="cell2">内容内容内容内容内容内内容内</div>
-            <div class="cell">内容内容内容内容内容内容内容内容内容</div>
-            <div class="cell">
-                内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            </div>
+    <div class="row">
+        <div class="cell">内容内容内容内容内容内内容内</div>
+        <div class="cell">内容内容内容内容内容内容内容内容内容</div>
+        <div class="cell">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
         </div>
     </div>
 </div>

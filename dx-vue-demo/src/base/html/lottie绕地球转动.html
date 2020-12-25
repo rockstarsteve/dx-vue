@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/lottie/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-1.11.2.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="bm"> </div>
+    <script>
+        //渲染动画
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('bm'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './js/lottie/data-rand.json'
+        })
+        //添加点击事件
+        $(function () {
+            setTimeout(() => {
+                $('image').each(function () {
+                    if ($(this).attr("href").includes('img_0.png')) {
+                        $(this).bind("click", function () {
+                            console.log("111111111111111");
+                        });
+                    } else if ($(this).attr("href").includes('img_1.png')) {
+                        $(this).bind("click", function () {
+                            console.log("2222222222222222222");
+                        });
+                    }
+                })
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>

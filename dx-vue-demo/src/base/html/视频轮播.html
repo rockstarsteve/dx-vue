@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>清新农商银行</title>
+    <link rel="stylesheet" href="css/plugs/common.css">
+    <link rel="stylesheet" href="css/plugs/page-common.css">
+    <script src="js/plugs/jquery-1.11.2.min.js"></script>
+    <script src="js/plugs/jsize-horizontal-3840.js"></script>
+    <link rel="stylesheet" href="css/index2.css">
+    <script src="js/plugs/video.min.js"></script>
+    <link rel="stylesheet" href="js/plugs/video-js.min.css">
+</head>
+
+<body>
+    <!--单视频播放轮播版-->
+    <div class="container">
+        
+        <video class="video-js" autoplay poster="./images/bg.jpg" preload="auto" id="e_video" muted>
+            <source id="source" type="video/mp4">
+        </video>
+        <div class="reload-btn" onclick="reloadVideo()"></div>
+    </div>
+
+    <script>
+        var myVid;
+        var curr = 0;
+        var options = {};
+        var vList = [
+		"source/清新农信改制宣传片（终版).mp4",
+            "source/清新农商银行宣传片 高清.mp4",
+            
+            "source/悦农e付宣传视频_(加logo）.mp4",
+            "source/悦农e付宣传视频_1（加logo).mp4",
+            "source/手机银行宣传视频(加logo）.mp4",
+            "source/零花钱的价值.mp4  ",
+            "source/钱是什么.mp4",
+            "source/如何分配零用钱.mp4",
+            "source/如何让孩子更聪明地花钱？.mp4",
+            "source/预算.mp4",
+            "source/智能存钱罐7大tips.mp4"
+        ];
+
+        var timer = null;
+        var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
+        var lastTime = new Date().getTime(); // 上次点击时间
+        var count = 0; // 连续点击次数
+        function reloadVideo() {
+            var currentTime = new Date().getTime();
+            // 计算两次相连的点击时间间隔
+            count = (currentTime - lastTime) < waitTime ? count + 1 : 1;
+            lastTime = new Date().getTime();
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                clearTimeout(timer);
+                // 处理点击事件，等于3时候进行处理
+                if (count > 2) {
+                    // 连续点击3次或者3次以上的点击事件
+                    var temp = curr
+                    if(temp){
+                        myVid.src(vList[temp-1]);
+                        myVid.load();
+                    }else if(!myVid){
+                        //判播放视频的节点是否存在，不存在从新创建播放
+                        $("#source").attr("src", vList[0]);
+                        myVid = videojs('e_video', options, function onPlayerReady() {
+                            this.play();
+                            this.on('ended', function () {
+                                videojs.log('Awww...over so soon?!');
+                                if (curr >= vList.length) {
+                                    curr = 0;
+                                }
+                                myVid.src(vList[curr]);
+                                myVid.load();
+                                curr++;
+                                console.log("curr1: " + curr);
+                            });
+                        })
+                        curr++;
+                    } else{
+                        var myVid;
+                        var curr = 0;
+                        var options = {};
+                        var vList = [
+                            "source/清新农商银行宣传片 高清.mp4",
+                            "source/清新农信改制宣传片（终版).mp4",
+                            "source/悦农e付宣传视频_(加logo）.mp4",
+                            "source/悦农e付宣传视频_1（加logo).mp4",
+                            "source/手机银行宣传视频(加logo）.mp4",
+                            "source/零花钱的价值.mp4  ",
+                            "source/钱是什么.mp4",
+                            "source/如何分配零用钱.mp4",
+                            "source/如何让孩子更聪明地花钱？.mp4",
+                            "source/预算.mp4",
+                            "source/智能存钱罐7大tips.mp4"
+                        ];
+                        myVid.src(vList[0]);
+                        myVid.load();
+                    }
+                }
+            }, waitTime + 10)
+        }
+
+        //初始化
+        window.onload = function () {
+            $("#source").attr("src", vList[0]);
+            myVid = videojs('e_video', options, function onPlayerReady() {
+                this.play();
+                this.on('ended', function () {
+                    videojs.log('Awww...over so soon?!');
+                    if (curr >= vList.length) {
+                        curr = 0;
+                    }
+                    myVid.src(vList[curr]);
+                    myVid.load();
+                    curr++;
+                    console.log("curr1: " + curr);
+                });
+            })
+            curr++;
+        }
+    </script>
+</body>
+
+</html>

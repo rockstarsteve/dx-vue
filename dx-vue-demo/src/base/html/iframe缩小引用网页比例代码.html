@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script>
+//获取浏览器名称 
+function getbrowser(){
+ var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+ var isOpera = userAgent.indexOf("Opera") > -1;
+ if (isOpera){return "Opera"}; //判断是否Opera浏览器
+ if (userAgent.indexOf("Firefox") > -1){return "FF";} //判断是否Firefox浏览器
+ if (userAgent.indexOf("Safari") > -1){return "Safari";} //判断是否Safari浏览器
+ if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera){return "IE";} ; 
+ //判断是否IE浏览器
+}
+//进行缩放
+//el 要缩放的dom对象
+//xSacle x方向缩放的大小
+//yScale y方向缩放的大小
+function zoomEle(el, xScale, yScale) {
+ var name = getbrowser();
+  style = el.getAttribute('style') || "";
+ if(name=="IE") {
+  if(document.compatMode == "CSS1Compat"){//模式匹配 解决ie8下兼容模式
+   el.style.width = el.clientWidth * 2.0;
+   el.style.height = el.clientHeight * 2.0;
+  } 
+  el.style.zoom = xScale;
+ }else if(name=="FF"){
+  el.style.transform = 'scale(' + xScale + ', ' + yScale + ')';
+  el.style.transformOrigin = '0px 0px';
+ }else {
+  el.setAttribute('style', style + '-webkit-transform: scale(' + xScale + ', ' +  yScale + '); -webkit-transform-origin: 0px 0px;');
+ }
+}
+</script>
+<body style="position:relative">
+123213213问问群若群二无若
+<iframe style="position:absolute;top:0;left:0;" src="http://www.baidu.com" width="1800" height="1010" id="f1" scrolling="no"  onload="zoomEle(this,0.84,1);"></iframe>
+测试测试测试
+</body>
+</HTML>
