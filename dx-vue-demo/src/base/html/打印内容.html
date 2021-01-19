@@ -1,65 +1,68 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>无标题文档</title>
-</head>
-<style>
-    .printonly{
-        display:none
-    }
-    @media print{
-        input,.noprint{
-            display:none
+    <head>
+        <meta charset="utf-8">
+        <title>无标题文档</title>
+    </head>
+    <style>
+        .printonly {
+            display: none
         }
+
+        @media print {
+            input, .noprint {
+                display: none
+            }
+
+            .printonly {
+                display: block;
+                width: 50%
+            }
+        }
+
+        /**
         .printonly{
-            display:block;
-            width:50%
+          display:none
         }
-    }
-    /**
-    .printonly{
-      display:none
-    }
-    不能写到这里，会导致打印时printonly的内容也不显示
-    */
-</style>
+        不能写到这里，会导致打印时printonly的内容也不显示
+        */
+    </style>
 
-<body>
-<div class="noprint">
-    这段打印时不显示
-</div>
-<div class="printonly">
-    <h1>这段打印时会显示</h1>
-    <hr>
-    This is print-only
-</div>
+    <body>
+        <div class="noprint">
+            这段打印时不显示
+        </div>
+        <div class="printonly">
+            <h1>这段打印时会显示</h1>
+            <hr>
+            This is print-only
+        </div>
 
 
-阿斯蒂芬
+        阿斯蒂芬
 
-<div class="noprint">
-    这段打印时不显示
-</div>
-<div class="printonly">
-    <h1>这段打印时会显示</h1>
-    <hr>
-    This is print-only
-</div>
-
-
-案发时风口浪尖
-<div class="noprint">
-    这段打印时不显示
-</div>
-<div class="printonly">
-    <h1>这段打印时会显示</h1>
-    <hr>
-    This is print-only
-</div>
-
-<input onClick="print()" value="点击打印" type="button">
+        <div class="noprint">
+            这段打印时不显示
+        </div>
+        <div class="printonly">
+            <h1>这段打印时会显示</h1>
+            <hr>
+            This is print-only
+        </div>
 
 
-</body>
+        案发时风口浪尖
+        <div class="noprint">
+            这段打印时不显示
+        </div>
+        <div class="printonly">
+            <h1>这段打印时会显示</h1>
+            <hr>
+            This is print-only
+        </div>
+
+        <input onClick="print()" value="点击打印" type="button">
+
+
+    </body>
 </html>

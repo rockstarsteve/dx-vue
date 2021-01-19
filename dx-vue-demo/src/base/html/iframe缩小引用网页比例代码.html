@@ -1,47 +1,57 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
-<HEAD>
-<TITLE> New Document </TITLE>
-<META NAME="Generator" CONTENT="EditPlus">
-<META NAME="Author" CONTENT="">
-<META NAME="Keywords" CONTENT="">
-<META NAME="Description" CONTENT="">
-</HEAD>
-<script>
-//»ñÈ¡ä¯ÀÀÆ÷Ãû³Æ 
-function getbrowser(){
- var userAgent = navigator.userAgent; //È¡µÃä¯ÀÀÆ÷µÄuserAgent×Ö·û´®
- var isOpera = userAgent.indexOf("Opera") > -1;
- if (isOpera){return "Opera"}; //ÅĞ¶ÏÊÇ·ñOperaä¯ÀÀÆ÷
- if (userAgent.indexOf("Firefox") > -1){return "FF";} //ÅĞ¶ÏÊÇ·ñFirefoxä¯ÀÀÆ÷
- if (userAgent.indexOf("Safari") > -1){return "Safari";} //ÅĞ¶ÏÊÇ·ñSafariä¯ÀÀÆ÷
- if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera){return "IE";} ; 
- //ÅĞ¶ÏÊÇ·ñIEä¯ÀÀÆ÷
-}
-//½øĞĞËõ·Å
-//el ÒªËõ·ÅµÄdom¶ÔÏó
-//xSacle x·½ÏòËõ·ÅµÄ´óĞ¡
-//yScale y·½ÏòËõ·ÅµÄ´óĞ¡
-function zoomEle(el, xScale, yScale) {
- var name = getbrowser();
-  style = el.getAttribute('style') || "";
- if(name=="IE") {
-  if(document.compatMode == "CSS1Compat"){//Ä£Ê½Æ¥Åä ½â¾öie8ÏÂ¼æÈİÄ£Ê½
-   el.style.width = el.clientWidth * 2.0;
-   el.style.height = el.clientHeight * 2.0;
-  } 
-  el.style.zoom = xScale;
- }else if(name=="FF"){
-  el.style.transform = 'scale(' + xScale + ', ' + yScale + ')';
-  el.style.transformOrigin = '0px 0px';
- }else {
-  el.setAttribute('style', style + '-webkit-transform: scale(' + xScale + ', ' +  yScale + '); -webkit-transform-origin: 0px 0px;');
- }
-}
-</script>
-<body style="position:relative">
-123213213ÎÊÎÊÈºÈôÈº¶şÎŞÈô
-<iframe style="position:absolute;top:0;left:0;" src="http://www.baidu.com" width="1800" height="1010" id="f1" scrolling="no"  onload="zoomEle(this,0.84,1);"></iframe>
-²âÊÔ²âÊÔ²âÊÔ
-</body>
+    <HEAD>
+        <TITLE> New Document </TITLE>
+        <META NAME="Generator" CONTENT="EditPlus">
+        <META NAME="Author" CONTENT="">
+        <META NAME="Keywords" CONTENT="">
+        <META NAME="Description" CONTENT="">
+    </HEAD>
+    <script>
+        //è·å–æµè§ˆå™¨åç§°
+        function getbrowser() {
+            var userAgent = navigator.userAgent; //å–å¾—æµè§ˆå™¨çš„userAgentå­—ç¬¦ä¸²
+            var isOpera = userAgent.indexOf("Opera") > -1;
+            //åˆ¤æ–­æ˜¯å¦Operaæµè§ˆå™¨
+            if (isOpera) {
+                return "Opera"
+            }
+            //åˆ¤æ–­æ˜¯å¦Firefoxæµè§ˆå™¨
+            if (userAgent.indexOf("Firefox") > -1) {
+                return "FF";
+            }
+            //åˆ¤æ–­æ˜¯å¦Safariæµè§ˆå™¨
+            if (userAgent.indexOf("Safari") > -1) {
+                return "Safari";
+            }
+            //åˆ¤æ–­æ˜¯å¦IEæµè§ˆå™¨
+            if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+                return "IE";
+            }
+        }
+
+        //è¿›è¡Œç¼©æ”¾
+        //el è¦ç¼©æ”¾çš„domå¯¹è±¡
+        //xSacle xæ–¹å‘ç¼©æ”¾çš„å¤§å°
+        //yScale yæ–¹å‘ç¼©æ”¾çš„å¤§å°
+        function zoomEle(el, xScale, yScale) {
+            var name = getbrowser();
+            style = el.getAttribute('style') || "";
+            if (name == "IE") {
+                if (document.compatMode == "CSS1Compat") {//æ¨¡å¼åŒ¹é… è§£å†³ie8ä¸‹å…¼å®¹æ¨¡å¼
+                    el.style.width = el.clientWidth * 2.0;
+                    el.style.height = el.clientHeight * 2.0;
+                }
+                el.style.zoom = xScale;
+            } else if (name == "FF") {
+                el.style.transform = 'scale(' + xScale + ', ' + yScale + ')';
+                el.style.transformOrigin = '0px 0px';
+            } else {
+                el.setAttribute('style', style + '-webkit-transform: scale(' + xScale + ', ' + yScale + '); -webkit-transform-origin: 0px 0px;');
+            }
+        }
+    </script>
+    <body style="position:relative">
+        <iframe src="http://www.baidu.com" width="1300" height="810" onload="zoomEle(this,0.84,1);"></iframe>
+    </body>
 </HTML>

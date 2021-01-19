@@ -1,89 +1,92 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>无标题文档</title>
-</head>
-<style>
-    @media print{
-        input,.noprint{
-            display:none
+    <head>
+        <meta charset="utf-8">
+        <title>无标题文档</title>
+    </head>
+    <style>
+        @media print {
+            input, .noprint {
+                display: none
+            }
+
+            .printonly {
+                display: block;
+                width: 50%
+            }
         }
+
+        .goos-cell {
+            border: 2px solid;
+        }
+
+        .table-goods {
+            width: 100%;
+        }
+
+        .goos-cell {
+            padding-left: 10px;
+            height: 40px;
+            border: 2px solid black;
+        }
+
+        /**
         .printonly{
-            display:block;
-            width:50%
+          display:none
         }
-    }
+        不能写到这里，会导致打印时printonly的内容也不显示
+        */
+    </style>
 
-    .goos-cell{
-        border: 2px solid;
-    }
+    <body>
 
-    .table-goods{
-        width: 100%;
-    }
-    .goos-cell{
-        padding-left: 10px;
-        height: 40px;
-        border: 2px solid black;
-    }
-    /**
-    .printonly{
-      display:none
-    }
-    不能写到这里，会导致打印时printonly的内容也不显示
-    */
-</style>
+        <table class="table-goods printonly" cellspacing="0" border="0" style="border-collapse:collapse">
+            <tr class="goos-line">
+                <td class="goos-cell">产品名称:</td>
+                <td class="goos-cell">12312313</td>
+                <td class="goos-cell">产品代码:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">起购金额:</td>
+                <td class="goos-cell">12312313万</td>
+                <td class="goos-cell">产品经理:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">风险等级:</td>
+                <td class="goos-cell">12312313</td>
+                <td class="goos-cell">是否热销:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">月收益:</td>
+                <td class="goos-cell">12312313</td>
+                <td class="goos-cell">年收益:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">日收益:</td>
+                <td class="goos-cell">12312313%</td>
+                <td class="goos-cell">业绩比较基准:</td>
+                <td class="goos-cell">12312313%</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">发售日期:</td>
+                <td class="goos-cell">12312313</td>
+                <td class="goos-cell">到期日期:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+            <tr class="goos-line">
+                <td class="goos-cell">期限:</td>
+                <td class="goos-cell">12312313</td>
+                <td class="goos-cell">是否已购:</td>
+                <td class="goos-cell">12312313</td>
+            </tr>
+        </table>
 
-<body>
-
-<table class="table-goods printonly" cellspacing="0" border="0" style="border-collapse:collapse">
-    <tr class="goos-line">
-        <td class="goos-cell">产品名称:</td>
-        <td class="goos-cell">12312313</td>
-        <td class="goos-cell">产品代码:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">起购金额:</td>
-        <td class="goos-cell">12312313万</td>
-        <td class="goos-cell">产品经理:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">风险等级:</td>
-        <td class="goos-cell">12312313</td>
-        <td class="goos-cell">是否热销:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">月收益:</td>
-        <td class="goos-cell">12312313</td>
-        <td class="goos-cell">年收益:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">日收益:</td>
-        <td class="goos-cell">12312313%</td>
-        <td class="goos-cell">业绩比较基准:</td>
-        <td class="goos-cell">12312313%</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">发售日期:</td>
-        <td class="goos-cell">12312313</td>
-        <td class="goos-cell">到期日期:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-    <tr class="goos-line">
-        <td class="goos-cell">期限:</td>
-        <td class="goos-cell">12312313</td>
-        <td class="goos-cell">是否已购:</td>
-        <td class="goos-cell">12312313</td>
-    </tr>
-</table>
-
-<input onClick="print()" value="点击打印" type="button">
+        <input onClick="print()" value="点击打印" type="button">
 
 
-</body>
+    </body>
 </html>

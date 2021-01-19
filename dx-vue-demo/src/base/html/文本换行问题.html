@@ -1,62 +1,59 @@
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>pinPade</title>
-</head>
-<body>
-<div class="root">
-  中英文换行：
-  参考地址：https://www.runoob.com/w3cnote/css-en-cn-break-line.html，https://www.runoob.com/w3cnote/css-nowrap-break-word.html
-  <div class="div1">
-    asfdasfsafdasfsafasfffffffffffffffsafffff
-    asdfas asdf asdfasf afsd sadf asdf adsfas asdfas adfsaf asdfsaf asdfsaf
-    咋奋达科技爱上了副科级拉速度快放假了大水井坊阿斯利康的房价索拉卡积分的烧腊大富科技碍事福利卡决胜巅峰看
-    阿斯蒂芬 离开 路径 空路径阿斯利康的 垃圾水电费垃圾啊是大佬 拉设计费 离开 拉开距离 离开家 爱的
-    阿暗\n示法
+    <head>
+        <meta charset="UTF-8">
+        <title>pinPade</title>
+    </head>
+    <body>
+        <div class="root">
+            中英文换行：
+            参考地址：https://www.runoob.com/w3cnote/css-en-cn-break-line.html，https://www.runoob.com/w3cnote/css-nowrap-break-word.html
+            <div class="div1">
+                asfdasfsafdasfsafasfffffffffffffffsafffff
+                asdfas asdf asdfasf afsd sadf asdf adsfas asdfas adfsaf asdfsaf asdfsaf
+                咋奋达科技爱上了副科级拉速度快放假了大水井坊阿斯利康的房价索拉卡积分的烧腊大富科技碍事福利卡决胜巅峰看
+                阿斯蒂芬 离开 路径 空路径阿斯利康的 垃圾水电费垃圾啊是大佬 拉设计费 离开 拉开距离 离开家 爱的
+                阿暗\n示法
 
-  </div>
-</div>
-<style>
-  .root {
-    width: 400px;
-    height: 400px;
-    background-color: pink;
-    /*display: flex;*/
-    /*justify-content: center;*/
-  }
+            </div>
+        </div>
+        <style>
+            .root {
+                width: 400px;
+                height: 400px;
+                background-color: pink;
+                /*display: flex;*/
+                /*justify-content: center;*/
+            }
 
-  .div1 {
+            .div1 {
 
-    /*【attention！】*/
-    /*1. word-break:break-all; 只对英文起作用，以字母作为换行依据*/
-    /*2. word-wrap:break-word; 只对英文起作用，以单词作为换行依据*/
-    /*3. white-space:pre-wrap; 只对中文起作用，强制换行*/
-    /*4. white-space:nowrap; 强制不换行，都起作用*/
-    /*5. white-space:nowrap; overflow:hidden; text-overflow:ellipsis; 不换行，超出部分隐藏且以省略号形式出现*/
+                /*【attention！】*/
+                /*1. word-break:break-all; 只对英文起作用，以字母作为换行依据*/
+                /*2. word-wrap:break-word; 只对英文起作用，以单词作为换行依据*/
+                /*3. white-space:pre-wrap; 只对中文起作用，强制换行*/
+                /*4. white-space:nowrap; 强制不换行，都起作用*/
+                /*5. white-space:nowrap; overflow:hidden; text-overflow:ellipsis; 不换行，超出部分隐藏且以省略号形式出现*/
 
+                /*max-width: 200px;*/
+                width: 200px;
+                /*word-wrap: break-word;*/
+                /*word-break: normal;*/
+                word-break: break-all;
+                /*word-wrap:break-word;*/
+                /*white-space:pre-wrap;*/
 
-    /*max-width: 200px;*/
-    width: 200px;
-    /*word-wrap: break-word;*/
-    /*word-break: normal;*/
-    word-break: break-all;
-    /*word-wrap:break-word;*/
-    /*white-space:pre-wrap;*/
+                /*white-space: nowrap;*/
+                /*overflow: hidden;*/
+                /*text-overflow: ellipsis;*/
 
+                white-space: pre-wrap;
 
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
+                background-color: moccasin;
+            }
 
-    white-space:pre-wrap;
+        </style>
+        <script>
 
-
-    background-color: moccasin;
-  }
-
-</style>
-<script>
-
-</script>
-</body>
+        </script>
+    </body>
 </html>

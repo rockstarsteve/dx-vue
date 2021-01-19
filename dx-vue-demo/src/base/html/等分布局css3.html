@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
 
-<div class="content">
-    <div class="col1">11</div>
-    <div class="col2">22</div>
-    <div class="col3">33</div>
-</div>
+        <div class="content">
+            <div class="col1">11</div>
+            <div class="col2">22</div>
+            <div class="col3">33</div>
+        </div>
 
-<style>
-    .content{
-        background-color: #8adced;
-        /*width: 900px;*/
-        columns: 200px 3;
-    }
-    .col1,.col2,.col3{
-        height: 200px;
-    }
-    .col1{
-        background-color: pink;
-    }
-    .col2{
-        background-color: lightgrey;
-        column-span: all;
-    }
-    .col3{
-        background-color: honeydew;
-    }
-</style>
+        <style>
+            .content {
+                background-color: #8adced;
+                columns: 200px 3;
+            }
+
+            .col1, .col2, .col3 {
+                height: 200px;
+            }
+
+            .col1 {
+                background-color: pink;
+            }
+
+            .col2 {
+                background-color: lightgrey;
+                column-span: all;
+            }
+
+            .col3 {
+                background-color: honeydew;
+            }
+        </style>
 
 
-</body>
+    </body>
 </html>

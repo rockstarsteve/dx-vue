@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-</head>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+    </head>
 
-<body>
-    <dl class="content">
-        <dt class="menu">nav1</dt>
-        <dt class="menu">nav2</dt>
-        <dt class="menu">nav3</dt>
-        
-        <dd class="item">1111111111111111111111</dd>
-        <dd class="item">2222222222222222222222</dd>
-        <dd class="item">3333333333333333333333</dd>
-    </dl>
+    <body>
+        <dl class="content">
+            <dt class="menu">nav1</dt>
+            <dt class="menu">nav2</dt>
+            <dt class="menu">nav3</dt>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+            <dd class="item">1111111111111111111111</dd>
+            <dd class="item">2222222222222222222222</dd>
+            <dd class="item">3333333333333333333333</dd>
+        </dl>
 
-        .content {
-            margin: 10px auto;
-            width: 500px;
-            line-height: 24px;
-            border-left: 1px solid #dcdcdc;
-        }
-
-        .menu.active {
-            border-bottom: 1px solid #fff;
-            position: relative;
-        }
-
-        .menu {
-            padding: 0 10px;
-            float: left;
-            border: 1px solid #dcdcdc;
-            border-left: 0;
-            cursor: pointer;
-            margin-bottom: -1px;
-        }
-
-        .item {
-            clear: both;
-            width: 100%;
-            border-left: 0;
-            border: 1px solid #dcdcdc;
-            border-left: 0;
-            display: none;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function () {
-            $('.menu:first').addClass('active');
-            $('.item:first').css('display', 'block');
-            autoroll();
-            //控制覆盖，或者点击切换的
-            // hookThumb();
-        });
-        var i = -1; //第i+1个tab开始
-        var offset = 2500; //轮换时间
-        var timer = null;
-        function autoroll() {
-            n = $('.menu').length - 1;
-            i++;
-            if (i > n) {
-                i = 0;
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
             }
-            slide(i);
-            timer = window.setTimeout(autoroll, offset);
-        }
-        function slide(i) {
-            $('.menu').eq(i).addClass('active').siblings().removeClass('active');
-            $('.item').eq(i).css('display', 'block').siblings('.item').css('display', 'none');
-        }
-        function hookThumb() {
-            $('.menu').hover(
-                function () {
-                    if (timer) {
-                        clearTimeout(timer);
-                        i = $(this).prevAll().length;
-                        slide(i);
-                    }
-                },
-                function () {
 
-                    timer = window.setTimeout(autoroll, offset);
-                    this.blur();
-                    return false;
+            .content {
+                margin: 10px auto;
+                width: 500px;
+                line-height: 24px;
+                border-left: 1px solid #dcdcdc;
+            }
+
+            .menu.active {
+                border-bottom: 1px solid #fff;
+                position: relative;
+            }
+
+            .menu {
+                padding: 0 10px;
+                float: left;
+                border: 1px solid #dcdcdc;
+                border-left: 0;
+                cursor: pointer;
+                margin-bottom: -1px;
+            }
+
+            .item {
+                clear: both;
+                width: 100%;
+                border-left: 0;
+                border: 1px solid #dcdcdc;
+                border-left: 0;
+                display: none;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('.menu:first').addClass('active');
+                $('.item:first').css('display', 'block');
+                autoroll();
+                //控制覆盖，或者点击切换的
+                // hookThumb();
+            });
+            var i = -1; //第i+1个tab开始
+            var offset = 2500; //轮换时间
+            var timer = null;
+
+            function autoroll() {
+                n = $('.menu').length - 1;
+                i++;
+                if (i > n) {
+                    i = 0;
                 }
-            );
-        }
+                slide(i);
+                timer = window.setTimeout(autoroll, offset);
+            }
 
-    </script>
+            function slide(i) {
+                $('.menu').eq(i).addClass('active').siblings().removeClass('active');
+                $('.item').eq(i).css('display', 'block').siblings('.item').css('display', 'none');
+            }
 
-</body>
+            function hookThumb() {
+                $('.menu').hover(
+                    function () {
+                        if (timer) {
+                            clearTimeout(timer);
+                            i = $(this).prevAll().length;
+                            slide(i);
+                        }
+                    },
+                    function () {
+
+                        timer = window.setTimeout(autoroll, offset);
+                        this.blur();
+                        return false;
+                    }
+                );
+            }
+
+        </script>
+
+    </body>
 
 </html>

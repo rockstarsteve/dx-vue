@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title>实现loadingh点点点的效果</title>
-    <style type="text/css">
-        .ani_dot {
-            /* font-family: simsun; */
-            letter-spacing: 0.3em;
-        }
-
-        :root .ani_dot {
-            display: inline-block;
-            width: 1.5em;
-            vertical-align: bottom;
-            overflow: hidden;
-        }
-
-        @-webkit-keyframes dot {
-            0% {
-                width: 0;
-                margin-right: 1.5em;
+    <head>
+        <meta charset="utf-8">
+        <title>实现loadingh点点点的效果</title>
+        <style type="text/css">
+            .ani_dot {
+                /* font-family: simsun; */
+                letter-spacing: 0.3em;
             }
 
-            33% {
-                width: .5em;
-                margin-right: 1em;
-            }
-
-            66% {
-                width: 1em;
-                margin-right: .5em;
-            }
-
-            100% {
+            :root .ani_dot {
+                display: inline-block;
                 width: 1.5em;
-                margin-right: 0;
-            }
-        }
-
-        .ani_dot {
-            -webkit-animation: dot 3s infinite step-start;
-        }
-
-        @keyframes dot {
-            0% {
-                width: 0;
-                margin-right: 1.5em;
+                vertical-align: bottom;
+                overflow: hidden;
             }
 
-            33% {
-                width: .5em;
-                margin-right: 1em;
+            @-webkit-keyframes dot {
+                0% {
+                    width: 0;
+                    margin-right: 1.5em;
+                }
+
+                33% {
+                    width: .5em;
+                    margin-right: 1em;
+                }
+
+                66% {
+                    width: 1em;
+                    margin-right: .5em;
+                }
+
+                100% {
+                    width: 1.5em;
+                    margin-right: 0;
+                }
             }
 
-            66% {
-                width: 1em;
-                margin-right: .5em;
+            .ani_dot {
+                -webkit-animation: dot 3s infinite step-start;
             }
 
-            100% {
-                width: 1.5em;
-                margin-right: 0;
+            @keyframes dot {
+                0% {
+                    width: 0;
+                    margin-right: 1.5em;
+                }
+
+                33% {
+                    width: .5em;
+                    margin-right: 1em;
+                }
+
+                66% {
+                    width: 1em;
+                    margin-right: .5em;
+                }
+
+                100% {
+                    width: 1.5em;
+                    margin-right: 0;
+                }
             }
-        }
 
-        .ani_dot {
-            animation: dot 3s infinite step-start;
-        }
-    </style>
-</head>
+            .ani_dot {
+                animation: dot 3s infinite step-start;
+            }
+        </style>
+    </head>
 
-<body>
+    <body>
 
-    <h3>animate方法：</h3>
-    <div style="font-size: 50px;">
-        提交订单中<span class="ani_dot">...</span>
-    </div>
+        <h3>animate方法：</h3>
+        <div style="font-size: 50px;">
+            提交订单中<span class="ani_dot">...</span>
+        </div>
 
-</body>
+    </body>
 
 </html>

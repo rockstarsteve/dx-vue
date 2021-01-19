@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 <div class="content">
-  <div class="div1">
-    你好
-  </div>
-  对的，很好
+    <div class="div1">
+        你好
+    </div>
+    对的，很好
 </div>
+
+<hr/>
 
 <div class="content2">
-  <div class="div21">
-    你好
-  </div>
-  <div class="div22">
-    对的，很好
-  </div>
+    <div class="div21">
+        你好
+    </div>
+    <div class="div22">
+        对的，很好
+    </div>
 </div>
+
 <style>
-  .content {
-    width: 500px;
-    height: 500px;
-    background-color: pink;
-  }
+    .content {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+    }
 
-  .div1 {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    font-size: 40px;
-    font-weight: bold;
-    background-color: seashell;
-    vertical-align: text-bottom;
-  }
-  .content2 {
-    width: 500px;
-    height: 500px;
-    background-color: pink;
-    /*display: flex;*/
-    /*align-items: center;*/
-  }
+    .div1 {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        font-size: 40px;
+        font-weight: bold;
+        background-color: seashell;
+        /*这里控制baseline属性*/
+        /*该属性定义行内元素的基线相对于{{该元素}}所在行的基线的垂直对齐。
+        允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。*/
+        vertical-align: text-bottom;
+    }
 
-  .div21 {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    font-size: 40px;
-    font-weight: bold;
-    background-color: seashell;
-    vertical-align: center;
-  }
-  .div22{
-    font-size: 20px;
-    display: inline-block;
-  }
+    .content2 {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+    }
+
+    .div21 {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        font-size: 40px;
+        font-weight: bold;
+        background-color: seashell;
+        vertical-align: text-bottom;
+    }
+
+    .div22 {
+        font-size: 20px;
+        display: inline-block;
+    }
 </style>
 </body>
 </html>

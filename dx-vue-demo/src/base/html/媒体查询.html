@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        body {
-            background-color:lightgreen;
-        }
-
-        .container{
-            width: 100px;
-            height: 100px;
-            background-color: pink;
-        }
-
-        @media screen and (max-width: 1000px) and (min-width: 700px){
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
             body {
-                background-color:lightblue;
+                background-color: lightgreen;
             }
-            .container{
-                width: 50px;
-                height: 50px;
-                background-color: yellow;
+
+            .container {
+                width: 100px;
+                height: 100px;
+                background-color: pink;
             }
-        }
 
-        @media screen and (min-width: 700px) {
-            body {
-                background-color:blue;
+            @media screen and (max-width: 1000px) and (min-width: 700px) {
+                body {
+                    background-color: lightblue;
+                }
+
+                .container {
+                    width: 50px;
+                    height: 50px;
+                    background-color: yellow;
+                }
             }
-            .container{
-                width: 20px;
-                height: 20px;
-                background-color: seashell;
+
+            @media screen and (min-width: 700px) {
+                body {
+                    background-color: blue;
+                }
+
+                .container {
+                    width: 20px;
+                    height: 20px;
+                    background-color: seashell;
+                }
             }
-        }
-    </style>
-</head>
-<body>
+        </style>
+    </head>
+    <body>
 
-<div class="container">
+        <div class="container">
 
-</div>
+        </div>
 
-</body>
+    </body>
 </html>
