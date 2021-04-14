@@ -51,17 +51,22 @@
             };
 
             let ajv = new Ajv();
-            let validate = ajv.compile(schema);
-            let valid = validate(this.data);
-            if (!valid) {
-                console.log("要打印的valid日志是：" + valid)
-                console.log(validate.errors)
 
-                // 国际化
-                localize.ru(validate.errors);
-                console.log(ajv.errorsText(validate.errors, {separator: '\n'}));
+            var valid = ajv.validate(schema, this.data);
+            if(!valid) {
+                console.log(ajv.errors);
+            } 
 
-            }
+
+            // let validate = ajv.compile(schema);
+            // let valid = validate(this.data);
+            // if (!valid) {
+            //     console.log("校验的valid结果是：" + valid)
+            //     console.log(validate.errors)
+            //     // 国际化
+            //     localize.ru(validate.errors)
+            //     console.log(ajv.errorsText(validate.errors, {separator: '\n'}));
+            // }
 
 
         }

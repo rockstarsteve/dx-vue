@@ -23,12 +23,12 @@
         let user = new FormData();
         user.append('password', 'xx')
 
-        service.post('http://localhost:8083/api/user/getNullData', user, {headers: {'Content-type': 'application/x-www-form-urlencoded'}})
+        service.post('http://www.baidu.com', user, {headers: {'Content-type': 'application/x-www-form-urlencoded'}})
             .then(function (response) {
-              console.log(response);
+              console.log("响应内容：",response);
             })
             .catch(function (error) {
-              console.log(error)
+              console.log("出错内容：",error)
             });
       }
     },

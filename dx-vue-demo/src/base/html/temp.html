@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-1.11.2.min.js"></script>
+    <title>简单解决</title>
+    <style type="text/css">
+        .red::before {
+            content: 'red';
+            color: red;
+        }
+        .green::before {
+            content: 'green';
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>你好</div>
+    <div class="test">
+        <p class="red">Hi, this is a plain-old, sad-looking paragraph tag.</p>
+        
+    </div>
+    <button onclick="change()">修改</button>
+
+    <script>
+        function change() {
+            // $('p').removeClass('red').addClass('green');
+            document.styleSheets[0].addRule('.red::before', 'color: green');
+            // document.styleSheets[0].insertRule('.red::before { color: green }', 0);
+        }
+    </script>
+</body>
+
+</html>

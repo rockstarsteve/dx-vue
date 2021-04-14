@@ -11,13 +11,10 @@
                 margin: 0;
                 padding: 0
             }
-
             body {
                 padding-top: 200px;
             }
-
             #box {
-
                 box-sizing: border-box;
                 height: 140px;
                 width: 400px;
@@ -27,7 +24,6 @@
                 margin: 50px auto;
                 text-align: center;
             }
-
             .div1 {
                 display: inline-block;
             }
@@ -78,11 +74,8 @@
             <ul id="ul2"></ul>
         </div>
         <script>
-
             // 126px
-
-            window.onload = roll(400);
-
+            window.onload = roll(200);
             // 传入的 t 为滚动快慢的时间
             function roll(t) {
                 console.log(1);
@@ -92,38 +85,20 @@
                 ul2.innerHTML = ul1.innerHTML;
                 // 初始化滚动高度
                 box.scrollTop = 0;
-                let timer = setInterval(rollStart, t);
-                // box.onmouseover = function () {
-                //   clearInterval(timer)
-                // }
-                // box.onmouseout = function () {
-                //   timer = setInterval(rollStart, t);
-                // }
+                setInterval(() => {
+                    rollStart()
+                }, t);
             }
-
             function rollStart() {
-
                 console.log("box.scrollTop:", box.scrollTop, "      ul1.scrollHeight:", ul1.scrollHeight)
-
-                if (box.scrollTop >= ul1.scrollHeight) {
+                    if (box.scrollTop >= ul1.scrollHeight) {
                     box.scrollTop = 0;
                     console.log('box.scrollTop >= ul1.scrollHeight', box.scrollTop >= ul1.scrollHeight)
                 } else {
                     var temp = box.scrollTop++;
-
-                    // if (temp > 110) {
-                    //   box.scrollTop = 0
-                    // }
-
-
                     console.log('temp:', temp)
                 }
             }
         </script>
-
-        <script>
-
-        </script>
     </body>
-
 </html>

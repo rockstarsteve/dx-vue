@@ -45,13 +45,13 @@
   // import Demo from './components/dialog/Demo02'
 
   /**********************axios********************/
-  // import Demo from './components/axios/Demo02'
+  import Demo from './components/axios/Demo02'
 
   /***********************ajv语法测试********************/
   // import Demo from './components/ajv/Simple'
 
   /***********************animate语法测试********************/
-  // import Demo from './components/animate/Simple'
+  // import Demo from './components/animation/Simple'
 
   /***********************vue-video-player测试********************/
   // import Demo from './components/vuevideoplayer/phone/PhoneVide'
@@ -99,7 +99,7 @@
   // import Demo from './components/event/fockinput'
 
   /***********************print测试********************/
-  import Demo from './components/print/Demo'
+  // import Demo from './components/print/Demo'
 
 
   export default {

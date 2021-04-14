@@ -34,9 +34,6 @@
         display: inline-flex;
         flex-direction: column;
 
-
-
-
         /*align-items : center;*/
         /*align-content: center;*/
         /*justify-content: space-around;*/

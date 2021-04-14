@@ -1,9 +1,9 @@
 <template>
     <div class="content">
         hello world
-        <svg-icon icon-class="el-table"/>
+        <svg-icon class="svg" icon-class="littleday"/>
 
-        <svg-icon icon-class="filter" />
+        <svg-icon icon-class="el-table" />
     </div>
 </template>
 
@@ -20,5 +20,12 @@
         font-weight: bold;
         font-size: xx-large;
     }
+
+    .svg{
+        width: 20rem !important;
+        height: 20rem !important;
+    }
+
+    
 
 </style>
