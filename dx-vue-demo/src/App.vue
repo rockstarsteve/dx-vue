@@ -45,7 +45,7 @@
   // import Demo from './components/dialog/Demo02'
 
   /**********************axios********************/
-  import Demo from './components/axios/Demo02'
+  // import Demo from './components/axios/Demo02'
 
   /***********************ajv语法测试********************/
   // import Demo from './components/ajv/Simple'
@@ -100,6 +100,9 @@
 
   /***********************print测试********************/
   // import Demo from './components/print/Demo'
+
+  /***********************print测试********************/
+  import Demo from './components/enc/Sm4Demo'
 
 
   export default {
