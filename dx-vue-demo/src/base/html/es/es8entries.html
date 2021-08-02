@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>请打开控制台</h1>
+
+    <script>
+        //对象转换为二维数组，然后放入map中
+        let arr = Object.entries({
+            name: 'tom',
+            age: 23,
+            say: function () {
+                console.log("说话，，好好说话。。。")
+            }
+        })
+        console.log(arr)
+        console.log(...arr)
+        let map = new Map(arr)
+        console.log(map.get("name"))
+        console.log(map)
+
+
+
+
+        let map2 = new Map()
+        map2.set("name", 'tom')
+        map2.set("age", 33)
+        console.log(map2.get("name"))
+        console.log(map2)
+
+
+
+        let arrs = [[ "name","tom" ], [ "age", 55 ]]
+        let map3 = new Map(arrs)
+
+        console.log(map3.get("name"))
+        console.log(map3)
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
